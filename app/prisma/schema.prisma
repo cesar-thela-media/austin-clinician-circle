@@ -1,0 +1,352 @@
+// Austin Clinician Circle — Prisma Schema
+// ORM: Prisma (replaces Drizzle per founder preference)
+// Database: PostgreSQL on Railway
+// Generated for review — run `npx prisma generate` after adding to project
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// ─── Enums ────────────────────────────────────────────────────────────────────
+
+enum UserRole {
+  member
+  admin
+}
+
+enum UserStatus {
+  pending   // application submitted, not yet approved
+  active    // subscribed and in good standing
+  inactive  // subscription lapsed / cancelled
+}
+
+enum ApplicationStatus {
+  pending
+  approved
+  rejected
+}
+
+enum SubscriptionStatus {
+  trialing
+  active
+  past_due
+  canceled
+  unpaid
+}
+
+enum EventType {
+  consultation // monthly case consultation
+  ceu          // continuing education
+  workshop
+  webinar
+}
+
+enum RsvpStatus {
+  registered
+  attended
+  canceled
+}
+
+enum ResourceType {
+  pdf
+  video
+  link
+  template
+}
+
+// ─── Core Auth (BetterAuth compatible) ────────────────────────────────────────
+// BetterAuth manages sessions / accounts tables internally.
+// User is the primary entity we extend.
+
+model User {
+  id            String   @id @default(cuid())
+  email         String   @unique
+  emailVerified Boolean  @default(false)
+  name          String?
+  image         String?
+  role          UserRole @default(member)
+  status        UserStatus @default(pending)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // BetterAuth relations
+  sessions      Session[]
+  accounts      Account[]
+
+  // ACC relations
+  profile       ClinicianProfile?
+  subscription  Subscription?
+  applications  Application[]
+  rsvps         EventRsvp[]
+
+  @@map("user")
+}
+
+model Session {
+  id        String   @id @default(cuid())
+  userId    String
+  token     String   @unique
+  expiresAt DateTime
+  ipAddress String?
+  userAgent String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("session")
+}
+
+model Account {
+  id                    String   @id @default(cuid())
+  userId                String
+  accountId             String
+  providerId            String
+  accessToken           String?
+  refreshToken          String?
+  idToken               String?
+  accessTokenExpiresAt  DateTime?
+  refreshTokenExpiresAt DateTime?
+  scope                 String?
+  password              String?  // bcrypt hash for email/password provider
+  createdAt             DateTime @default(now())
+  updatedAt             DateTime @updatedAt
+
+  user                  User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@map("account")
+}
+
+model Verification {
+  id         String   @id @default(cuid())
+  identifier String
+  value      String
+  expiresAt  DateTime
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+
+  @@map("verification")
+}
+
+// ─── Clinician Profile ────────────────────────────────────────────────────────
+
+model ClinicianProfile {
+  id               String    @id @default(cuid())
+  userId           String    @unique
+  slug             String    @unique // URL slug for public directory
+  displayName      String
+  credentials      String    // "LPC-S", "LMFT", etc.
+  bio              String?   @db.Text
+  tagline          String?
+  photoUrl         String?
+
+  // Contact
+  phone            String?
+  emailPublic      String?
+  website          String?
+  bookingUrl       String?   // Calendly or similar
+
+  // Practice details
+  clientTypes      String[]  // individual, couples, family, teen
+  formats          String[]  // virtual, in-person, both
+  languages        String[]
+  areasServed      String[]
+
+  // Visibility
+  acceptingClients Boolean   @default(true)
+  isVisible        Boolean   @default(false) // admin toggles on after approval
+
+  createdAt        DateTime  @default(now())
+  updatedAt        DateTime  @updatedAt
+
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  specialties      ProfileSpecialty[]
+  modalities       ProfileModality[]
+  insurances       ProfileInsurance[]
+
+  @@map("clinician_profile")
+}
+
+model ProfileSpecialty {
+  id        String           @id @default(cuid())
+  profileId String
+  name      String           // "Anxiety", "Trauma", "Grief", etc.
+  profile   ClinicianProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, name])
+  @@map("profile_specialty")
+}
+
+model ProfileModality {
+  id        String           @id @default(cuid())
+  profileId String
+  name      String           // "EMDR", "CBT", "IFS", "Gottman", etc.
+  profile   ClinicianProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, name])
+  @@map("profile_modality")
+}
+
+model ProfileInsurance {
+  id        String           @id @default(cuid())
+  profileId String
+  name      String           // "Aetna", "BCBS", "self-pay only", etc.
+  profile   ClinicianProfile @relation(fields: [profileId], references: [id], onDelete: Cascade)
+
+  @@unique([profileId, name])
+  @@map("profile_insurance")
+}
+
+// ─── Subscription ─────────────────────────────────────────────────────────────
+
+model Subscription {
+  id                     String             @id @default(cuid())
+  userId                 String             @unique
+  stripeCustomerId       String             @unique
+  stripeSubscriptionId   String?            @unique
+  stripePriceId          String?
+
+  // Convenience boolean — derived from status but indexed for fast access-gate queries
+  active                 Boolean            @default(false)
+
+  status                 SubscriptionStatus @default(trialing)
+  plan                   String             @default("standard")
+
+  currentPeriodStart     DateTime?
+  currentPeriodEnd       DateTime?
+
+  // Cancellation — set when member schedules cancellation but is still within paid period
+  cancelAtPeriodEnd      Boolean            @default(false)
+  cancelAt               DateTime?          // when Stripe will cancel
+  canceledAt             DateTime?          // when cancellation was confirmed
+
+  trialStart             DateTime?
+  trialEnd               DateTime?
+
+  createdAt              DateTime           @default(now())
+  updatedAt              DateTime           @updatedAt
+
+  user                   User               @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([active])
+  @@index([stripeCustomerId])
+  @@map("subscription")
+}
+
+// ─── Application ──────────────────────────────────────────────────────────────
+
+model Application {
+  id             String            @id @default(cuid())
+  userId         String?           // nullable — may not have account yet at apply time
+  name           String
+  email          String
+  licenseType    String            // LPC, LCSW, LMFT, etc.
+  licenseNumber  String?
+  yearsLicensed  String?
+  practiceName   String?
+  practiceCity   String?
+  format         String?           // virtual, in-person, both
+  specialties    String[]
+  modalities     String[]
+  bio            String?           @db.Text
+  whyAcc         String?           @db.Text
+
+  status         ApplicationStatus @default(pending)
+  adminNotes     String?           @db.Text
+
+  createdAt      DateTime          @default(now())
+  reviewedAt     DateTime?
+
+  user           User?             @relation(fields: [userId], references: [id], onDelete: SetNull)
+
+  @@index([status])
+  @@index([email])
+  @@map("application")
+}
+
+// ─── Resources ────────────────────────────────────────────────────────────────
+
+model ResourceCategory {
+  id        String     @id @default(cuid())
+  name      String     @unique // "Clinical Tools", "CEU Materials", "Business", etc.
+  sortOrder Int        @default(0)
+  resources Resource[]
+
+  @@map("resource_category")
+}
+
+model Resource {
+  id          String           @id @default(cuid())
+  title       String
+  description String?          @db.Text
+  fileUrl     String           // R2 object URL
+  fileType    ResourceType
+  categoryId  String
+  sortOrder   Int              @default(0)
+  isPublished Boolean          @default(false)
+  createdAt   DateTime         @default(now())
+  updatedAt   DateTime         @updatedAt
+
+  category    ResourceCategory @relation(fields: [categoryId], references: [id])
+
+  @@index([isPublished])
+  @@index([categoryId])
+  @@map("resource")
+}
+
+// ─── Events ───────────────────────────────────────────────────────────────────
+
+model Event {
+  id          String    @id @default(cuid())
+  title       String
+  description String?   @db.Text
+  eventType   EventType
+  startTime   DateTime
+  endTime     DateTime
+  location    String?   // Zoom link, address, etc.
+  capacity    Int?      // null = no limit
+  ceuCredits  Float?    // null = no CEU credits
+  isPublished Boolean   @default(false)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  rsvps       EventRsvp[]
+
+  @@index([startTime])
+  @@index([isPublished])
+  @@map("event")
+}
+
+model EventRsvp {
+  id        String     @id @default(cuid())
+  eventId   String
+  userId    String
+  status    RsvpStatus @default(registered)
+  createdAt DateTime   @default(now())
+
+  event     Event      @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  user      User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([eventId, userId])
+  @@map("event_rsvp")
+}
+
+// ─── Lead Magnet ──────────────────────────────────────────────────────────────
+// Tracks playbook downloads from the /coming-soon tripwire page
+
+model Lead {
+  id          String   @id @default(cuid())
+  firstName   String
+  email       String   @unique
+  source      String   @default("playbook") // which lead magnet
+  convertedAt DateTime? // set when lead becomes an Application
+  createdAt   DateTime @default(now())
+
+  @@index([email])
+  @@map("lead")
+}

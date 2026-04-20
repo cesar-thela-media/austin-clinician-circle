@@ -27,11 +27,39 @@ Three tiers: **Starter · Professional · Premium**
 |---|---|
 | Frontend | Next.js (App Router), Tailwind CSS v4, TypeScript |
 | Auth | BetterAuth (session + role-based access) |
-| Database | PostgreSQL on Railway, Drizzle ORM |
-| Payments | Stripe (subscriptions) |
+| Database | PostgreSQL on Railway, Prisma ORM |
+| Payments | Stripe (subscriptions + cancellation) |
 | File Storage | Cloudflare R2 |
 | Email | Resend |
-| Hosting | Vercel |
+| Hosting | Railway (Docker, single platform) |
+
+---
+
+## Local Dev — Docker
+
+**Prerequisites:** Docker Desktop installed and running.
+
+```bash
+# 1. Clone and enter the repo
+git clone https://github.com/thela-media-group/austin-clinician-circle.git
+cd austin-clinician-circle
+
+# 2. Copy env template and fill in secrets
+cp .env.example .env
+
+# 3. Spin up Postgres + the app
+docker compose up -d
+
+# 4. Run Prisma migrations (first time only)
+docker compose exec app npx prisma migrate dev --name init
+
+# 5. Open http://localhost:3000
+```
+
+To wipe the database and start fresh:
+```bash
+docker compose down -v
+```
 
 ---
 

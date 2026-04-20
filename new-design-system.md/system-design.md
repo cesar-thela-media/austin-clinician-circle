@@ -1,8 +1,8 @@
 # Austin Clinician Circle — System Design
 
-> **Version:** 1.0 (Draft)
-> **Date:** April 20, 2026
-> **Stack:** Next.js, Tailwind CSS, Postgres (Railway), BetterAuth, Stripe, Cloudflare R2, Vercel
+> **Version:** 1.1
+> **Date:** April 21, 2026
+> **Stack:** Next.js, Tailwind CSS, Postgres (Railway), BetterAuth, Stripe, Cloudflare R2, Railway (hosting)
 
 ---
 
@@ -22,7 +22,7 @@ graph TB
         UI["Next.js App<br/>React + Tailwind"]
     end
 
-    subgraph Vercel["Vercel (Hosting)"]
+    subgraph Railway_App["Railway (App Service)"]
         SSR["Next.js Server<br/>(App Router, SSR/SSG)"]
         API["API Routes<br/>(/api/*)"]
         MW["Middleware<br/>(Auth + Role checks)"]
@@ -70,7 +70,7 @@ graph TB
 | **Payments** | Stripe | Industry standard, Checkout + Customer Portal + Webhooks |
 | **File Storage** | Cloudflare R2 | S3-compatible, no egress fees, good for PDFs/resources |
 | **Email** | Resend (recommended) | Developer-friendly, React Email templates |
-| **Deployment** | Vercel | Native Next.js support, edge functions, preview deploys |
+| **Deployment** | Railway | Single-platform with Postgres, Docker-native, no vendor split |
 
 ---
 
@@ -150,10 +150,12 @@ erDiagram
         uuid user_id FK
         string stripe_customer_id
         string stripe_subscription_id
+        boolean active "true when status is active or trialing"
         string status "active | past_due | canceled | trialing"
         string plan "standard"
         timestamp current_period_start
         timestamp current_period_end
+        timestamp cancel_at_period_end "set when member schedules cancellation"
         timestamp canceled_at
         timestamp created_at
     }
@@ -350,9 +352,19 @@ sequenceDiagram
     App->>DB: Set USER.status = active
 
     Note over Stripe,App: Ongoing billing
-    Stripe->>App: Webhook: invoice.paid → keep active
-    Stripe->>App: Webhook: invoice.payment_failed → set past_due
-    Stripe->>App: Webhook: customer.subscription.deleted → set canceled
+    Stripe->>App: Webhook: invoice.paid → keep active, active=true
+    Stripe->>App: Webhook: invoice.payment_failed → set past_due, active=false
+    Stripe->>App: Webhook: customer.subscription.updated → sync cancel_at_period_end
+    Stripe->>App: Webhook: customer.subscription.deleted → set canceled, active=false
+
+    Note over Member,Stripe: Cancellation flow
+    Member->>App: Click "Cancel membership" (POST /api/stripe/portal)
+    App->>Stripe: Create Customer Portal session (cancel_at_period_end)
+    Stripe-->>Member: Redirect to portal — member confirms cancellation
+    Stripe->>App: Webhook: customer.subscription.updated (cancel_at_period_end=true)
+    App->>DB: Set SUBSCRIPTION.cancel_at_period_end, keep active=true until period ends
+    Stripe->>App: Webhook: customer.subscription.deleted (at period end)
+    App->>DB: Set active=false, status=canceled, USER.status=inactive
 
     Member->>App: Click "Manage Subscription" (POST /api/stripe/portal)
     App->>Stripe: Create Customer Portal session
@@ -366,6 +378,7 @@ sequenceDiagram
 3. **Customer Portal**: Enable subscription management, cancellation, payment update
 4. **Webhooks**: Register endpoint `https://<domain>/api/stripe/webhook`
 5. **Events to listen for**: `checkout.session.completed`, `invoice.paid`, `invoice.payment_failed`, `customer.subscription.deleted`, `customer.subscription.updated`
+6. **Customer Portal**: Enable cancellation (schedule at period end, not immediate), payment method update, and invoice history
 
 </details>
 
@@ -430,7 +443,7 @@ graph TB
     Route -->|SQL query with filters| DB
     DB -->|Results| Route
     Route -->|JSON| Browser
-    Route -.->|Cache public results| Cache
+    Route -.->|Cache public results| Railway_Cache
 ```
 
 ### Query Design

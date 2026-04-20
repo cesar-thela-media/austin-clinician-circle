@@ -1,0 +1,18 @@
+# Dev Dockerfile for Next.js
+# Used by docker-compose.yml — NOT for production
+# Production: Railway builds from this repo directly using Dockerfile
+
+FROM node:20-alpine
+
+WORKDIR /app
+
+# Install dependencies first (layer cache)
+COPY package*.json ./
+RUN npm ci
+
+# Copy source (overridden by volume mount in dev)
+COPY . .
+
+EXPOSE 3000
+
+CMD ["npm", "run", "dev"]
