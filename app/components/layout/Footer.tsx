@@ -9,7 +9,7 @@ export function Footer() {
             <p
               className="text-lg font-semibold mb-3"
               style={{
-                fontFamily: "var(--font-serif), Manrope, sans-serif",
+                fontFamily: "var(--font-serif), Georgia, serif",
                 color: "#fff",
               }}
             >

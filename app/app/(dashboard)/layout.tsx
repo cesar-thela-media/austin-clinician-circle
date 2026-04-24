@@ -6,11 +6,11 @@ export default function DashboardLayout({
   children: React.ReactNode;
 }) {
   return (
-    <div className="flex min-h-screen" style={{ background: "var(--color-sage-900)" }}>
+    <div className="flex min-h-screen" style={{ background: "var(--color-cream-100)" }}>
       <DashboardNav />
       <main
         className="flex-1 overflow-auto"
-        style={{ background: "var(--color-sage-900)", color: "var(--color-text-inverse)" }}
+        style={{ background: "var(--color-cream-100)", color: "var(--color-text-primary)" }}
       >
         <div className="max-w-5xl mx-auto px-8 py-10">{children}</div>
       </main>

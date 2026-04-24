@@ -52,7 +52,7 @@ export default function DashboardPage() {
             fontFamily: "var(--font-serif), Manrope, sans-serif",
             fontSize: "2rem",
             fontWeight: 400,
-            color: "#fff",
+            color: "var(--color-sage-900)",
           }}
         >
           Welcome back, Jane.
@@ -102,7 +102,7 @@ export default function DashboardPage() {
               <div
                 key={ev.title}
                 className="flex items-start justify-between gap-4 pb-4 border-b last:border-0 last:pb-0"
-                style={{ borderColor: "rgba(217,181,162,0.5)" }}
+                style={{ borderColor: "rgba(197,200,190,0.5)" }}
               >
                 <div>
                   <p
@@ -150,7 +150,7 @@ export default function DashboardPage() {
               <div
                 key={r.title}
                 className="flex items-center justify-between gap-4 pb-4 border-b last:border-0 last:pb-0"
-                style={{ borderColor: "rgba(217,181,162,0.5)" }}
+                style={{ borderColor: "rgba(197,200,190,0.5)" }}
               >
                 <p
                   className="text-sm"
@@ -173,7 +173,7 @@ export default function DashboardPage() {
         <div className="flex flex-col gap-1">
           <p
             className="text-xs font-medium uppercase tracking-widest"
-            style={{ color: "#1B1B1B" }}
+            style={{ color: "var(--color-text-primary)" }}
           >
             Weekly ritual
           </p>
@@ -181,13 +181,13 @@ export default function DashboardPage() {
             className="text-base font-semibold"
             style={{
               fontFamily: "var(--font-serif), Manrope, sans-serif",
-              color: "#1B1B1B",
+              color: "var(--color-text-primary)",
               fontSize: "1.25rem",
             }}
           >
             You&apos;ve attended 4 consultation groups in a row.
           </p>
-          <p className="text-sm mt-0.5" style={{ color: "#1B1B1B" }}>
+          <p className="text-sm mt-0.5" style={{ color: "var(--color-text-primary)" }}>
             Consistency is the foundation of great clinical work.
           </p>
         </div>
@@ -202,7 +202,7 @@ export default function DashboardPage() {
       {/* Membership status */}
       <Card
         className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-        style={{ border: "1px solid rgba(243,216,202,0.8)", background: "var(--color-cream-100)" }}
+        style={{ border: "1px solid rgba(197,200,190,0.65)", background: "var(--color-cream-100)" }}
       >
         <div>
           <p

@@ -39,7 +39,7 @@ export function PricingCard({
           <span
             className="text-5xl font-light"
             style={{
-              fontFamily: "var(--font-serif), Manrope, sans-serif",
+              fontFamily: "var(--font-serif), Georgia, serif",
               color: "var(--color-sage-700)",
             }}
           >

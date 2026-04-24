@@ -15,7 +15,7 @@ export default function BillingPage() {
     <div className="flex flex-col gap-10 max-w-2xl">
       <div>
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Billing</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "#fff" }}>
+        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
           Subscription & billing
         </h1>
       </div>
@@ -57,7 +57,7 @@ export default function BillingPage() {
           <div className="flex items-center gap-3 mt-1">
             <div
               className="px-3 py-1 rounded text-xs font-semibold"
-              style={{ background: "#1B1B1B", color: "#fff" }}
+              style={{ background: "var(--color-sage-900)", color: "#fff" }}
             >
               VISA
             </div>
@@ -94,7 +94,7 @@ export default function BillingPage() {
 
       {/* Invoice history */}
       <div>
-        <h2 className="text-base font-semibold mb-4" style={{ color: "#fff" }}>Invoice history</h2>
+        <h2 className="text-base font-semibold mb-4" style={{ color: "var(--color-sage-900)" }}>Invoice history</h2>
         <Card className="overflow-hidden" style={{ padding: 0 }}>
           <table className="w-full text-sm">
             <thead>

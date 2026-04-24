@@ -13,7 +13,7 @@
 
 ACC is not a productivity app. It is a professional sanctuary. The UI should feel like:
 
-- **Calm + grounded** — terracotta warmth, warm cream surfaces, and charcoal anchors. Nature, not decoration.
+- **Calm + botanical** — sage-tinted surfaces, not warm beige. Nature, not decoration.
 - **Editorial, not dashboard-y** — generous whitespace, asymmetric breathing, no crowding.
 - **Warm precision** — trusted colleague energy. Professional but never corporate.
 - **Ambient depth** — elevation through tonal layering (color shifts), not hard borders.
@@ -34,57 +34,57 @@ Transitions are **slow and breath-like**. Use 300–400ms ease-in-out. Nothing s
 
 All colors are CSS custom properties defined in `globals.css → @theme inline`.
 
-### Primary Brand Palette (terracotta-led)
+### Sage Palette (primary brand)
 
 | Token | Value | Usage |
 |---|---|---|
-| `--color-sage-900` | `#1B1B1B` | Hero backgrounds, footer, dark CTA sections |
-| `--color-sage-800` | `#C1572F` | Dark section variants, hover on dark |
-| `--color-sage-700` | `#DC673B` | **Primary brand** — buttons, links, icons, headlines in light sections, and high-emphasis story bands |
-| `--color-sage-600` | `#E98359` | Eyebrow labels, secondary accents, active states |
-| `--color-sage-500` | `#F1A27F` | Lighter icons, decorative accents |
-| `--color-sage-100` | `#FDE1D5` | Light terracotta tint — avatar backgrounds, soft highlights |
-| `--color-sage-50` | `#FFF5EE` | Barely-there terracotta wash |
+| `--color-sage-900` | `#2F3E33` | Hero backgrounds, footer, dark CTA sections |
+| `--color-sage-800` | `#3B4D3F` | Dark section variants, hover on dark |
+| `--color-sage-700` | `#4A5D4E` | **Primary brand** — buttons, links, icons, headlines in light sections |
+| `--color-sage-600` | `#5A7060` | Eyebrow labels, secondary accents, active states |
+| `--color-sage-500` | `#6B8572` | Lighter icons, decorative accents |
+| `--color-sage-100` | `#E4EBE6` | Light sage tint — avatar backgrounds, soft highlights |
+| `--color-sage-50` | `#F3F6F4` | Barely-there sage wash |
 
-### Surface Palette (warm cream, not cool beige)
+### Surface Palette (sage-tinted, not warm-beige)
 
 | Token | Value | Semantic Alias | Usage |
 |---|---|---|---|
-| `--color-cream-100` | `#FFF9F5` | `--color-surface` | Page base background |
-| `--color-cream-200` | `#FFF1E8` | `--color-surface-low` | Section nest, alternating containers |
-| `--color-cream-300` | `#F3D8CA` | Ghost borders / dividers | Use at ≤60% opacity for borders |
-| `--color-cream-400` | `#D9B5A2` | Outline-variant | Disabled states, subtle dividers |
+| `--color-cream-100` | `#F8FAF3` | `--color-surface` | Page base background |
+| `--color-cream-200` | `#ECEFE8` | `--color-surface-low` | Section nest, alternating containers |
+| `--color-cream-300` | `#DFE3DA` | Ghost borders / dividers | Use at ≤60% opacity for borders |
+| `--color-cream-400` | `#C5C8BE` | Outline-variant | Disabled states, subtle dividers |
 | — | `#FFFFFF` | `--color-surface-card` | Interactive cards, floating modules |
 
-> **Note:** These surfaces are warm cream with a subtle peach undertone — soft, sun-washed, and intentionally supportive of the terracotta brand color.
+> **Note:** These surfaces have a botanical sage tint — slightly green-grey, not warm yellow-cream. This matches the Zenith reference palette.
 
 ### Accent Colors
 
 | Token | Value | Usage |
 |---|---|---|
-| `--color-gold` | `#F9D251` | Premium highlights, serif display accents, stats |
-| `--color-terracotta` | `#DC673B` | Warm CTA accents, stress indicators, callout borders |
-| `--color-blush` | `#FFF2BF` | **Achievement / reward callouts** — milestones, streak banners, warm announcements |
-| `--color-blush-dark` | `#F9D251` | Blush icon tint, deeper blush accents |
+| `--color-gold` | `#C9A96E` | Premium highlights, serif display accents, stats |
+| `--color-terracotta` | `#C07A5A` | Warm CTA accents, stress indicators, callout borders |
+| `--color-blush` | `#FED7D2` | **Achievement / reward callouts** — milestones, streak banners, warm announcements |
+| `--color-blush-dark` | `#F4B4AE` | Blush icon tint, deeper blush accents |
 
 ### Text Colors
 
 | Token | Value | Usage |
 |---|---|---|
-| `--color-text-primary` | `#1B1B1B` | Headings, body text on light backgrounds |
-| `--color-text-secondary` | `#5C463B` | Subtext, captions, meta info |
-| `--color-text-tertiary` | `#8B6F61` | Placeholders, labels, fine print |
+| `--color-text-primary` | `#191C18` | Headings, body text on light backgrounds |
+| `--color-text-secondary` | `#444841` | Subtext, captions, meta info |
+| `--color-text-tertiary` | `#75796E` | Placeholders, labels, fine print |
 | `--color-text-inverse` | `#FFFFFF` | Text on dark/sage backgrounds |
-| `--color-text-inverse-muted` | `rgba(255,255,255,0.72)` | Subtext on dark backgrounds |
+| `--color-text-inverse-muted` | `rgba(255,255,255,0.65)` | Subtext on dark backgrounds |
 
 ### Functional
 
 | Token | Value | Usage |
 |---|---|---|
-| `--color-success` | `#DC673B` | Active badges, RSVP states, accepting-clients UI |
-| `--color-warning` | `#F9D251` | Warnings, limited spots, attention states |
+| `--color-success` | `#4A7C59` | Success states, "accepting clients" badges |
+| `--color-warning` | `#C4932A` | Warnings, pending states |
 | `--color-error` | `#B54B4B` | Errors, destructive actions |
-| `--color-info` | `#DC673B` | Informational accents and links |
+| `--color-info` | `#4A6F8C` | Info badges, informational states |
 
 ---
 
@@ -118,7 +118,7 @@ Both fonts are loaded via `next/font/google` in the root layout.
 - **Headings in dark sections**: use `#FFFFFF` or `var(--color-gold)` for accent
 - **Overlines / section labels**: `0.75rem`, uppercase, `tracking-widest`, `var(--color-sage-600)`
 - **Max body width**: `680px` for readability
-- **No pure black** anywhere — use `--color-text-primary` (`#1B1B1B`)
+- **No pure black** anywhere — use `--color-text-primary` (`#191C18`)
 
 ---
 
@@ -127,15 +127,14 @@ Both fonts are loaded via `next/font/google` in the root layout.
 Think of the UI as a stack of physical materials:
 
 ```
-Layer 0 (Base):    --color-surface (#FFF9F5)         → page background
-Layer 1 (Nest):    --color-surface-low (#FFF1E8)      → section containers
+Layer 0 (Base):    --color-surface (#F8FAF3)         → page background
+Layer 1 (Nest):    --color-surface-low (#ECEFE8)      → section containers
 Layer 2 (Cards):   --color-surface-card (#FFFFFF)     → interactive cards
-Layer 3 (Dark):    --color-sage-900 (#1B1B1B)         → hero, footer, CTA sections
+Layer 3 (Dark):    --color-sage-900 (#2F3E33)         → hero, footer, CTA sections
 ```
 
 **Separation between layers is achieved by background shift only — not borders.**
-Cards may have a ghost border: `1px solid rgba(217, 181, 162, 0.5)`.
-High-emphasis story sections may use `--color-sage-700` as a full-bleed band with white text and gold sub-emphasis.
+Cards may have a ghost border: `1px solid rgba(197, 200, 190, 0.5)`.
 
 ---
 
@@ -168,22 +167,22 @@ High-emphasis story sections may use `--color-sage-700` as a full-bleed band wit
 | `--radius-xl` | `24px` | **Main content cards**, large containers |
 | `--radius-full` | `9999px` | Buttons, pills, avatars |
 
-**Card border standard**: `1px solid rgba(217, 181, 162, 0.5)` — ghost, not solid.
+**Card border standard**: `1px solid rgba(197, 200, 190, 0.5)` — ghost, not solid.
 **Focus ring**: `2px solid var(--color-sage-700)` with `2px` offset.
 
 ---
 
-## 7. Shadows (Primary-Tinted Ambient)
+## 7. Shadows (Sage-Tinted Ambient)
 
-All shadows use a terracotta tint (`rgba(220, 103, 59, ...)`) — never cold black.
+All shadows use a sage-green tint (`rgba(74, 93, 78, ...)`) — never cold black.
 
 | Token | Value | Usage |
 |---|---|---|
-| `--shadow-xs` | `0 1px 3px rgba(220,103,59,0.06)` | Barely-lifted inputs |
-| `--shadow-sm` | `0 2px 8px rgba(220,103,59,0.07)` | Subtle cards |
-| `--shadow-md` | `0 4px 20px rgba(220,103,59,0.09)` | Standard cards (default) |
-| `--shadow-lg` | `0 8px 36px rgba(220,103,59,0.11)` | Elevated / hover state |
-| `--shadow-xl` | `0 16px 56px rgba(220,103,59,0.13)` | Modals, hero cards |
+| `--shadow-xs` | `0 1px 3px rgba(74,93,78,0.06)` | Barely-lifted inputs |
+| `--shadow-sm` | `0 2px 8px rgba(74,93,78,0.07)` | Subtle cards |
+| `--shadow-md` | `0 4px 20px rgba(74,93,78,0.09)` | Standard cards (default) |
+| `--shadow-lg` | `0 8px 36px rgba(74,93,78,0.11)` | Elevated / hover state |
+| `--shadow-xl` | `0 16px 56px rgba(74,93,78,0.13)` | Modals, hero cards |
 
 **Floating elements** (nav, badges): Use glassmorphism — `backdrop-blur(20px)` + translucent background, never solid.
 
@@ -208,11 +207,11 @@ Transition: 300ms `ease-in-out`.
 
 ```
 Background:     white (#FFFFFF)
-Border:         1px solid rgba(217, 181, 162, 0.5)  ← ghost border
+Border:         1px solid rgba(197, 200, 190, 0.5)  ← ghost border
 Border-radius:  24px (radius-xl)
 Padding:        24px (space-6)
-Shadow:         0 2px 16px rgba(220, 103, 59, 0.07)
-Hover shadow:   0 8px 36px rgba(220, 103, 59, 0.12)
+Shadow:         0 2px 16px rgba(74, 93, 78, 0.07)
+Hover shadow:   0 8px 36px rgba(74, 93, 78, 0.12)
 Hover lift:     translateY(-2px) over 300ms
 ```
 
@@ -220,31 +219,31 @@ Hover lift:     translateY(-2px) over 300ms
 
 | Variant | Background | Text |
 |---|---|---|
-| `default` | `rgba(220,103,59,0.08)` | `--color-sage-700` |
-| `success` | `rgba(220,103,59,0.12)` | `--color-success` |
-| `warning` | `rgba(249,210,81,0.18)` | `--color-sage-900` |
-| `error` | `rgba(181,75,75,0.12)` | `--color-error` |
-| `gold` | `rgba(249,210,81,0.18)` | `--color-sage-900` |
-| `blush` | `--color-blush` | `--color-text-primary` |
+| `default` | `rgba(228, 235, 230, 0.7)` | `--color-sage-700` |
+| `success` | `#EAF5EE` | `--color-success` |
+| `warning` | `#FDF3E3` | `#C4932A` |
+| `error` | `#FAEAEA` | `--color-error` |
+| `gold` | `rgba(201,169,110,0.12)` | `--color-gold` |
+| `blush` | `--color-blush` | `#755754` |
 
 ### Floating Navigation (Public)
 
 ```
 Base state:      background: transparent
-Scrolled state:  background: rgba(255, 249, 245, 0.85)
+Scrolled state:  background: rgba(248, 250, 243, 0.85)
                  backdrop-filter: blur(20px)
-                 border-bottom: 1px solid rgba(243, 216, 202, 0.6)
+                 border-bottom: 1px solid rgba(223, 227, 218, 0.6)
 Transition:      300ms ease-in-out
 ```
 
 ### Inputs
 
 ```
-Background:     --color-surface-low (#FFF1E8)
-Border:         1px solid rgba(217, 181, 162, 0.6)
+Background:     --color-surface-low (#ECEFE8)
+Border:         1px solid rgba(197, 200, 190, 0.6)
 Border-radius:  --radius-xl (24px) for standalone fields
                 --radius-md (10px) for compact fields
-Focus:          background shifts to cream-200 (#FFF1E8), soft border
+Focus:          background shifts to primary-fixed (#D9E7CD), soft border
 No harsh outlines — use soft glow or bg shift only
 ```
 
@@ -267,13 +266,13 @@ All interactive transitions: **300–400ms** `cubic-bezier(0.4, 0, 0.2, 1)`.
 
 ## 10. Blush Usage (Warm Reward Callouts)
 
-`--color-blush` (`#FFF2BF`) is used for:
+`--color-blush` (`#FED7D2`) is used for:
 - Milestone banners ("founding member", "streak achieved")
 - Achievement section backgrounds
 - Warm welcome / announcement banners
 - "Limited spots" callout sections
 
-Pair with `--color-blush-dark` (`#F9D251`) for icons and text emphasis.
+Pair with `--color-blush-dark` (`#F4B4AE`) for icons and text emphasis.
 Never use blush for error states — it reads as soft/positive.
 
 ---
@@ -284,9 +283,9 @@ Never use blush for error states — it reads as soft/positive.
 |---|---|
 | Use color shifts for section separation | Use 1px solid borders between sections |
 | Glassmorphism for floating elements | Solid opaque backgrounds on floating UI |
-| Primary-tinted shadows | Cold black shadows |
+| Sage-tinted shadows | Cold black shadows |
 | 300–400ms transitions | Instant snaps (`duration-0`, `duration-100`) |
-| `--color-text-primary` (#1B1B1B) | Pure black (#000000) |
+| `--color-text-primary` (#191C18) | Pure black (#000000) |
 | XL radius (24px) on cards | Sharp corners on cards |
 | Generous whitespace | Crowded layouts |
 | Sentence case headings | ALL CAPS headings |
@@ -318,10 +317,10 @@ Sarah wants the site to "complement" restoredfamily.com — same family of aesth
 
 | Token | Hex | RGB | Usage on restoredfamily.com |
 |---|---|---|---|
-| Brand Terracotta | `#DC673B` | `rgb(220, 103, 59)` | Hero accents, CTA sections, highlight moments |
-| Soft Cream | `#FFF1E8` | `rgb(255, 241, 232)` | Alternating section backgrounds |
-| Warm White | `#FFF9F5` | `rgb(255, 249, 245)` | Main content backgrounds |
-| Charcoal | `#1B1B1B` | `rgb(27, 27, 27)` | Primary body text |
+| Deep Sage | `#4A5D4E` | `rgb(74, 93, 78)` | Hero background, CTA sections, accent |
+| Soft Cream | `#F2EDE4` | `rgb(242, 237, 228)` | Alternating section backgrounds |
+| Warm White | `#FAF8F5` | `rgb(250, 248, 245)` | Main content backgrounds |
+| Charcoal | `#2D2D2D` | `rgb(45, 45, 45)` | Primary body text |
 | White | `#FFFFFF` | `rgb(255, 255, 255)` | Text on dark, button fill |
 
 ### ACC Palette (complementary — same family, distinct identity)
@@ -330,30 +329,30 @@ Sarah wants the site to "complement" restoredfamily.com — same family of aesth
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-sage-900` | `#1B1B1B` | Primary dark (nav bg, footer, hero overlay) |
-| `--color-sage-800` | `#C1572F` | Dark sections, hover states |
-| `--color-sage-700` | `#DC673B` | Primary brand (buttons, links, accents) — matches restoredfamily |
-| `--color-sage-600` | `#E98359` | Secondary accents, active states |
-| `--color-sage-500` | `#F1A27F` | Lighter accents, icons |
-| `--color-sage-100` | `#FDE1D5` | Light terracotta tint for subtle backgrounds |
-| `--color-sage-50` | `#FFF5EE` | Barely-there terracotta wash |
+| `--color-sage-900` | `#2F3E33` | Primary dark (nav bg, footer, hero overlay) |
+| `--color-sage-800` | `#3B4D3F` | Dark sections, hover states |
+| `--color-sage-700` | `#4A5D4E` | Primary brand (buttons, links, accents) — matches restoredfamily |
+| `--color-sage-600` | `#5A7060` | Secondary accents, active states |
+| `--color-sage-500` | `#6B8572` | Lighter accents, icons |
+| `--color-sage-100` | `#E8EDE9` | Light sage tint for subtle backgrounds |
+| `--color-sage-50` | `#F3F6F4` | Barely-there sage wash |
 
 #### Neutral Warmth
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-cream-100` | `#FFF9F5` | Page background (warm white) |
-| `--color-cream-200` | `#FFF1E8` | Section alternating background (soft cream) |
-| `--color-cream-300` | `#F3D8CA` | Card borders, dividers |
-| `--color-cream-400` | `#D9B5A2` | Subtle borders, disabled states |
+| `--color-cream-100` | `#FAF8F5` | Page background (warm white) |
+| `--color-cream-200` | `#F2EDE4` | Section alternating background (soft cream) |
+| `--color-cream-300` | `#E8E0D4` | Card borders, dividers |
+| `--color-cream-400` | `#D4C9B9` | Subtle borders, disabled states |
 
 #### Text
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-text-primary` | `#1B1B1B` | Headings, body text on light backgrounds |
-| `--color-text-secondary` | `#5C463B` | Subtext, captions, meta info |
-| `--color-text-tertiary` | `#8B6F61` | Placeholders, disabled text |
+| `--color-text-primary` | `#2D2D2D` | Headings, body text on light backgrounds |
+| `--color-text-secondary` | `#5C5C5C` | Subtext, captions, meta info |
+| `--color-text-tertiary` | `#8A8A8A` | Placeholders, disabled text |
 | `--color-text-inverse` | `#FFFFFF` | Text on dark/sage backgrounds |
 | `--color-text-inverse-muted` | `rgba(255,255,255,0.7)` | Subtext on dark backgrounds |
 
@@ -361,17 +360,17 @@ Sarah wants the site to "complement" restoredfamily.com — same family of aesth
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-success` | `#DC673B` | Active badges, RSVP states, live labels |
-| `--color-warning` | `#F9D251` | Warnings, pending states, limited availability |
+| `--color-success` | `#4A7C59` | Success states, active badges |
+| `--color-warning` | `#C4932A` | Warnings, pending states |
 | `--color-error` | `#B54B4B` | Errors, destructive actions |
-| `--color-info` | `#DC673B` | Informational accents, links |
+| `--color-info` | `#4A6F8C` | Info badges, links |
 
 #### Accent (optional — use sparingly)
 
 | Token | Hex | Usage |
 |---|---|---|
-| `--color-gold` | `#F9D251` | Premium highlights, membership badge |
-| `--color-terracotta` | `#DC673B` | Warm accent for CTAs or callouts |
+| `--color-gold` | `#C9A96E` | Premium highlights, membership badge |
+| `--color-terracotta` | `#C07A5A` | Warm accent for CTAs or callouts |
 
 ---
 
@@ -649,22 +648,22 @@ No bounce, no spring, no parallax. Clean and restrained.
     extend: {
       colors: {
         sage: {
-          50: '#FFF5EE',
-          100: '#FDE1D5',
-          500: '#F1A27F',
-          600: '#E98359',
-          700: '#DC673B',
-          800: '#C1572F',
-          900: '#1B1B1B',
+          50: '#F3F6F4',
+          100: '#E8EDE9',
+          500: '#6B8572',
+          600: '#5A7060',
+          700: '#4A5D4E',
+          800: '#3B4D3F',
+          900: '#2F3E33',
         },
         cream: {
-          100: '#FFF9F5',
-          200: '#FFF1E8',
-          300: '#F3D8CA',
-          400: '#D9B5A2',
+          100: '#FAF8F5',
+          200: '#F2EDE4',
+          300: '#E8E0D4',
+          400: '#D4C9B9',
         },
-        gold: '#F9D251',
-        terracotta: '#DC673B',
+        gold: '#C9A96E',
+        terracotta: '#C07A5A',
       },
       fontFamily: {
         serif: ['Cormorant Garamond', 'Georgia', 'serif'],
@@ -688,9 +687,9 @@ No bounce, no spring, no parallax. Clean and restrained.
 ## 12. Accessibility
 
 - All text meets WCAG 2.1 AA contrast ratios (4.5:1 for body, 3:1 for large text)
-- Sage-700 (`#DC673B`) on cream-100 (`#FFF9F5`): **contrast ratio ~4.8:1** — passes AA
+- Sage-700 (`#4A5D4E`) on cream-100 (`#FAF8F5`): **contrast ratio ~4.8:1** — passes AA
 - White on sage-700: **contrast ratio ~5.2:1** — passes AA
-- Charcoal (`#1B1B1B`) on cream-100: **contrast ratio ~12.5:1** — passes AAA
+- Charcoal (`#2D2D2D`) on cream-100: **contrast ratio ~12.5:1** — passes AAA
 - Focus states must be visible (2px ring)
 - All interactive elements must be keyboard-navigable
 - Images must have alt text

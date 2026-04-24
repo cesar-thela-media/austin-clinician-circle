@@ -874,12 +874,12 @@ export default function HomePage() {
         className="py-28 relative overflow-hidden"
         style={{ background: "var(--color-sage-900)" }}
       >
-        {/* Terracotta radial */}
+        {/* Sage radial */}
         <div
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(circle at 28% 60%, rgba(220,103,59,0.09) 0%, transparent 52%)",
+              "radial-gradient(circle at 28% 60%, rgba(74,93,78,0.12) 0%, transparent 52%)",
           }}
         />
 

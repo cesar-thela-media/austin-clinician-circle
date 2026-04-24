@@ -27,7 +27,7 @@ export function DashboardNav() {
         href="/dashboard"
         className="text-sm font-semibold tracking-wide px-3 mb-8 block"
         style={{
-          fontFamily: "var(--font-serif), Manrope, sans-serif",
+          fontFamily: "var(--font-serif), Georgia, serif",
           color: "#fff",
         }}
       >

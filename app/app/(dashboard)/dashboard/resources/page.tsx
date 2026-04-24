@@ -38,7 +38,7 @@ export default function ResourcesPage() {
     <div className="flex flex-col gap-8">
       <div>
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Resources</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "#fff" }}>
+        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
           Resource library
         </h1>
       </div>
@@ -83,7 +83,7 @@ export default function ResourcesPage() {
         </div>
       </div>
 
-      <p className="text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>
+      <p className="text-xs" style={{ color: "var(--color-text-tertiary)" }}>
         {filtered.length} resource{filtered.length !== 1 ? "s" : ""}
       </p>
 

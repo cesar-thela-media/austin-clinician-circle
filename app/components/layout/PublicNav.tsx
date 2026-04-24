@@ -38,7 +38,7 @@ export function PublicNav() {
             <div className="flex items-center gap-2.5 min-w-0">
               <span
                 className="w-1.5 h-1.5 rounded-full animate-pulse-dot shrink-0"
-                style={{ background: "var(--color-terracotta)" }}
+                style={{ background: "var(--color-sage-500)" }}
               />
               <p className="text-xs" style={{ color: "rgba(255,255,255,0.7)" }}>
                 Now accepting founding members —{" "}
@@ -73,7 +73,7 @@ export function PublicNav() {
               href="/"
               className="text-base font-semibold tracking-wide transition-colors duration-300"
               style={{
-                fontFamily: "var(--font-serif), Manrope, sans-serif",
+                fontFamily: "var(--font-serif), Georgia, serif",
                 color: isHomepage && !scrolled ? "#fff" : "var(--color-sage-800)",
               }}
             >
@@ -153,7 +153,7 @@ export function PublicNav() {
             <span
               className="text-base font-semibold"
               style={{
-                fontFamily: "var(--font-serif), Manrope, sans-serif",
+                fontFamily: "var(--font-serif), Georgia, serif",
                 color: "#fff",
               }}
             >
@@ -177,7 +177,7 @@ export function PublicNav() {
                 onClick={() => setMobileOpen(false)}
                 className="text-3xl font-light"
                 style={{
-                  fontFamily: "var(--font-serif), Manrope, sans-serif",
+                  fontFamily: "var(--font-serif), Georgia, serif",
                   color: "#fff",
                 }}
               >

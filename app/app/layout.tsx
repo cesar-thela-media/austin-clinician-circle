@@ -1,19 +1,12 @@
 import type { Metadata } from "next";
-import { Inter, Manrope, Plus_Jakarta_Sans } from "next/font/google";
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { AosInit } from "@/components/AosInit";
 
-const inter = Inter({
-  variable: "--font-strong",
-  subsets: ["latin"],
-  weight: ["700", "800"],
-  display: "swap",
-});
-
-const manrope = Manrope({
+const cormorant = Cormorant_Garamond({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"],
   display: "swap",
 });
 
@@ -38,7 +31,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${inter.variable} ${manrope.variable} ${jakarta.variable} h-full antialiased`}
+      className={`${cormorant.variable} ${jakarta.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <AosInit />

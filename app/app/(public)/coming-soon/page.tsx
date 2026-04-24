@@ -65,7 +65,7 @@ export default function ComingSoonPage() {
         className="fixed inset-0 pointer-events-none"
         style={{
           backgroundImage:
-            "radial-gradient(circle at 70% 20%, rgba(249,210,81,0.08) 0%, transparent 55%), radial-gradient(circle at 20% 80%, rgba(220,103,59,0.25) 0%, transparent 50%)",
+            "radial-gradient(circle at 70% 20%, rgba(201,169,110,0.08) 0%, transparent 55%), radial-gradient(circle at 20% 80%, rgba(74,93,78,0.22) 0%, transparent 50%)",
         }}
       />
 
@@ -96,7 +96,7 @@ export default function ComingSoonPage() {
             <h1
               className="leading-[1.08] mb-5"
               style={{
-                fontFamily: "var(--font-serif), Manrope, sans-serif",
+                fontFamily: "var(--font-serif), Georgia, serif",
                 fontSize: "clamp(2.25rem, 5vw, 3.75rem)",
                 fontWeight: 400,
                 color: "#fff",
@@ -253,7 +253,7 @@ export default function ComingSoonPage() {
                 <div className="flex flex-col gap-2">
                   <div
                     className="w-10 h-10 rounded-full flex items-center justify-center text-base mb-1"
-                    style={{ background: "rgba(220,103,59,0.16)", color: "#DC673B" }}
+                    style={{ background: "rgba(74,124,89,0.16)", color: "var(--color-success)" }}
                   >
                     ✓
                   </div>
@@ -278,7 +278,7 @@ export default function ComingSoonPage() {
                   <p
                     className="text-xl leading-snug"
                     style={{
-                      fontFamily: "var(--font-serif), Manrope, sans-serif",
+                      fontFamily: "var(--font-serif), Georgia, serif",
                       fontWeight: 400,
                       color: "#fff",
                     }}

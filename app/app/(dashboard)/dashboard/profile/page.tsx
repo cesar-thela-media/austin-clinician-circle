@@ -35,17 +35,17 @@ export default function ProfilePage() {
     <div
       className="flex flex-col gap-8 max-w-2xl"
       style={{
-        ["--input-label-color" as string]: "rgba(255,255,255,0.78)",
-        ["--input-hint-color" as string]: "rgba(255,255,255,0.48)",
+        ["--input-label-color" as string]: "var(--color-text-secondary)",
+        ["--input-hint-color" as string]: "var(--color-text-tertiary)",
         ["--input-text-color" as string]: "var(--color-text-primary)",
       }}
     >
       <div>
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Profile</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "#fff" }}>
+        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
           Edit your profile
         </h1>
-        <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.68)" }}>
+        <p className="text-sm mt-1" style={{ color: "var(--color-text-secondary)" }}>
           Your profile appears in the ACC member directory and clinician search.
         </p>
       </div>
@@ -63,14 +63,14 @@ export default function ProfilePage() {
             </div>
             <div>
               <Button type="button" variant="secondary" size="sm">Upload photo</Button>
-              <p className="text-xs mt-1.5" style={{ color: "rgba(255,255,255,0.48)" }}>
+              <p className="text-xs mt-1.5" style={{ color: "var(--color-text-tertiary)" }}>
                 JPG or PNG. 2MB max. Square crops best.
               </p>
             </div>
           </div>
         </section>
 
-        <hr style={{ borderColor: "rgba(255,255,255,0.12)" }} />
+        <hr style={{ borderColor: "rgba(197,200,190,0.5)" }} />
 
         {/* Basic info */}
         <section className="flex flex-col gap-4">
@@ -83,13 +83,13 @@ export default function ProfilePage() {
           <Input label="City, State" defaultValue="Austin, TX" name="city" hint="Displayed publicly on your profile." />
         </section>
 
-        <hr style={{ borderColor: "rgba(255,255,255,0.12)" }} />
+        <hr style={{ borderColor: "rgba(197,200,190,0.5)" }} />
 
         {/* Credentials */}
         <section className="flex flex-col gap-4">
           <h2 className="text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--color-sage-700)" }}>Credentials</h2>
           <div>
-            <label className="block text-xs font-medium mb-2" style={{ color: "rgba(255,255,255,0.72)" }}>License type</label>
+            <label className="block text-xs font-medium mb-2" style={{ color: "var(--color-text-secondary)" }}>License type</label>
             <div className="flex flex-wrap gap-2">
               {LICENSE_TYPES.map((l) => (
                 <button
@@ -110,7 +110,7 @@ export default function ProfilePage() {
           <Input label="Supervising clinician (if applicable)" placeholder="Name, credentials" name="supervisor" />
         </section>
 
-        <hr style={{ borderColor: "rgba(255,255,255,0.12)" }} />
+        <hr style={{ borderColor: "rgba(197,200,190,0.5)" }} />
 
         {/* Bio & specialties */}
         <section className="flex flex-col gap-4">
@@ -123,8 +123,8 @@ export default function ProfilePage() {
             defaultValue="I'm a licensed professional counselor in Austin, TX with a focus on trauma and anxiety. I work primarily with adults using EMDR and somatic approaches."
           />
           <div>
-            <label className="block text-xs font-medium mb-2" style={{ color: "rgba(255,255,255,0.72)" }}>
-              Specialties <span style={{ color: "rgba(255,255,255,0.48)" }}>(select all that apply)</span>
+            <label className="block text-xs font-medium mb-2" style={{ color: "var(--color-text-secondary)" }}>
+              Specialties <span style={{ color: "var(--color-text-tertiary)" }}>(select all that apply)</span>
             </label>
             <div className="flex flex-wrap gap-2">
               {SPECIALTIES.map((s) => {
@@ -147,13 +147,13 @@ export default function ProfilePage() {
           </div>
         </section>
 
-        <hr style={{ borderColor: "rgba(255,255,255,0.12)" }} />
+        <hr style={{ borderColor: "rgba(197,200,190,0.5)" }} />
 
         {/* Availability */}
         <section className="flex flex-col gap-4">
           <h2 className="text-sm font-semibold uppercase tracking-widest" style={{ color: "var(--color-sage-700)" }}>Availability</h2>
           <div>
-            <label className="block text-xs font-medium mb-2" style={{ color: "rgba(255,255,255,0.72)" }}>Service format</label>
+            <label className="block text-xs font-medium mb-2" style={{ color: "var(--color-text-secondary)" }}>Service format</label>
             <div className="flex gap-2">
               {FORMATS.map((f) => (
                 <button
@@ -184,7 +184,7 @@ export default function ProfilePage() {
                 style={{ transform: accepting ? "translateX(16px)" : "translateX(0)" }}
               />
             </button>
-            <label className="text-sm cursor-pointer" style={{ color: "rgba(255,255,255,0.72)" }}
+            <label className="text-sm cursor-pointer" style={{ color: "var(--color-text-secondary)" }}
               onClick={() => setAccepting((v) => !v)}
             >
               Currently accepting new clients

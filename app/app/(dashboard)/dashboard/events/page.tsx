@@ -95,7 +95,7 @@ export default function EventsPage() {
     <div className="flex flex-col gap-8">
       <div>
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Events</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "#fff" }}>
+        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
           Upcoming events
         </h1>
       </div>
@@ -172,10 +172,10 @@ export default function EventsPage() {
       <div>
         <div className="mb-5">
           <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Practice coaching</p>
-          <h2 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "1.5rem", fontWeight: 400, color: "#fff" }}>
+          <h2 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "1.5rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
             Book a session with Sarah
           </h2>
-          <p className="text-sm mt-1" style={{ color: "rgba(255,255,255,0.68)" }}>
+          <p className="text-sm mt-1" style={{ color: "var(--color-text-secondary)" }}>
             Discounted 1-on-1 practice-building sessions — fees, marketing, burnout, and long-term sustainability. Members only.
           </p>
         </div>

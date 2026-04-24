@@ -65,9 +65,9 @@ docker compose down -v
 
 ## Design
 
-Warm terracotta/cream palette — complementing restoredfamily.com.
+Calm sage/cream palette — complementing restoredfamily.com.
 Typography: Cormorant Garamond (headings) + Plus Jakarta Sans (body).
-Colors: terracotta `#DC673B`, cream `#FFF1E8`, warm white `#FFF9F5`, accent yellow `#F9D251`.
+Colors: sage `#4A5D4E`, soft surface `#F8FAF3`, nested surface `#ECEFE8`, accent gold `#C9A96E`.
 
 ---
 
@@ -81,22 +81,25 @@ Colors: terracotta `#DC673B`, cream `#FFF1E8`, warm white `#FFF9F5`, accent yell
 
 ---
 
-## Requirements
+## Documentation
 
-Full documentation in [`notes/requirement/`](./notes/requirement/):
+All docs live in [`docs/`](./docs/):
 
-- **[PRD](./notes/requirement/PRD.md)** — Product scope, user stories, page specs, subscription model, MVP definition, success metrics
-- **[Design System](./notes/requirement/design-system.md)** — Color palette, typography, component specs, Tailwind token reference
-- **[System Design](./notes/requirement/system-design.md)** — Architecture diagram, database ERD, auth flow, Stripe payment flow, file storage flow, API structure, deployment pipeline
-- **[Questions for Sarah](./notes/requirement/questions-for-sarah.md)** — Open items before build begins (pricing, content, legal, integrations)
+- **[PRD](./docs/PRD.md)** — Product scope, user stories, page specs, subscription model, MVP definition, success metrics
+- **[Design System](./docs/design-system.md)** — Color palette, typography, component specs, Tailwind token reference
+- **[Design Strategy](./docs/DESIGN.md)** — Design intent and rationale
+- **[System Design](./docs/system-design.md)** — Architecture diagram, database ERD, auth flow, Stripe payment flow, file storage flow, API structure, deployment pipeline
 
 ---
 
 ## Project Structure
 
 ```
-app/          # Next.js application
-notes/
-  requirement/  # PRD, design system, system design, open questions
-  diagrams/     # 8 architecture/flow diagrams (PNG)
+app/                      # Next.js application (main codebase)
+docs/                     # PRD, design system, system design
+diagrams/                 # Architecture and flow diagrams (PNG)
+  design-references/      # Visual design reference images
+images/                   # Production photos
+  screenshots/            # UI review screenshots
+notes/                    # Developer notes (blockers, client requests)
 ```

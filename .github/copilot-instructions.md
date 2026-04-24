@@ -9,40 +9,40 @@ Not a client-facing therapy platform — it serves therapists.
 Stack: Next.js App Router, TypeScript, Tailwind CSS v4, BetterAuth, Drizzle ORM, PostgreSQL (Railway), Stripe, Cloudflare R2, Resend, Vercel.
 
 App lives at: `app/` (Next.js project root)
-Docs live at: `PRD.md`, `design-system.md`, `system-design.md` in repo root
-Diagrams: `notes/diagrams/*.png`
+Docs live at: `docs/` — PRD, design system, DESIGN, system-design
+Diagrams: `diagrams/*.png` (system diagrams), `diagrams/design-references/` (visual references)
 
 ---
 
 ## Design System
 
-Always refer to `design-system.md` for the full spec. Summary:
+Always refer to `docs/design-system.md` for the full spec. Summary:
 
 Fonts: Cormorant Garamond (serif, headings) + Plus Jakarta Sans (sans, body)
 Loaded via next/font/google as CSS variables: --font-serif, --font-sans
 
 Colors (always use CSS variables, never raw hex):
-- --color-sage-900: #1B1B1B  (dark nav, footer)
-- --color-sage-800: #C1572F
-- --color-sage-700: #DC673B  (primary brand, buttons, links)
-- --color-sage-600: #E98359
-- --color-sage-500: #F1A27F
-- --color-sage-100: #FDE1D5
-- --color-sage-50:  #FFF5EE
-- --color-cream-100: #FFF9F5  (page background)
-- --color-cream-200: #FFF1E8  (section alt background)
-- --color-cream-300: #F3D8CA  (borders, dividers)
-- --color-cream-400: #D9B5A2
-- --color-text-primary: #1B1B1B
-- --color-text-secondary: #5C463B
-- --color-text-tertiary: #8B6F61
+- --color-sage-900: #2F3E33  (dark hero, footer, deep sections)
+- --color-sage-800: #3B4D3F
+- --color-sage-700: #4A5D4E  (primary brand, buttons, links)
+- --color-sage-600: #5A7060
+- --color-sage-500: #6B8572
+- --color-sage-100: #E4EBE6
+- --color-sage-50:  #F3F6F4
+- --color-cream-100: #F8FAF3  (page background)
+- --color-cream-200: #ECEFE8  (section alt background)
+- --color-cream-300: #DFE3DA  (borders, dividers)
+- --color-cream-400: #C5C8BE
+- --color-text-primary: #191C18
+- --color-text-secondary: #444841
+- --color-text-tertiary: #75796E
 - --color-text-inverse: #FFFFFF
 - --color-error: #B54B4B
-- --color-success: #DC673B
-- --color-gold: #F9D251
+- --color-success: #4A7C59
+- --color-gold: #C9A96E
 
 Borders: rounded-full for buttons/pills, rounded-2xl for cards
-Shadows: soft warm — shadow-md for cards, shadow-lg for modals
+Shadows: soft sage-tinted ambient — shadow-md for cards, shadow-lg for modals
 
 ---
 

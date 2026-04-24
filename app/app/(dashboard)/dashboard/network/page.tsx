@@ -24,14 +24,14 @@ export default function NetworkPage() {
     <div className="flex flex-col gap-10">
       <div>
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Network</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "#fff" }}>
+        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
           Referral network
         </h1>
       </div>
 
       {/* Recent referral activity */}
       <div>
-        <h2 className="text-base font-semibold mb-4" style={{ color: "#fff" }}>Recent referral activity</h2>
+        <h2 className="text-base font-semibold mb-4" style={{ color: "var(--color-sage-900)" }}>Recent referral activity</h2>
         <Card className="flex flex-col divide-y" style={{ padding: 0 }}>
           {referralActivity.map((r, i) => (
             <div key={i} className="flex items-center justify-between gap-4 px-6 py-4">
@@ -55,7 +55,7 @@ export default function NetworkPage() {
       <div>
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-base font-semibold" style={{ color: "var(--color-sage-800)" }}>Member directory</h2>
-          <p className="text-xs" style={{ color: "rgba(255,255,255,0.55)" }}>{MEMBERS.length} members</p>
+          <p className="text-xs" style={{ color: "var(--color-text-tertiary)" }}>{MEMBERS.length} members</p>
         </div>
         <div className="flex flex-col gap-3">
           {MEMBERS.map((m) => (

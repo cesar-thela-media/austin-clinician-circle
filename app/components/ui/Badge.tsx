@@ -9,11 +9,11 @@ interface BadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, { background: string; color: string }> = {
-  default: { background: "rgba(220,103,59,0.08)", color: "var(--color-sage-700)" },
-  success: { background: "rgba(220,103,59,0.12)", color: "var(--color-success)" },
-  warning: { background: "rgba(249,210,81,0.18)", color: "var(--color-sage-900)" },
+  default: { background: "rgba(228,235,230,0.7)", color: "var(--color-sage-700)" },
+  success: { background: "rgba(74,124,89,0.12)", color: "var(--color-success)" },
+  warning: { background: "rgba(201,169,110,0.18)", color: "var(--color-warning)" },
   error:   { background: "rgba(181,75,75,0.12)", color: "var(--color-error)" },
-  gold:    { background: "rgba(249,210,81,0.18)", color: "var(--color-sage-900)" },
+  gold:    { background: "rgba(201,169,110,0.12)", color: "var(--color-gold)" },
   blush:   { background: "var(--color-blush)", color: "var(--color-text-primary)" },
 };
 

@@ -7,7 +7,7 @@ This design system moves away from the aggressive "productivity-first" utility o
 ---
 
 ## 2. Colors & Surface Architecture
-The palette is a sophisticated interplay of terracotta, warm yellow, and organic off-whites. The objective is "tonal depth" rather than "structural containment."
+The palette is a sophisticated interplay of sage, blush, and organic off-whites. The objective is "tonal depth" rather than "structural containment."
 
 ### The "No-Line" Rule
 **Prohibit 1px solid borders for sectioning.** 
@@ -15,14 +15,14 @@ Boundaries must be defined solely through background color shifts. A `surface-co
 
 ### Surface Hierarchy & Nesting
 Treat the UI as a physical stack of materials. 
-- **Base Layer:** `surface` (#FFF9F5) or `surface-bright`.
-- **Secondary Content:** `surface-container-low` (#FFF1E8).
+- **Base Layer:** `surface` (#f8faf3) or `surface-bright`.
+- **Secondary Content:** `surface-container-low` (#f2f4ed).
 - **Interactive Modules:** Nest a `surface-container-lowest` (#ffffff) card within a `surface-container-low` section to create a soft, natural lift.
 
 ### The "Glass & Gradient" Rule
 To elevate the "Zenith" experience, main CTAs and floating elements should utilize **Glassmorphism**. 
 - **Floating Nav Background:** `surface` at 70% opacity with a `backdrop-blur` of 20px.
-- **Signature Gradients:** For primary CTAs or progress rings, use a subtle linear gradient from `primary` (#DC673B) to `secondary` (#F9D251) at a 135-degree angle. This adds "soul" and organic depth.
+- **Signature Gradients:** For primary CTAs or progress rings, use a subtle linear gradient from `primary` (#55624d) to `primary-container` (#98a68e) at a 135-degree angle. This adds "soul" and organic depth.
 
 ---
 
@@ -31,7 +31,7 @@ We utilize a pairing of **Manrope** for structural authority and **Plus Jakarta 
 
 - **Display & Headlines (Manrope):** Large, airy, and centered. Use `display-lg` (3.5rem) for mood-setting moments (e.g., "Good morning, Sarah"). The generous kerning and scale convey a premium editorial feel.
 - **Titles & Body (Plus Jakarta Sans):** These levels provide the "intuitive" functional layer. Use `title-md` for card headings to ensure they feel grounded but elegant.
-- **Hierarchy through Weight, not just Size:** Use `primary` color for headlines to keep them soft, and `on-surface-variant` (#5C463B) for body text to reduce high-contrast eye strain.
+- **Hierarchy through Weight, not just Size:** Use `primary` color for headlines to keep them soft, and `on-surface-variant` (#444841) for body text to reduce high-contrast eye strain.
 
 ---
 
@@ -39,8 +39,8 @@ We utilize a pairing of **Manrope** for structural authority and **Plus Jakarta 
 Traditional shadows are often too "heavy" for a tranquility-focused app. We use **Ambient Softness.**
 
 - **The Layering Principle:** Depth is achieved by "stacking." A `surface-container-highest` element should only appear on top of a `surface-dim` layer. 
-- **Ambient Shadows:** When a card must float (e.g., a meditation player), use a shadow with a 40px blur, 0px spread, and 6% opacity. The shadow color must be a tinted version of `primary` (e.g., #DC673B at 6%) rather than black.
-- **The "Ghost Border" Fallback:** If a border is required for accessibility, use `outline-variant` (#D9B5A2) at **15% opacity**. Anything higher disrupts the "Sanctuary" aesthetic.
+- **Ambient Shadows:** When a card must float (e.g., a meditation player), use a shadow with a 40px blur, 0px spread, and 6% opacity. The shadow color must be a tinted version of `primary` (e.g., #55624d at 6%) rather than black.
+- **The "Ghost Border" Fallback:** If a border is required for accessibility, use `outline-variant` (#c5c8be) at **15% opacity**. Anything higher disrupts the "Sanctuary" aesthetic.
 
 ---
 
@@ -61,7 +61,7 @@ Traditional shadows are often too "heavy" for a tranquility-focused app. We use 
 
 ### Input Fields
 - **Style:** Minimalist. No bottom border or box. Use a `surface-container-low` background with an `xl` corner radius. 
-- **States:** On focus, transition the background color to `primary-fixed` (#FDE1D5) rather than adding a heavy border.
+- **States:** On focus, transition the background color to `primary-fixed` (#d9e7cd) rather than adding a heavy border.
 
 ---
 
@@ -69,11 +69,11 @@ Traditional shadows are often too "heavy" for a tranquility-focused app. We use 
 
 ### Do
 - **Do** prioritize negative space. If a screen feels "full," increase the spacing scale by one increment.
-- **Do** use `secondary_container` (#FFF2BF) for "High-Emotion" moments like completed streaks or badges to provide a soft, warm reward.
+- **Do** use `secondary_container` (#fed7d2) for "High-Emotion" moments like completed streaks or badges to provide a soft, warm reward.
 - **Do** use asymmetrical layouts (e.g., a header aligned left with a sub-label offset to the right) to break the "standard app" feel.
 
 ### Don't
-- **Don't** use solid black (#000000) anywhere. Even "on-surface" should be the soft charcoal of #1B1B1B.
+- **Don't** use solid black (#000000) anywhere. Even "on-surface" should be the soft charcoal of #191c18.
 - **Don't** use sharp corners. Every interactive element must have at least a `md` (0.75rem) radius to remain "Tranquil."
 - **Don't** use "Pop" animations. Use ease-in-out transitions with durations of 400ms+ to mimic the slow pace of a deep breath.
 
@@ -83,10 +83,10 @@ Traditional shadows are often too "heavy" for a tranquility-focused app. We use 
 
 | Token | Value | Usage |
 | :--- | :--- | :--- |
-| **Surface Base** | `#FFF9F5` | Main background |
-| **Surface Nest** | `#FFF1E8` | Secondary sections / Content grouping |
+| **Surface Base** | `#f8faf3` | Main background |
+| **Surface Nest** | `#ecefe8` | Secondary sections / Content grouping |
 | **Interactive Card**| `#ffffff` | Floating modules / Task cards |
-| **Primary Accent** | `#DC673B` | Key icons, Headlines, Primary Buttons |
-| **Soft Callout** | `#F9D251` | Secondary actions / Warm accents |
+| **Primary Accent** | `#55624d` | Key icons, Headlines, Primary Buttons |
+| **Soft Callout** | `#755754` | Secondary actions / Warm accents |
 | **Radius: Large** | `1rem` | Standard cards and inputs |
 | **Radius: XL** | `1.5rem` | Hero containers |

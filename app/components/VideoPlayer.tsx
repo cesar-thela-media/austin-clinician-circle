@@ -25,7 +25,7 @@ export function VideoPlayer() {
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(135deg, var(--color-sage-900) 0%, #8C3F22 100%)",
+            "linear-gradient(135deg, var(--color-sage-900) 0%, var(--color-sage-700) 100%)",
         }}
       />
 
@@ -54,7 +54,7 @@ export function VideoPlayer() {
         className="absolute inset-0"
         style={{
           backgroundImage:
-            "radial-gradient(ellipse at 80% 30%, rgba(220,103,59,0.07) 0%, transparent 45%)",
+            "radial-gradient(ellipse at 80% 30%, rgba(74,93,78,0.12) 0%, transparent 45%)",
         }}
       />
 
@@ -95,7 +95,7 @@ export function VideoPlayer() {
               <p
                 className="text-xl font-light"
                 style={{
-                  fontFamily: "var(--font-serif), Manrope, sans-serif",
+                  fontFamily: "var(--font-serif), Georgia, serif",
                   color: "#fff",
                   letterSpacing: "-0.01em",
                 }}
@@ -146,7 +146,7 @@ export function VideoPlayer() {
           <p
             className="text-2xl font-light"
             style={{
-              fontFamily: "var(--font-serif), Manrope, sans-serif",
+              fontFamily: "var(--font-serif), Georgia, serif",
               color: "#fff",
             }}
           >

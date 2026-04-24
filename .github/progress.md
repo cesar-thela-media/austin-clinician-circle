@@ -1,0 +1,31 @@
+# Progress Log
+
+## 2026-04-24
+- Refined `PRD.md` again per feedback: replacing Mermaid diagrams with manual text-based diagrams for better readability and less code-like presentation.
+- Completed PRD diagram refresh: all Mermaid blocks removed and replaced with clean ASCII/text diagrams in sections 4 and 5.
+- Reviewed `landon-PRD.md` (employer template) against `PRD.md` to evaluate structure quality and portability for ACC.
+- Delivered recommendation: keep employer-style Table of Contents and decision-oriented sections, but trim marketing-only sections and preserve ACC product-specific scope.
+- Full PRD refactor complete: rewrote `PRD.md` v2.0 in Landon's style (19 sections, TOC, personas, brand system, page specs, data model, permissions matrix, security, milestones, appendix). Merged design system v2.0 tokens into the PRD for single-source-of-truth.
+- Delivered reusable PRD generation prompt for future projects.
+- Adjusted PRD status to "Draft — Pending Approval" and reframed §2.2 to honestly position early work as exploratory, not final. PRD is now ready to send for review.
+- Workspace reorganized — all files moved, nothing deleted:
+  - Created `docs/` — moved PRD, design-system, DESIGN, system-design there
+  - Created `diagrams/design-references/` — moved 4 reference PNGs from old `new-design-system.md/` folder
+  - Renamed `new-design-system.md/` (confusingly-named folder) to `design-archived/` (now empty)
+  - Created `images/screenshots/` — moved UI check screenshots there; production photos stay at `images/`
+  - Renamed `cesar-notes/` to `notes/`
+  - Updated `copilot-instructions.md` paths to reflect `docs/` and `diagrams/`
+  - Updated `README.md` with correct Documentation and Project Structure sections
+- Started repo sync task to pull the latest remote changes safely while preserving current local workspace changes, then launch localhost for review.
+- Pulled latest remote branch `cesar` successfully to commit `7046d9a` (`design: refresh brand system and dashboard styling`).
+- Preserved local workspace changes during pull, then cleared the temporary stash conflict state (docs-only path collisions from the earlier file reorganization). No unmerged files remain.
+- Started the Next.js app from `app/` and verified it locally at `http://localhost:3000` in the browser.
+- Started rollback from the orange/Inter dashboard refresh: restoring the original green sage palette, original serif/sans font stack, and a light dashboard content area before rebuild verification.
+- Completed the visual rollback to the original sage system across the app shell, shared UI, dashboard pages, coming-soon flow, email template, and PDF styling.
+- Fixed the `@react-pdf/renderer` build type error in `app/app/api/leads/route.ts` by passing a typed document element directly to `renderToBuffer`.
+- Added `app/.env` with safe placeholders for `RESEND_API_KEY`, `RESEND_FROM_EMAIL`, and `SARAH_EMAIL` because the leads flow depends on env configuration.
+- `npm run build` now passes successfully from `app/` with no TypeScript or Next.js build errors.
+- Reopened localhost and verified the live UI after clearing a stale dev server: dashboard sidebar is back to sage green, dashboard content area is light/cream, restored fonts are active, and browser console checks were clean on `/`, `/coming-soon`, `/sign-in`, and `/dashboard/profile`.
+- Started repo publish step for this prompt: preparing the current ACC rollback/build-verified changes for commit and push to the existing remote branch.
+- Inspected git state on branch `cesar`, confirmed the working tree contains the verified rollback plus the earlier docs/notes/diagram reorganization, and sanity-checked newly untracked files before staging.
+- Keeping local-only helper artifacts (`app/.vscode/tasks.json` and `codespace-convo.md`) out of the commit while staging the actual ACC repo changes for push to `origin/cesar`.

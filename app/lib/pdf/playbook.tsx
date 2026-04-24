@@ -1,21 +1,23 @@
 import {
   Document,
+  type DocumentProps,
   Page,
   Text,
   View,
   StyleSheet,
   Link,
 } from "@react-pdf/renderer";
+import type { ReactElement } from "react";
 
 // ─── Palette ──────────────────────────────────────────────────────────────
-const SAGE_900 = "#1B1B1B";
-const SAGE_700 = "#DC673B";
-const SAGE_600 = "#E98359";
-const SAGE_100 = "#FDE1D5";
-const GOLD = "#F9D251";
-const CREAM = "#FFF9F5";
-const TEXT = "#1B1B1B";
-const TEXT_SEC = "#5C463B";
+const SAGE_900 = "#2F3E33";
+const SAGE_700 = "#4A5D4E";
+const SAGE_600 = "#5A7060";
+const SAGE_100 = "#E4EBE6";
+const GOLD = "#C9A96E";
+const CREAM = "#F8FAF3";
+const TEXT = "#191C18";
+const TEXT_SEC = "#444841";
 
 const s = StyleSheet.create({
   page: {
@@ -216,7 +218,7 @@ const s = StyleSheet.create({
   },
   goldBoxText: {
     fontSize: 9.5,
-    color: "#1B1B1B",
+    color: TEXT,
     lineHeight: 1.6,
   },
 
@@ -328,7 +330,7 @@ function Footer({ page }: { page: number }) {
 
 // ─── Document ─────────────────────────────────────────────────────────────
 
-export function PlaybookDocument({ firstName }: { firstName: string }) {
+export function PlaybookDocument({ firstName }: { firstName: string }): ReactElement<DocumentProps> {
   return (
     <Document
       title="The Private Practice Playbook"
