@@ -29,3 +29,4 @@
 - Started repo publish step for this prompt: preparing the current ACC rollback/build-verified changes for commit and push to the existing remote branch.
 - Inspected git state on branch `cesar`, confirmed the working tree contains the verified rollback plus the earlier docs/notes/diagram reorganization, and sanity-checked newly untracked files before staging.
 - Keeping local-only helper artifacts (`app/.vscode/tasks.json` and `codespace-convo.md`) out of the commit while staging the actual ACC repo changes for push to `origin/cesar`.
+- Committed the staged ACC rollback + docs reorganization work on branch `cesar` and pushed it to `origin/cesar` successfully.
