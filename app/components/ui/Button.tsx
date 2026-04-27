@@ -14,7 +14,7 @@ const variantStyles: Record<ButtonVariant, string> = {
   secondary:
     "bg-transparent text-[var(--color-sage-700)] border border-[var(--color-sage-700)] hover:bg-[var(--color-sage-50)] hover:border-[var(--color-sage-800)] hover:text-[var(--color-sage-800)]",
   accent:
-    "bg-[var(--color-accent-secondary)] text-white hover:opacity-90 hover:shadow-md",
+    "bg-[var(--color-accent-secondary)] text-[var(--color-text-primary)] hover:opacity-90 hover:shadow-md",
   ghost:
     "bg-transparent text-[var(--color-text-primary)] hover:bg-[var(--color-cream-200)]",
   inverse:

@@ -113,9 +113,9 @@ export default function ComingSoonPage() {
           {/* ── Left: copy ── */}
           <div>
             {/* Eyebrow */}
-            <div className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full" style={{ background: "rgba(var(--color-accent-secondary-rgb), 0.14)", border: "1px solid rgba(var(--color-accent-secondary-rgb), 0.28)" }}>
-              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--color-accent-highlight)" }} />
-              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-accent-highlight)" }}>
+            <div className="inline-flex items-center gap-2 mb-6 px-3.5 py-1.5 rounded-full" style={{ background: "var(--color-accent-secondary)", border: "1px solid rgba(27,27,27,0.08)" }}>
+              <span className="w-1.5 h-1.5 rounded-full" style={{ background: "var(--color-text-primary)" }} />
+              <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-text-primary)" }}>
                 Free guide for Austin therapists
               </span>
             </div>
@@ -150,7 +150,7 @@ export default function ComingSoonPage() {
                 <li key={item} className="flex items-start gap-3">
                   <span
                     className="mt-0.5 shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-xs"
-                    style={{ background: "rgba(var(--color-accent-highlight-rgb), 0.18)", color: "var(--color-sage-700)" }}
+                    style={{ background: "rgba(var(--color-accent-highlight-rgb), 0.18)", color: "var(--color-text-primary)" }}
                   >
                     ✓
                   </span>
@@ -297,8 +297,8 @@ export default function ComingSoonPage() {
 
                 {/* Tripwire offer */}
                 <div className="flex flex-col gap-3">
-                  <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full" style={{ background: "rgba(var(--color-accent-highlight-rgb), 0.14)", border: "1px solid rgba(var(--color-accent-highlight-rgb), 0.32)" }}>
-                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-accent-highlight)" }}>
+                  <div className="inline-flex items-center gap-2 self-start px-3 py-1 rounded-full" style={{ background: "var(--color-accent-highlight)", border: "1px solid rgba(27,27,27,0.08)" }}>
+                    <span className="text-xs font-semibold uppercase tracking-widest" style={{ color: "var(--color-text-primary)" }}>
                       One more thing
                     </span>
                   </div>
@@ -319,26 +319,26 @@ export default function ComingSoonPage() {
                   {/* Urgency bar */}
                   <div
                     className="rounded-xl p-4 flex flex-col gap-2"
-                    style={{ background: "rgba(var(--color-accent-highlight-rgb), 0.08)", border: "1px solid rgba(var(--color-accent-highlight-rgb), 0.18)" }}
+                    style={{ background: "rgba(var(--color-accent-highlight-rgb), 0.88)", border: "1px solid rgba(27,27,27,0.08)" }}
                   >
                     <div className="flex justify-between items-center">
-                      <span className="text-xs font-medium" style={{ color: "rgba(255,255,255,0.5)" }}>
+                      <span className="text-xs font-medium" style={{ color: "rgba(27,27,27,0.62)" }}>
                         Founding spots remaining
                       </span>
-                      <span className="text-sm font-bold" style={{ color: "var(--color-accent-highlight)" }}>
+                      <span className="text-sm font-bold" style={{ color: "var(--color-text-primary)" }}>
                         {SPOTS_REMAINING} of 40
                       </span>
                     </div>
-                    <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(255,255,255,0.08)" }}>
+                    <div className="h-1.5 rounded-full overflow-hidden" style={{ background: "rgba(27,27,27,0.12)" }}>
                       <div
                         className="h-full rounded-full"
                         style={{
                           width: `${((40 - SPOTS_REMAINING) / 40) * 100}%`,
-                          background: "var(--color-accent-highlight)",
+                          background: "var(--color-text-primary)",
                         }}
                       />
                     </div>
-                    <p className="text-xs" style={{ color: "rgba(255,255,255,0.35)" }}>
+                    <p className="text-xs" style={{ color: "rgba(27,27,27,0.62)" }}>
                       {40 - SPOTS_REMAINING} therapists have already applied
                     </p>
                   </div>

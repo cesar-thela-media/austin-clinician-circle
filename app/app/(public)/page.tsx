@@ -428,7 +428,7 @@ export default function HomePage() {
                 className="text-sm font-medium leading-snug"
                 style={{
                   fontFamily: "var(--font-serif), Manrope, sans-serif",
-                  color: "#fff",
+                  color: "var(--color-text-primary)",
                   fontSize: "1rem",
                   fontStyle: "italic",
                 }}

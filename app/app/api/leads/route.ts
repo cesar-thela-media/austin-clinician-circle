@@ -49,7 +49,6 @@ export async function POST(req: NextRequest) {
   const apiKey = process.env.RESEND_API_KEY;
   if (!apiKey) {
     // Dev mode: PDF generated successfully but email not sent
-    console.warn("[leads] RESEND_API_KEY not set — skipping email send (dev mode).");
     return NextResponse.json({ ok: true, dev: true });
   }
 

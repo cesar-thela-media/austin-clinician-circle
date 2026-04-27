@@ -176,7 +176,7 @@ export default function DashboardPage() {
         <div className="flex flex-col gap-1">
           <p
             className="text-xs font-medium uppercase tracking-widest"
-            style={{ color: "var(--color-sage-700)" }}
+            style={{ color: "var(--color-text-primary)" }}
           >
             Weekly ritual
           </p>
