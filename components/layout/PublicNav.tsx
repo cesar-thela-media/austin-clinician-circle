@@ -47,7 +47,7 @@ export function PublicNav() {
           <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
             <Link
               href="/"
-              className="text-base font-semibold tracking-wide transition-colors duration-300"
+              className="text-lg font-semibold tracking-wide transition-colors duration-300"
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
                 color: isHomepage && !scrolled ? "#fff" : "var(--color-sage-800)",
@@ -136,7 +136,7 @@ export function PublicNav() {
               Navigate
             </p>
             <span
-              className="text-base font-semibold"
+              className="text-lg font-semibold"
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
                 color: "#fff",

@@ -2,13 +2,6 @@ import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import Link from "next/link";
 
-const stats = [
-  { label: "Resources available", value: "48" },
-  { label: "Members in network", value: "24" },
-  { label: "Events this month", value: "3" },
-  { label: "CEU credits logged", value: "6.5" },
-];
-
 const upcomingEvents = [
   {
     title: "Monthly case consultation",
@@ -38,7 +31,7 @@ const recentResources = [
 
 export default function DashboardPage() {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 2xl:gap-14">
       {/* Header */}
       <div>
         <p
@@ -47,36 +40,9 @@ export default function DashboardPage() {
         >
           Member dashboard
         </p>
-        <h1
-          style={{
-            fontFamily: "var(--font-serif), Manrope, sans-serif",
-            fontSize: "2rem",
-            fontWeight: 400,
-            color: "var(--color-sage-900)",
-          }}
-        >
+        <h1 className="text-page-title">
           Welcome back, Jane.
         </h1>
-      </div>
-
-      {/* Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-        {stats.map((s) => (
-          <Card key={s.label} className="flex flex-col gap-1 py-5">
-            <p
-              className="text-3xl font-light"
-              style={{
-                fontFamily: "var(--font-serif), Manrope, sans-serif",
-                color: "var(--color-sage-700)",
-              }}
-            >
-              {s.value}
-            </p>
-            <p className="text-xs" style={{ color: "var(--color-text-tertiary)" }}>
-              {s.label}
-            </p>
-          </Card>
-        ))}
       </div>
 
       {/* Quick actions */}
@@ -117,7 +83,7 @@ export default function DashboardPage() {
           MO
         </div>
         <div className="flex-1 min-w-0">
-          <p className="text-xs font-medium uppercase tracking-widest mb-1" style={{ color: "var(--color-sage-600)" }}>
+          <p className="text-eyebrow">
             Member spotlight
           </p>
           <p className="text-sm font-semibold" style={{ color: "var(--color-text-primary)" }}>
@@ -188,7 +154,9 @@ export default function DashboardPage() {
                 {ev.rsvp ? (
                   <Badge variant="success">RSVP&apos;d</Badge>
                 ) : (
-                  <Badge>RSVP</Badge>
+                  <Link href="/dashboard/events">
+                    <Badge>RSVP</Badge>
+                  </Link>
                 )}
               </div>
             ))}
@@ -230,46 +198,6 @@ export default function DashboardPage() {
             ))}
           </div>
         </Card>
-      </div>
-
-      {/* Weekly milestone: warm accent callout */}
-      <div
-        className="rounded-2xl p-6 flex items-center justify-between gap-6"
-        style={{
-          background: "rgba(var(--color-accent-highlight-rgb), 0.16)",
-          border: "1px solid rgba(var(--color-accent-highlight-rgb), 0.24)",
-        }}
-      >
-        <div className="flex flex-col gap-1">
-          <p
-            className="text-xs font-medium uppercase tracking-widest"
-            style={{ color: "var(--color-text-primary)" }}
-          >
-            Weekly ritual
-          </p>
-          <p
-            className="text-base font-semibold"
-            style={{
-              fontFamily: "var(--font-serif), Manrope, sans-serif",
-              color: "var(--color-text-primary)",
-              fontSize: "1.25rem",
-            }}
-          >
-            You&apos;ve attended 4 consultation groups in a row.
-          </p>
-          <p className="text-sm mt-0.5" style={{ color: "var(--color-text-primary)" }}>
-            Consistency is the foundation of great clinical work.
-          </p>
-        </div>
-        <div
-          className="w-14 h-14 rounded-full flex items-center justify-center text-2xl shrink-0"
-          style={{
-            background: "rgba(255,255,255,0.45)",
-            color: "var(--color-sage-700)",
-          }}
-        >
-          ◈
-        </div>
       </div>
 
       {/* Membership status */}

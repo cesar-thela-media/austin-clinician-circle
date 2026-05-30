@@ -27,7 +27,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-[1.35fr,0.9fr,0.9fr,1fr] gap-8 md:gap-10 mb-10 md:mb-12 text-center md:text-left">
           <div>
             <p
-              className="text-lg font-semibold mb-3"
+              className="text-xl font-semibold mb-3"
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
                 color: "#fff",

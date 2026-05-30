@@ -96,10 +96,8 @@ export default function AdminApplicationsPage() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Admin</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
-          Applications
-        </h1>
+        <p className="text-eyebrow">Admin</p>
+        <h1 className="text-page-title">Applications</h1>
       </div>
 
       {/* Filter tabs */}

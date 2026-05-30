@@ -111,13 +111,12 @@ export default function HomePage() {
           }}
         />
 
-        <div
-          className="absolute -top-24 -right-24 w-[28rem] h-[28rem] rounded-full pointer-events-none"
-          style={{ border: "1px solid rgba(var(--color-accent-highlight-rgb), 0.09)" }}
+        <div className="absolute -top-24 -right-24 w-[28rem] h-[28rem] rounded-full pointer-events-none"
+          style={{ border: "1px solid rgba(var(--color-accent-highlight-rgb), 0.09)", animation: "float 8s ease-in-out infinite" }}
         />
         <div
           className="absolute top-16 right-24 w-64 h-64 rounded-full pointer-events-none"
-          style={{ border: "1px solid rgba(var(--color-accent-highlight-rgb), 0.06)" }}
+          style={{ border: "1px solid rgba(var(--color-accent-highlight-rgb), 0.06)", animation: "float 12s ease-in-out infinite reverse" }}
         />
         <div
           className="absolute -bottom-40 -left-40 w-[40rem] h-[40rem] rounded-full pointer-events-none"
@@ -125,7 +124,7 @@ export default function HomePage() {
         />
 
         <div className="flex-1 flex items-center relative z-10">
-          <div className="max-w-6xl mx-auto px-5 md:px-6 py-6 md:py-10 w-full">
+          <div className="container-fluid py-6 md:py-10 w-full">
             <div>
               <p
                 className="text-xs font-medium uppercase tracking-widest mb-6 md:mb-8 inline-flex items-center gap-2"
@@ -209,18 +208,33 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Scroll indicator */}
+      <div
+        className="hidden md:flex fixed bottom-8 left-1/2 -translate-x-1/2 flex-col items-center gap-2 z-20 pointer-events-none"
+        style={{ animation: "fadeIn 1s 1.2s both" }}
+      >
+        <span
+          className="w-px h-10 block"
+          style={{
+            background: "linear-gradient(to bottom, rgba(255,255,255,0.3), transparent)",
+            animation: "pulseDot 2s ease-in-out infinite",
+          }}
+        />
+      </div>
+
+      {/* Why The Circle exists section */}
       <section
-        className="py-20 md:py-28 relative overflow-hidden"
+        className="py-20 md:py-28 xl:py-32 relative overflow-hidden"
         style={{ background: "var(--color-sage-700)" }}
       >
-        {/* Decorative rings — subtle depth */}
+        {/* Decorative rings */}
         <div
           className="absolute -top-32 -right-32 w-[32rem] h-[32rem] rounded-full pointer-events-none"
-          style={{ border: "1px solid rgba(255,255,255,0.05)" }}
+          style={{ border: "1px solid rgba(255,255,255,0.06)" }}
         />
         <div
           className="absolute -bottom-20 -left-20 w-72 h-72 rounded-full pointer-events-none"
-          style={{ border: "1px solid rgba(255,255,255,0.04)" }}
+          style={{ border: "1px solid rgba(255,255,255,0.05)" }}
         />
 
         {/* Warm radial glow */}
@@ -228,11 +242,20 @@ export default function HomePage() {
           className="absolute inset-0 pointer-events-none"
           style={{
             backgroundImage:
-              "radial-gradient(ellipse at 50% 40%, rgba(var(--color-accent-highlight-rgb), 0.06) 0%, transparent 60%)",
+              "radial-gradient(ellipse at 50% 40%, rgba(var(--color-accent-highlight-rgb), 0.08) 0%, transparent 60%)",
           }}
         />
 
-        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center relative z-10">
+        {/* Subtle sage-to-cream texture overlay */}
+        <div
+          className="absolute inset-0 pointer-events-none opacity-[0.03]"
+          style={{
+            backgroundImage:
+              "radial-gradient(circle at 30% 70%, rgba(255,255,255,0.8) 0%, transparent 50%), radial-gradient(circle at 70% 30%, rgba(255,255,255,0.6) 0%, transparent 50%)",
+          }}
+        />
+
+        <div className="container-fluid text-center relative z-10">
           <p
             className="text-xs font-medium uppercase tracking-widest mb-6"
             data-aos="fade-in"
@@ -251,15 +274,15 @@ export default function HomePage() {
           >
             Private practice can feel isolating.
             <br />
-            <span style={{ color: "var(--color-accent-highlight)" }}>
+            <span style={{ color: "var(--color-sage-100)" }}>
               You don&apos;t have to do this alone.
             </span>
           </h2>
 
           {/* Accent divider */}
           <div
-            className="w-12 h-px mx-auto mb-8"
-            style={{ background: "rgba(255,255,255,0.15)" }}
+            className="w-16 h-px mx-auto mb-8"
+            style={{ background: "linear-gradient(to right, transparent, rgba(255,255,255,0.2), transparent)" }}
           />
 
           <p
@@ -282,17 +305,18 @@ export default function HomePage() {
             The Circle is here to change that.
           </p>
           <div
-            className="inline-flex flex-col sm:flex-row items-center gap-2 sm:gap-3 px-5 sm:px-6 py-3 rounded-2xl sm:rounded-full text-center sm:text-left"
+            className="inline-flex flex-col sm:flex-row items-center gap-3 sm:gap-4 px-6 sm:px-8 py-3.5 rounded-2xl sm:rounded-full text-center sm:text-left"
             data-aos="fade-in"
             data-delay="400"
             style={{
-              background: "rgba(27,27,27,0.16)",
-              border: "1px solid rgba(255,255,255,0.14)",
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.12)",
+              backdropFilter: "blur(4px)",
             }}
           >
             <span
-              className="text-sm"
-              style={{ color: "rgba(255,255,255,0.72)" }}
+              className="text-xs font-medium uppercase tracking-widest"
+              style={{ color: "rgba(255,255,255,0.5)" }}
             >
               Founded by
             </span>
@@ -304,21 +328,22 @@ export default function HomePage() {
             </span>
             <span
               className="w-px h-4"
-              style={{ background: "rgba(255,255,255,0.24)" }}
+              style={{ background: "rgba(255,255,255,0.2)" }}
             />
             <span
               className="text-sm"
-              style={{ color: "rgba(255,255,255,0.68)" }}
+              style={{ color: "rgba(255,255,255,0.65)" }}
             >
-              Restored Family Counseling · Austin, TX
+              Restored Family Counseling
             </span>
           </div>
         </div>
       </section>
 
-      <section className="py-20 md:py-28" style={{ background: "var(--color-cream-100)" }}>
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
-          <div className="mb-12 md:mb-16" data-aos="fade-in-up">
+      {/* Membership includes section */}
+      <section className="py-20 md:py-28 xl:py-32" style={{ background: "var(--color-cream-100)" }}>
+        <div className="container-fluid">
+          <div className="mb-12 md:mb-16 xl:mb-20" data-aos="fade-in-up">
             <p
               className="text-xs font-medium uppercase tracking-widest mb-4"
               style={{ color: "var(--color-sage-600)" }}
@@ -337,19 +362,19 @@ export default function HomePage() {
           </div>
 
           <div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px"
-            style={{ background: "var(--color-cream-300)" }}
+            className="grid-fluid-sm"
+            style={{ background: "var(--color-cream-300)", gap: "1px" }}
           >
             {benefits.map((benefit, index) => (
               <div
                 key={benefit.title}
-                className="group flex flex-col gap-4 p-6 md:p-8 transition-colors duration-300 hover:bg-white"
+                className="group flex flex-col gap-4 p-6 md:p-8 xl:p-10 transition-all duration-500 hover:bg-white hover:shadow-lg hover:-translate-y-0.5"
                 data-aos="fade-in-up"
                 data-delay={String(((index % 3) + 1) * 100)}
                 style={{ background: "var(--color-cream-100)" }}
               >
                 <div
-                  className="w-10 h-10 rounded-xl flex items-center justify-center text-base transition-colors duration-300"
+                  className="w-11 h-11 rounded-xl flex items-center justify-center text-base transition-all duration-300 group-hover:scale-110 group-hover:shadow-md"
                   style={{
                     background: `color-mix(in srgb, ${benefit.accent} 12%, transparent)`,
                     color: benefit.accent,
@@ -375,8 +400,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28" style={{ background: "var(--color-cream-100)" }}>
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
+      {/* Getting started section */}
+      <section className="py-20 md:py-28 xl:py-32" style={{ background: "var(--color-cream-100)" }}>
+        <div className="container-fluid">
           <div className="mb-16 text-center" data-aos="fade-in-up">
             <p
               className="text-xs font-medium uppercase tracking-widest mb-4"
@@ -395,7 +421,8 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12 relative">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-10 relative">
+            {/* Connecting line */}
             <div
               className="absolute top-8 left-[16.67%] right-[16.67%] h-px hidden md:block"
               style={{
@@ -412,10 +439,11 @@ export default function HomePage() {
                 data-delay={String((index + 1) * 150)}
               >
                 <div
-                  className="w-16 h-16 rounded-full flex items-center justify-center shrink-0 mb-2"
+                  className="w-16 h-16 rounded-full flex items-center justify-center shrink-0 mb-2 relative"
                   style={{
-                    background: "var(--color-cream-200)",
-                    border: "1px solid var(--color-cream-300)",
+                    background: "var(--color-cream-100)",
+                    border: "2px solid var(--color-cream-300)",
+                    boxShadow: "0 0 0 4px var(--color-cream-200)",
                   }}
                 >
                   <span
@@ -447,7 +475,7 @@ export default function HomePage() {
           <div className="mt-14 text-center" data-aos="fade-in" data-delay="400">
             <Link
               href="/join"
-              className="inline-flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-90"
+              className="inline-flex w-full sm:w-auto items-center justify-center px-8 py-4 rounded-full text-sm font-semibold transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5"
               style={{ background: "var(--color-sage-700)", color: "#fff" }}
             >
               Start your application →
@@ -456,8 +484,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="py-20 md:py-28" style={{ background: "var(--color-cream-100)" }}>
-        <div className="max-w-xl mx-auto px-5 md:px-6 text-center">
+      {/* Pricing section */}
+      <section className="py-20 md:py-28 xl:py-32" style={{ background: "var(--color-surface-low)" }}>
+        <div className="container-fluid text-center">
           <p
             className="text-xs font-medium uppercase tracking-widest mb-4"
             data-aos="fade-in"
@@ -478,7 +507,7 @@ export default function HomePage() {
           </h2>
 
           <div
-            className="rounded-2xl border p-6 md:p-10 text-left"
+            className="max-w-lg mx-auto rounded-2xl border p-6 md:p-10 text-left relative overflow-hidden"
             data-aos="scale-in"
             data-delay="150"
             style={{
@@ -487,6 +516,12 @@ export default function HomePage() {
               boxShadow: "0 8px 48px rgba(27,27,27,0.08)",
             }}
           >
+            {/* Subtle top accent */}
+            <div
+              className="absolute top-0 left-0 right-0 h-1"
+              style={{ background: "linear-gradient(to right, var(--color-sage-500), var(--color-sage-700))" }}
+            />
+
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 mb-8">
               <div className="flex items-baseline gap-2 flex-wrap">
                 <span
@@ -530,16 +565,19 @@ export default function HomePage() {
                 "Discounted coaching with Sarah Arnold, LPC-S",
                 "Professional Will designation",
                 "Private online community for real-time support",
-              ].map((feature) => (
-                <div key={feature} className="flex items-start gap-3">
+              ].map((feature, i) => (
+                <div key={feature} className="flex items-start gap-3 group/feature">
                   <span
-                    className="mt-0.5 shrink-0 text-xs"
-                    style={{ color: "var(--color-sage-600)" }}
+                    className="mt-0.5 shrink-0 w-5 h-5 rounded-full flex items-center justify-center text-[10px] font-bold transition-all duration-300 group-hover/feature:scale-110"
+                    style={{
+                      background: "var(--color-sage-100)",
+                      color: "var(--color-sage-700)",
+                    }}
                   >
                     ✓
                   </span>
                   <span
-                    className="text-sm"
+                    className="text-sm transition-colors duration-300 group-hover/feature:text-[var(--color-sage-800)]"
                     style={{ color: "var(--color-text-secondary)" }}
                   >
                     {feature}
@@ -550,7 +588,7 @@ export default function HomePage() {
 
             <Link
               href="/join"
-              className="block text-center w-full py-4 rounded-full text-sm font-semibold transition-all duration-200 hover:opacity-90"
+              className="block text-center w-full py-4 rounded-full text-sm font-semibold transition-all duration-300 hover:opacity-90 hover:shadow-lg hover:-translate-y-0.5"
               style={{ background: "var(--color-sage-700)", color: "#fff" }}
             >
               Apply for membership

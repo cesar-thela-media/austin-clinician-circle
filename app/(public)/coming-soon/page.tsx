@@ -84,7 +84,7 @@ export default function ComingSoonPage() {
         <div className="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
           <Link href="/" className="text-center sm:text-left no-underline">
             <p
-              className="text-[11px] font-medium uppercase tracking-[0.24em] mb-1"
+              className="text-eyebrow"
               style={{ color: "rgba(255,255,255,0.34)" }}
             >
               Free guide for therapists
@@ -118,7 +118,7 @@ export default function ComingSoonPage() {
 
       {/* Main */}
       <main className="relative z-10 flex-1 flex items-center justify-center px-6 py-16">
-        <div className="w-full max-w-5xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="w-full max-w-6xl grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
           {/* ── Left: copy ── */}
           <div>

@@ -17,6 +17,7 @@ export default function ProfilePage() {
   const [licenseType, setLicenseType] = useState("LPC");
   const [selectedSpecialties, setSelectedSpecialties] = useState<string[]>(["Anxiety", "Trauma", "EMDR"]);
   const [format, setFormat] = useState("Both");
+  const [officeLocation, setOfficeLocation] = useState("");
   const [accepting, setAccepting] = useState(true);
   const [photoPreview, setPhotoPreview] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
@@ -48,7 +49,7 @@ export default function ProfilePage() {
 
   return (
     <div
-      className="flex flex-col gap-8 max-w-2xl"
+      className="flex flex-col gap-8 max-w-4xl"
       style={{
         ["--input-label-color" as string]: "var(--color-text-secondary)",
         ["--input-hint-color" as string]: "var(--color-text-tertiary)",
@@ -57,7 +58,7 @@ export default function ProfilePage() {
     >
       <div>
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Profile</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
+        <h1 className="text-page-title">
           Edit your profile
         </h1>
         <p className="text-sm mt-1" style={{ color: "var(--color-text-secondary)" }}>
@@ -199,6 +200,15 @@ export default function ProfilePage() {
               ))}
             </div>
           </div>
+          {(format === "In-person" || format === "Both") && (
+            <Input
+              label="Office location"
+              value={officeLocation}
+              onChange={(e) => setOfficeLocation(e.target.value)}
+              placeholder="Ex: South Austin, Westlake, Cedar Park, Dallas"
+              hint="Shown on your public directory listing so clients know where you practice."
+            />
+          )}
           <div className="flex items-center gap-3">
             <button
               type="button"

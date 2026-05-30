@@ -1,6 +1,9 @@
+"use client";
+
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { Button } from "@/components/ui/Button";
+import { useState } from "react";
 
 const invoices = [
   { id: "INV-2026-04", date: "Apr 1, 2026", amount: "$79.00", status: "Paid" },
@@ -11,11 +14,13 @@ const invoices = [
 ];
 
 export default function BillingPage() {
+  const [showCancel, setShowCancel] = useState(false);
+
   return (
-    <div className="flex flex-col gap-10 max-w-2xl w-full">
+    <div className="flex flex-col gap-10 max-w-4xl w-full">
       <div>
         <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Billing</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
+        <h1 className="text-page-title">
           Subscription & billing
         </h1>
       </div>
@@ -71,8 +76,8 @@ export default function BillingPage() {
         </div>
 
         <div className="flex flex-col sm:flex-row gap-3 flex-wrap">
-          <Button variant="secondary" size="sm">Update payment method</Button>
-          <Button variant="ghost" size="sm">Download receipt</Button>
+          <Button variant="secondary" size="sm" onClick={() => alert('Payment method update form coming soon.')}>Update payment method</Button>
+          <Button variant="ghost" size="sm" onClick={() => alert('Receipt download coming soon.')}>Download receipt</Button>
         </div>
       </Card>
 
@@ -89,7 +94,7 @@ export default function BillingPage() {
             Switch to $806/year (equivalent to $67/month) and lock in your rate.
           </p>
         </div>
-        <Button variant="primary" size="sm">Switch to annual</Button>
+        <Button variant="primary" size="sm" onClick={() => alert('Annual billing option coming soon.')}>Switch to annual</Button>
       </Card>
 
       {/* Invoice history */}
@@ -107,7 +112,7 @@ export default function BillingPage() {
               </div>
               <div className="flex items-center justify-between gap-3">
                 <p className="text-sm font-medium" style={{ color: "var(--color-text-primary)" }}>{inv.amount}</p>
-                <button className="text-xs underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
+                <button onClick={() => alert('Download started.')} className="text-xs underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
                   Download
                 </button>
               </div>
@@ -139,7 +144,7 @@ export default function BillingPage() {
                     <td className="px-6 py-3.5" style={{ color: "var(--color-text-primary)", fontWeight: 500 }}>{inv.amount}</td>
                     <td className="px-6 py-3.5"><Badge variant="success">{inv.status}</Badge></td>
                     <td className="px-6 py-3.5 text-right">
-                      <button className="text-xs underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
+                      <button onClick={() => alert('Download started.')} className="text-xs underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
                         Download
                       </button>
                     </td>
@@ -152,18 +157,15 @@ export default function BillingPage() {
       </div>
 
       {/* Cancel */}
-      <div
-        className="rounded-2xl border px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4"
-        style={{ borderColor: "var(--color-cream-300)", background: "#fff" }}
-      >
+      <Card className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
           <p className="text-sm font-semibold" style={{ color: "var(--color-text-primary)" }}>Cancel membership</p>
           <p className="text-xs mt-0.5" style={{ color: "var(--color-text-tertiary)" }}>
-            You&apos;ll retain access through May 1, 2026. This action cannot be undone.
+            You&apos;ll retain access through your billing period. This action cannot be undone.
           </p>
         </div>
-        <Button variant="destructive" size="sm">Cancel membership</Button>
-      </div>
+        <Button variant="destructive" size="sm" onClick={() => { if (confirm('Are you sure you want to cancel your membership?')) alert('Cancellation request submitted.'); }}>Cancel membership</Button>
+      </Card>
     </div>
   );
 }

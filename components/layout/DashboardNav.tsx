@@ -8,6 +8,7 @@ import { MobileSidePanel } from "@/components/layout/MobileSidePanel";
 const navLinks = [
   { href: "/dashboard", label: "Overview", icon: "⊞" },
   { href: "/dashboard/resources", label: "Resources", icon: "◫" },
+  { href: "/dashboard/files", label: "Files", icon: "◰" },
   { href: "/dashboard/events", label: "Events", icon: "◷" },
   { href: "/dashboard/network", label: "Network", icon: "◎" },
   { href: "/dashboard/profile", label: "Profile", icon: "◉" },
@@ -34,7 +35,7 @@ export function DashboardNav() {
       >
         <Link
           href="/dashboard"
-          className="text-sm font-semibold tracking-wide"
+          className="text-base font-semibold tracking-wide"
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
             color: "#fff",
@@ -63,7 +64,7 @@ export function DashboardNav() {
       >
         <Link
           href="/dashboard"
-          className="text-sm font-semibold tracking-wide px-3 mb-6 block"
+          className="text-base font-semibold tracking-wide px-3 mb-6 block"
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
             color: "#fff",

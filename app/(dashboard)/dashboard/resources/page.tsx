@@ -194,33 +194,12 @@ export default function ResourcesPage() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
         <div>
-          <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>
+          <p className="text-eyebrow">
             Resources
           </p>
-          <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
+          <h1 className="text-page-title">
             Resource library
           </h1>
-          <p className="text-sm mt-2 max-w-2xl" style={{ color: "var(--color-text-secondary)" }}>
-            Browse the clinical tools, handouts, and business guides members return to most often.
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-          {[
-            { value: RESOURCES.length, label: "Resources available" },
-            { value: 12, label: "Updated this month" },
-            { value: 7, label: "Member favorites" },
-          ].map((stat) => (
-            <Card key={stat.label} className="flex flex-col gap-1">
-              <p
-                className="text-3xl font-light"
-                style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", color: "var(--color-sage-700)" }}
-              >
-                {stat.value}
-              </p>
-              <p className="text-xs" style={{ color: "var(--color-text-tertiary)" }}>{stat.label}</p>
-            </Card>
-          ))}
         </div>
       </div>
 
@@ -302,8 +281,8 @@ export default function ResourcesPage() {
                 <p>• Great for client prep and supervision follow-up</p>
               </div>
               <div className="flex flex-col sm:flex-row gap-3 mt-auto">
-                <Button size="sm">Download</Button>
-                <Button variant="secondary" size="sm">Preview</Button>
+                <Button size="sm" onClick={() => alert('Download started.')}>Download</Button>
+                <Button variant="secondary" size="sm" onClick={() => alert('Preview coming soon.')}>Preview</Button>
               </div>
             </div>
           </Card>
@@ -323,7 +302,7 @@ export default function ResourcesPage() {
               </button>
             </Card>
           ) : (
-            <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-5">
+            <div className="grid-fluid-sm" style={{ gap: "1.25rem" }}>
               {filtered.map((resource) => (
                 <Card key={resource.title} hover className="flex flex-col gap-4">
                   <div className="flex items-start justify-between gap-3">
@@ -337,10 +316,10 @@ export default function ResourcesPage() {
                   <div className="flex items-center justify-between gap-3 mt-auto">
                     <span className="text-xs" style={{ color: "var(--color-text-tertiary)" }}>{resource.date}</span>
                     <div className="flex items-center gap-3">
-                      <button className="text-xs font-medium underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
+                      <button onClick={() => alert('Preview coming soon.')} className="text-xs font-medium underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
                         Preview
                       </button>
-                      <button className="text-xs font-medium underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
+                      <button onClick={() => alert('Download started.')} className="text-xs font-medium underline" style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}>
                         Download
                       </button>
                     </div>

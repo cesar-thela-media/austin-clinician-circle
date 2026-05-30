@@ -86,15 +86,7 @@ export default function SignInPage() {
         >
           ◉
         </div>
-        <h1
-          className="mb-2"
-          style={{
-            fontFamily: "var(--font-serif), Manrope, sans-serif",
-            fontSize: "2rem",
-            fontWeight: 400,
-            color: "var(--color-sage-900)",
-          }}
-        >
+        <h1 className="text-page-title mb-2">
           Welcome back.
         </h1>
         <p className="text-sm" style={{ color: "var(--color-text-secondary)" }}>

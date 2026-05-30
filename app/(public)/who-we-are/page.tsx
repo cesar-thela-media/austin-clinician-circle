@@ -17,7 +17,7 @@ const values = [
 ];
 
 export const metadata: Metadata = {
-  title: "Who We Are — The Circle",
+  title: "Who We Are | The Circle",
   description:
     "Learn the story behind The Circle. Founded by Sarah Arnold, LPC-S, The Circle is a professional home and community for licensed therapists in Austin, TX.",
 };
@@ -25,11 +25,12 @@ export const metadata: Metadata = {
 export default function WhoWeArePage() {
   return (
     <>
+      {/* Hero */}
       <section
         className="pt-28 md:pt-32 pb-16 md:pb-20"
         style={{ background: "var(--color-cream-100)" }}
       >
-        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
+        <div className="container-fluid text-center">
           <p
             className="text-xs font-medium uppercase tracking-widest mb-5"
             style={{ color: "var(--color-sage-600)" }}
@@ -50,11 +51,12 @@ export default function WhoWeArePage() {
         </div>
       </section>
 
+      {/* Origin */}
       <section
         className="py-16 md:py-24"
         style={{ background: "var(--color-cream-100)" }}
       >
-        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
+        <div className="container-fluid text-center">
           <p
             className="text-xs font-medium uppercase tracking-widest mb-5"
             style={{ color: "var(--color-sage-600)" }}
@@ -101,7 +103,7 @@ export default function WhoWeArePage() {
         className="py-16 md:py-24"
         style={{ background: "var(--color-cream-200)" }}
       >
-        <div className="max-w-6xl mx-auto px-5 md:px-6 grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
+        <div className="container-fluid grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-start">
           <div className="aspect-square rounded-2xl max-w-sm w-full mx-auto md:mx-0 lg:sticky lg:top-24 overflow-hidden">
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
@@ -176,8 +178,8 @@ export default function WhoWeArePage() {
         className="py-16 md:py-24"
         style={{ background: "var(--color-cream-200)" }}
       >
-        <div className="max-w-6xl mx-auto px-5 md:px-6">
-          <div className="max-w-3xl mx-auto text-center mb-10 md:mb-14">
+        <div className="container-fluid">
+          <div className="max-w-5xl mx-auto text-center mb-10 md:mb-14">
             <p
               className="text-xs font-medium uppercase tracking-widest mb-5"
               style={{ color: "var(--color-sage-600)" }}
@@ -219,7 +221,7 @@ export default function WhoWeArePage() {
         className="py-16 md:py-24 text-center"
         style={{ background: "var(--color-sage-900)" }}
       >
-        <div className="max-w-xl mx-auto px-5 md:px-6">
+        <div className="max-w-2xl mx-auto px-5 md:px-6">
           <h2
             className="section-title-strong mb-6"
             style={{

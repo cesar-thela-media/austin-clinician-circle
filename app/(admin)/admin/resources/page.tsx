@@ -71,10 +71,8 @@ export default function AdminResourcesPage() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
         <div>
-          <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Admin</p>
-          <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
-            Resources
-          </h1>
+          <p className="text-eyebrow">Admin</p>
+          <h1 className="text-page-title">Resources</h1>
         </div>
         <Button variant="primary" size="sm" className="w-full sm:w-auto" onClick={() => setShowForm((v) => !v)}>
           {showForm ? "Cancel" : "+ Upload resource"}

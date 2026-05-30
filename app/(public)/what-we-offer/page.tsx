@@ -74,7 +74,7 @@ const faqs = [
   },
   {
     q: "How do I reach Sarah?",
-    a: "By email - Sarah@restoredfamily.com",
+    a: "By email - sarah@restoredfamily.com",
   },
 ];
 
@@ -92,7 +92,7 @@ const pricingFeatures = [
 ];
 
 export const metadata: Metadata = {
-  title: "What We Offer — The Circle",
+  title: "What We Offer | The Circle",
   description:
     "Membership gives you full access to clinical support, professional development, and community. Monthly case consultation, CEU trainings, resource library, and more.",
 };
@@ -105,7 +105,7 @@ export default function WhatWeOfferPage() {
         className="pt-28 md:pt-32 pb-16 md:pb-20"
         style={{ background: "var(--color-cream-100)" }}
       >
-        <div className="max-w-4xl mx-auto px-5 md:px-6 text-center">
+        <div className="container-fluid text-center max-w-5xl">
           <p
             className="text-xs font-medium uppercase tracking-widest mb-5"
             style={{ color: "var(--color-sage-600)" }}
@@ -145,7 +145,7 @@ export default function WhatWeOfferPage() {
                 : "var(--color-cream-100)",
           }}
         >
-          <div className="max-w-6xl mx-auto px-5 md:px-6">
+          <div className="container-fluid">
             <div className="flex flex-col items-center gap-3 mb-10 md:mb-12 text-center">
               <span
                 className="text-2xl"
@@ -160,7 +160,7 @@ export default function WhatWeOfferPage() {
                 {section.category}
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-3 gap-6 md:gap-8 xl:gap-10">
               {section.items.map((item) => (
                 <div
                   key={item.title}
@@ -194,8 +194,8 @@ export default function WhatWeOfferPage() {
         className="py-16 md:py-24"
         style={{ background: "var(--color-cream-200)" }}
       >
-        <div className="max-w-5xl mx-auto px-5 md:px-6">
-          <div className="flex flex-col items-center gap-10 md:gap-12 text-center">
+        <div className="container-fluid">
+          <div className="flex flex-col items-center gap-10 md:gap-12 text-center max-w-5xl mx-auto">
             <div className="max-w-2xl">
               <p
                 className="text-xs font-medium uppercase tracking-widest mb-5"
@@ -232,7 +232,7 @@ export default function WhatWeOfferPage() {
                 Apply for membership
               </Link>
             </div>
-            <div className="max-w-sm w-full mx-auto">
+            <div className="max-w-md w-full mx-auto">
               <PricingCard price="$79" features={pricingFeatures} featured />
             </div>
           </div>
@@ -244,7 +244,7 @@ export default function WhatWeOfferPage() {
         className="py-16 md:py-24"
         style={{ background: "var(--color-cream-100)" }}
       >
-        <div className="max-w-3xl mx-auto px-5 md:px-6 text-center">
+        <div className="container-fluid text-center max-w-4xl">
           <p
             className="text-xs font-medium uppercase tracking-widest mb-5"
             style={{ color: "var(--color-sage-600)" }}

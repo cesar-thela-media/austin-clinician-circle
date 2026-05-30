@@ -156,15 +156,12 @@ export default function NetworkPage() {
     <div className="flex flex-col gap-8">
       <div className="flex flex-col gap-4">
         <div>
-          <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>
+          <p className="text-eyebrow">
             Network
           </p>
-          <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
+          <h1 className="text-page-title">
             Referral network
           </h1>
-          <p className="text-sm mt-2 max-w-2xl" style={{ color: "var(--color-text-secondary)" }}>
-            Search the member network, find the right clinical fit, and make referrals with more confidence.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
@@ -342,7 +339,7 @@ export default function NetworkPage() {
                 </button>
               </Card>
             ) : (
-              <div className="grid grid-cols-1 xl:grid-cols-2 gap-4">
+              <div className="grid-fluid-md" style={{ gap: "1rem" }}>
                 {filteredMembers.map((member) => (
                   <Card
                     key={member.name}
@@ -426,8 +423,8 @@ export default function NetworkPage() {
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-3 mt-auto">
-                      <Button size="sm">Refer client</Button>
-                      <Button variant="secondary" size="sm">Message intro</Button>
+                      <Button size="sm" onClick={() => alert('Referral form coming soon.')}>Refer client</Button>
+                      <Button variant="secondary" size="sm" onClick={() => alert('Message feature coming soon.')}>Message intro</Button>
                     </div>
                   </Card>
                 ))}

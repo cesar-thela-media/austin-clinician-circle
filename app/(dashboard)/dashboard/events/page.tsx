@@ -94,10 +94,8 @@ export default function EventsPage() {
   return (
     <div className="flex flex-col gap-8">
       <div>
-        <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Events</p>
-        <h1 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "2rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
-          Upcoming events
-        </h1>
+        <p className="text-eyebrow">Events</p>
+        <h1 className="text-page-title">Upcoming events</h1>
       </div>
 
       <div className="flex flex-col gap-4">
@@ -157,7 +155,7 @@ export default function EventsPage() {
                     >
                       {isRsvpd ? "Cancel RSVP" : "RSVP"}
                     </Button>
-                    <Button variant="ghost" size="sm">
+                    <Button variant="ghost" size="sm" onClick={() => alert('Calendar invite coming soon.')}>
                       Add to calendar
                     </Button>
                   </div>
@@ -175,9 +173,6 @@ export default function EventsPage() {
           <h2 style={{ fontFamily: "var(--font-serif), Manrope, sans-serif", fontSize: "1.5rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
             Book a session with Sarah
           </h2>
-          <p className="text-sm mt-1" style={{ color: "var(--color-text-secondary)" }}>
-            Discounted 1-on-1 practice-building sessions covering fees, marketing, burnout, and long-term sustainability. Members only.
-          </p>
         </div>
         <CalendlyEmbed />
       </div>

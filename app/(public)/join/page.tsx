@@ -98,15 +98,7 @@ export default function JoinPage() {
           >
             ✓
           </div>
-          <h1
-            className="mb-4"
-            style={{
-              fontFamily: "var(--font-serif), Manrope, sans-serif",
-              fontSize: "2rem",
-              fontWeight: 400,
-              color: "var(--color-sage-900)",
-            }}
-          >
+          <h1 className="text-page-title mb-4">
             Application received.
           </h1>
           <p
