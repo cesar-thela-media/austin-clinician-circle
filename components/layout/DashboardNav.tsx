@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { MobileSidePanel } from "@/components/layout/MobileSidePanel";
+import { SignOutAction } from "@/components/auth/SignOutAction";
 
 const navLinks = [
   { href: "/dashboard", label: "Overview", icon: "⊞" },
@@ -97,12 +98,10 @@ export function DashboardNav() {
           className="mt-auto pt-6"
           style={{ borderTop: "1px solid rgba(255, 255, 255, 0.12)" }}
         >
-          <button
+          <SignOutAction
             className="flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium w-full transition-all duration-300 hover:bg-white/10"
             style={{ color: "rgba(255,255,255,0.68)" }}
-          >
-            <span>⇤</span> Sign out
-          </button>
+          />
         </div>
       </aside>
 
@@ -144,12 +143,11 @@ export function DashboardNav() {
         </nav>
 
         <div className="mt-auto pt-6" style={{ borderTop: "1px solid rgba(255,255,255,0.12)" }}>
-          <button
+          <SignOutAction
             className="flex items-center gap-3 px-4 py-3 rounded-2xl text-sm font-medium w-full transition-all duration-300 hover:bg-white/10"
             style={{ color: "rgba(255,255,255,0.72)" }}
-          >
-            <span>⇤</span> Sign out
-          </button>
+            onSignedOut={() => setMobileOpen(false)}
+          />
         </div>
       </MobileSidePanel>
     </>

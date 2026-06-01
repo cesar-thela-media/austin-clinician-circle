@@ -1,5 +1,9 @@
+import { auth } from "@clerk/nextjs/server";
+import { redirect } from "next/navigation";
 import type { Metadata } from "next";
 import { AdminNav } from "@/components/layout/AdminNav";
+import { getCurrentViewer } from "@/lib/auth";
+import { hasClerkCredentials } from "@/lib/env";
 
 export const metadata: Metadata = {
   title: "Admin | The Circle",
@@ -7,7 +11,19 @@ export const metadata: Metadata = {
     "Admin dashboard for managing members, applications, events, and resources.",
 };
 
-export default function AdminLayout({ children }: { children: React.ReactNode }) {
+export default async function AdminLayout({ children }: { children: React.ReactNode }) {
+  if (hasClerkCredentials) {
+    const { userId, redirectToSignIn } = await auth();
+    if (!userId) {
+      return redirectToSignIn({ returnBackUrl: "/admin" });
+    }
+
+    const viewer = await getCurrentViewer();
+    if (!viewer.isAdmin) {
+      redirect("/dashboard");
+    }
+  }
+
   return (
     <div className="flex min-h-screen md:h-screen md:overflow-hidden" style={{ background: "var(--color-cream-100)" }}>
       <AdminNav />

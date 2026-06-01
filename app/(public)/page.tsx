@@ -81,7 +81,6 @@ export default function HomePage() {
           src="/hero-community.svg"
           alt=""
           aria-hidden="true"
-          fetchPriority="high"
           decoding="async"
           className="absolute inset-0 w-full h-full object-cover pointer-events-none select-none"
           style={{ opacity: 0.96, objectPosition: "center center" }}

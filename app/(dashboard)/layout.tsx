@@ -1,5 +1,7 @@
+import { auth } from "@clerk/nextjs/server";
 import type { Metadata } from "next";
 import { DashboardNav } from "@/components/layout/DashboardNav";
+import { hasClerkCredentials } from "@/lib/env";
 
 export const metadata: Metadata = {
   title: "Dashboard | The Circle",
@@ -7,11 +9,18 @@ export const metadata: Metadata = {
     "Your member dashboard. Access resources, events, your referral network, billing, and profile settings.",
 };
 
-export default function DashboardLayout({
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  if (hasClerkCredentials) {
+    const { userId, redirectToSignIn } = await auth();
+    if (!userId) {
+      return redirectToSignIn({ returnBackUrl: "/dashboard" });
+    }
+  }
+
   return (
     <div className="flex min-h-screen md:h-screen md:overflow-hidden" style={{ background: "var(--color-cream-100)" }}>
       <DashboardNav />
