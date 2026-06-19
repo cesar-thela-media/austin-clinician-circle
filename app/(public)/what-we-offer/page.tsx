@@ -117,7 +117,7 @@ export default function WhatWeOfferPage() {
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--color-sage-900)",
             }}
           >
@@ -207,7 +207,7 @@ export default function WhatWeOfferPage() {
                 className="section-title-strong mb-6"
                 style={{
                   fontFamily: "var(--font-serif), Georgia, serif",
-                  fontWeight: 300,
+                  fontWeight: 400,
                   fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
                   color: "var(--color-sage-900)",
                 }}
@@ -257,7 +257,7 @@ export default function WhatWeOfferPage() {
             className="section-title-strong mb-10 md:mb-14"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: "clamp(1.75rem, 3vw, 2.25rem)",
               color: "var(--color-sage-900)",
             }}

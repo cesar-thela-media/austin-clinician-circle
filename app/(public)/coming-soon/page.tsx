@@ -91,7 +91,7 @@ export default function ComingSoonPage() {
             </p>
             <p
               className="text-base font-semibold transition-opacity hover:opacity-80"
-              style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 300, color: "#fff" }}
+              style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "#fff" }}
             >
               The Circle
             </p>
@@ -135,7 +135,7 @@ export default function ComingSoonPage() {
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
                 fontSize: "clamp(2.25rem, 5vw, 3.75rem)",
-                fontWeight: 300,
+                fontWeight: 400,
                 color: "#fff",
                 letterSpacing: "-0.01em",
               }}
@@ -334,7 +334,7 @@ export default function ComingSoonPage() {
                     className="text-xl leading-snug"
                     style={{
                       fontFamily: "var(--font-serif), Georgia, serif",
-                      fontWeight: 300,
+                      fontWeight: 400,
                       color: "#fff",
                     }}
                   >
@@ -396,7 +396,7 @@ export default function ComingSoonPage() {
             <div>
               <p
                 className="text-sm mb-3"
-                style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 300, color: "#fff" }}
+                style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "#fff" }}
               >
                 The Circle
               </p>

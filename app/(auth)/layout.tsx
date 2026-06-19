@@ -23,7 +23,7 @@ export default function AuthLayout({
           className="text-base tracking-wide"
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
-            fontWeight: 300,
+            fontWeight: 400,
             color: "var(--color-sage-800)",
           }}
         >

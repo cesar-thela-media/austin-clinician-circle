@@ -1,17 +1,17 @@
 import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
-import { Spectral, DM_Sans } from "next/font/google";
+import { Playfair_Display, DM_Sans } from "next/font/google";
 import "./globals.css";
 import { AosInit } from "@/components/AosInit";
 import { hasClerkCredentials } from "@/lib/env";
 
-/* Spectral — ultra-thin high-contrast editorial serif by Production Type.
-   Weight 300 = Light with hairline strokes and dramatic thick-thin contrast,
-   closest free Google match to Tiempos Fine / Freight Display Light style. */
-const spectral = Spectral({
+/* Playfair Display — high-contrast editorial display serif with beautiful calligraphic italic.
+   Closest Google Fonts match to Tiempos Fine / Freight Display Light style.
+   Weight 400 at large display sizes shows hairline thin strokes with dramatic thick-thin contrast. */
+const playfairDisplay = Playfair_Display({
   variable: "--font-serif",
   subsets: ["latin"],
-  weight: ["200", "300", "400", "600"],
+  weight: ["400", "500", "700"],
   style: ["normal", "italic"],
   display: "swap",
 });
@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${spectral.variable} ${dmSans.variable} h-full antialiased`}
+      className={`${playfairDisplay.variable} ${dmSans.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         {hasClerkCredentials ? <ClerkProvider>{appShell}</ClerkProvider> : appShell}

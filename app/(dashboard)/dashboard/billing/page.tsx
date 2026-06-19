@@ -106,7 +106,7 @@ export default async function BillingPage() {
           style={{ background: "var(--color-cream-100)", border: "1px solid var(--color-cream-300)" }}
         >
           <div>
-            <p className="text-2xl font-light" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 300, color: "var(--color-sage-700)" }}>
+            <p className="text-2xl font-light" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "var(--color-sage-700)" }}>
               {formatMoney(planAmount, planCurrency)}
               <span className="text-sm font-normal ml-1" style={{ color: "var(--color-text-tertiary)" }}>/month</span>
             </p>

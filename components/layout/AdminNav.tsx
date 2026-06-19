@@ -38,7 +38,7 @@ export function AdminNav() {
           </p>
           <span
             className="text-base"
-            style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 300, color: "#fff" }}
+            style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "#fff" }}
           >
             Austin Clinician Circle
           </span>
@@ -73,7 +73,7 @@ export function AdminNav() {
             className="text-base"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "#fff",
             }}
           >
@@ -127,7 +127,7 @@ export function AdminNav() {
             </p>
             <span
               className="text-base"
-              style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 300, color: "#fff" }}
+              style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "#fff" }}
             >
               Austin Clinician Circle
             </span>

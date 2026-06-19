@@ -29,7 +29,7 @@ export function Footer() {
           <div>
             <p
               className="text-sm font-medium mb-1"
-              style={{ fontFamily: "var(--font-serif), Georgia, serif", color: "#fff", fontWeight: 300, fontSize: "1.05rem" }}
+              style={{ fontFamily: "var(--font-serif), Georgia, serif", color: "#fff", fontWeight: 400, fontSize: "1.05rem" }}
             >
               Austin Clinician Circle
             </p>

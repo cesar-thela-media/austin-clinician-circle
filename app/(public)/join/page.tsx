@@ -102,7 +102,7 @@ export default function JoinPage() {
             className="text-page-title mb-4"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 300,
+              fontWeight: 400,
             }}
           >
             Application received.
@@ -137,7 +137,7 @@ export default function JoinPage() {
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
             fontSize: "clamp(2rem, 4vw, 2.75rem)",
-            fontWeight: 300,
+            fontWeight: 400,
             color: "var(--color-sage-900)",
           }}
         >

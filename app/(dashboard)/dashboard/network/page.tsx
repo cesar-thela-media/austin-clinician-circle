@@ -171,7 +171,7 @@ export default function NetworkPage() {
             { value: totalReferrals, label: "Referrals this month" },
           ].map((stat) => (
             <Card key={stat.label} className="flex flex-col gap-1">
-              <p className="text-3xl font-light" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 300, color: "var(--color-sage-700)" }}>
+              <p className="text-3xl font-light" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "var(--color-sage-700)" }}>
                 {stat.value}
               </p>
               <p className="text-xs" style={{ color: "var(--color-text-tertiary)" }}>{stat.label}</p>

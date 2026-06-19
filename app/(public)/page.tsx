@@ -166,16 +166,17 @@ export default function HomePage() {
         className="relative flex flex-col items-center justify-center text-center overflow-hidden"
         style={{ background: HERO_BG, minHeight: "100svh", paddingTop: 80, paddingBottom: 100 }}
       >
-        {/* 5 concentric rings — innermost 8%, outermost 3% */}
-        {[720, 570, 430, 300, 180].map((d, i) => (
+        {/* 5 concentric rings — innermost brightest (8%), outermost most faded (3%).
+            vw-relative so they span ~75% viewport at any desktop size (1440–1920px). */}
+        {["75vw","58vw","43vw","28vw","15vw"].map((size, i) => (
           <div
-            key={d}
+            key={size}
             className="absolute rounded-full pointer-events-none"
             style={{
-              width: d, height: d,
+              width: size, height: size,
               top: "50%", left: "50%",
               transform: "translate(-50%,-50%)",
-              border: `1px solid rgba(255,255,255,${(0.08 - i * 0.012).toFixed(3)})`,
+              border: `1px solid rgba(255,255,255,${(0.03 + i * 0.013).toFixed(3)})`,
             }}
           />
         ))}
@@ -220,13 +221,13 @@ export default function HomePage() {
             For licensed clinicians in Austin, TX
           </p>
 
-          {/* Headline — ultra-thin Spectral 300 (Tiempos Fine closest free match) */}
+          {/* Headline — Playfair Display 400 (closest free match to Tiempos Fine / Freight Display Light) */}
           <h1
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "clamp(3rem, 7.2vw, 6rem)",
-              fontWeight: 300,
-              letterSpacing: "-0.015em",
+              fontWeight: 400,
+              letterSpacing: "-0.02em",
               lineHeight: 1.0,
               marginBottom: "2.75rem",
               animation: "fadeInUp 0.75s 0.2s cubic-bezier(0.16,1,0.3,1) both",
@@ -278,7 +279,7 @@ export default function HomePage() {
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "clamp(2.1rem, 5.5vw, 3.75rem)",
-              fontWeight: 300,
+              fontWeight: 400,
               letterSpacing: "-0.02em",
               lineHeight: 1.1,
               color: "#fff",
@@ -319,7 +320,7 @@ export default function HomePage() {
                   style={{
                     fontFamily: "var(--font-serif), Georgia, serif",
                     fontSize: "clamp(2rem, 5vw, 3.5rem)",
-                    fontWeight: 300,
+                    fontWeight: 400,
                     color: "#fff",
                     lineHeight: 1,
                     display: "block",
@@ -362,7 +363,7 @@ export default function HomePage() {
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "clamp(1.9rem, 3.5vw, 2.75rem)",
-              fontWeight: 300,
+              fontWeight: 400,
               letterSpacing: "-0.018em",
               lineHeight: 1.1,
               color: "#1A1A1A",
@@ -404,7 +405,7 @@ export default function HomePage() {
                     fontFamily: "var(--font-serif), Georgia, serif",
                     fontSize: "clamp(0.88rem, 1.1vw, 1rem)",
                     fontStyle: "italic",
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: 1.65,
                     color: "#1A1A1A",
                   }}
@@ -439,7 +440,7 @@ export default function HomePage() {
                     fontFamily: "var(--font-serif), Georgia, serif",
                     fontSize: "1rem",
                     fontStyle: "italic",
-                    fontWeight: 300,
+                    fontWeight: 400,
                     lineHeight: 1.65,
                     color: "#1A1A1A",
                   }}
@@ -475,7 +476,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: "var(--font-serif), Georgia, serif",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  fontWeight: 300,
+                  fontWeight: 400,
                   letterSpacing: "-0.018em",
                   lineHeight: 1.18,
                   color: "#1A1A1A",
@@ -526,7 +527,7 @@ export default function HomePage() {
                 style={{
                   fontFamily: "var(--font-serif), Georgia, serif",
                   fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  fontWeight: 300,
+                  fontWeight: 400,
                   letterSpacing: "-0.018em",
                   lineHeight: 1.18,
                   color: "#1A1A1A",
@@ -554,7 +555,7 @@ export default function HomePage() {
                       style={{
                         fontFamily: "var(--font-serif), Georgia, serif",
                         fontSize: "clamp(3rem, 7vw, 5rem)",
-                        fontWeight: 300,
+                        fontWeight: 400,
                         letterSpacing: "-0.03em",
                         lineHeight: 1,
                         color: "#1A1A1A",
@@ -618,7 +619,7 @@ export default function HomePage() {
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "clamp(2.2rem, 6vw, 4.5rem)",
-              fontWeight: 300,
+              fontWeight: 400,
               letterSpacing: "-0.02em",
               lineHeight: 1.08,
               color: "#fff",

@@ -28,7 +28,7 @@ export default function Error({
         <h1
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: "clamp(1.75rem, 4vw, 2.5rem)",
             color: "rgba(255,255,255,0.88)",
             marginBottom: "1rem",

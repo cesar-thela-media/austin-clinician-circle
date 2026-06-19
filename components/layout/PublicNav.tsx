@@ -47,7 +47,7 @@ export function PublicNav() {
               className="shrink-0 text-sm transition-colors duration-300"
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: "1rem",
                 letterSpacing: "0.01em",
                 color: onDark ? "#fff" : "#2D3B2C",
@@ -123,7 +123,7 @@ export function PublicNav() {
         title={
           <div>
             <p className="text-[10px] font-medium uppercase tracking-[0.24em] mb-2" style={{ color: "rgba(255,255,255,0.38)" }}>Navigate</p>
-            <span className="text-base" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 300, color: "#fff" }}>
+            <span className="text-base" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "#fff" }}>
               Austin Clinician Circle
             </span>
           </div>

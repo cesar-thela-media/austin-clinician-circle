@@ -42,7 +42,7 @@ export default function WhoWeArePage() {
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "clamp(2.5rem, 5vw, 3.75rem)",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--color-sage-900)",
             }}
           >
@@ -67,7 +67,7 @@ export default function WhoWeArePage() {
             className="section-title-strong mb-10"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: "clamp(1.75rem, 3vw, 2.25rem)",
               color: "var(--color-sage-900)",
             }}
@@ -125,7 +125,7 @@ export default function WhoWeArePage() {
               className="section-title-strong mb-6"
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: "clamp(1.75rem, 3vw, 2.25rem)",
                 color: "var(--color-sage-900)",
               }}
@@ -194,7 +194,7 @@ export default function WhoWeArePage() {
               className="section-title-strong"
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: "clamp(1.75rem, 3vw, 2.25rem)",
                 color: "var(--color-sage-900)",
               }}
@@ -232,7 +232,7 @@ export default function WhoWeArePage() {
             className="section-title-strong mb-6"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
               color: "#fff",
             }}

@@ -16,7 +16,7 @@ export default function NotFound() {
         <h1
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: "clamp(4rem, 12vw, 7rem)",
             color: "rgba(255,255,255,0.12)",
             lineHeight: 1,
@@ -28,7 +28,7 @@ export default function NotFound() {
         <h2
           style={{
             fontFamily: "var(--font-serif), Georgia, serif",
-            fontWeight: 300,
+            fontWeight: 400,
             fontSize: "clamp(1.5rem, 3vw, 2rem)",
             color: "rgba(255,255,255,0.88)",
             marginBottom: "1.25rem",

@@ -100,7 +100,7 @@
 
 .text-display-serif {
   font-family: var(--font-serif), Georgia, serif;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.02em;
   line-height: 1.06;
 }
@@ -108,14 +108,14 @@
 .text-page-title {
   font-family: var(--font-serif), Georgia, serif;
   font-size: var(--text-display);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--color-text-primary);
 }
 
 .text-section-title {
   font-family: var(--font-serif), Georgia, serif;
   font-size: var(--text-heading);
-  font-weight: 300;
+  font-weight: 400;
   color: var(--color-sage-900);
   letter-spacing: -0.015em;
   line-height: 1.15;
@@ -134,7 +134,7 @@
 
 .section-title-strong {
   font-family: var(--font-serif), Georgia, serif;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: -0.018em;
   line-height: 1.1;
 }
@@ -214,8 +214,10 @@ button, a {
 [data-delay="80"]  { transition-delay: 0.08s; }
 [data-delay="100"] { transition-delay: 0.10s; }
 [data-delay="150"] { transition-delay: 0.15s; }
+[data-delay="160"] { transition-delay: 0.16s; }
 [data-delay="180"] { transition-delay: 0.18s; }
 [data-delay="200"] { transition-delay: 0.20s; }
+[data-delay="220"] { transition-delay: 0.22s; }
 [data-delay="260"] { transition-delay: 0.26s; }
 [data-delay="300"] { transition-delay: 0.30s; }
 [data-delay="340"] { transition-delay: 0.34s; }

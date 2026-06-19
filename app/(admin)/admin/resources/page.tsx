@@ -80,7 +80,7 @@ export default function AdminResourcesPage() {
           <h1
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 300,
+              fontWeight: 400,
               fontSize: "clamp(1.75rem, 3vw, 2.5rem)",
               color: "var(--color-sage-800)",
               lineHeight: 1.15,
@@ -108,7 +108,7 @@ export default function AdminResourcesPage() {
             className="text-base"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--color-sage-800)",
             }}
           >

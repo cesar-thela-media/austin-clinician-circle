@@ -170,7 +170,7 @@ export default function EventsPage() {
       <div>
         <div className="mb-5">
           <p className="text-xs font-medium uppercase tracking-widest mb-2" style={{ color: "var(--color-sage-600)" }}>Practice coaching</p>
-          <h2 style={{ fontFamily: "var(--font-serif), Georgia, serif", fontSize: "1.5rem", fontWeight: 300, color: "var(--color-sage-900)" }}>
+          <h2 style={{ fontFamily: "var(--font-serif), Georgia, serif", fontSize: "1.5rem", fontWeight: 400, color: "var(--color-sage-900)" }}>
             Book a session with Sarah
           </h2>
         </div>

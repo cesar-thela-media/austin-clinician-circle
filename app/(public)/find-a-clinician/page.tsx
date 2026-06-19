@@ -26,7 +26,7 @@ export default function FindAClinicianPage() {
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
               fontSize: "clamp(2rem, 4vw, 3rem)",
-              fontWeight: 300,
+              fontWeight: 400,
               color: "var(--color-sage-900)",
             }}
           >
@@ -72,7 +72,7 @@ export default function FindAClinicianPage() {
               className="section-title-strong mb-3"
               style={{
                 fontFamily: "var(--font-serif), Georgia, serif",
-                fontWeight: 300,
+                fontWeight: 400,
                 fontSize: "clamp(1.25rem, 2.5vw, 1.5rem)",
                 color: "var(--color-sage-900)",
               }}
