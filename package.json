@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "node scripts/start-standalone.mjs",
     "lint": "eslint",
-    "postinstall": "prisma generate"
+    "postinstall": "node scripts/prisma-generate.js"
   },
   "dependencies": {
     "@clerk/nextjs": "7.4.2",
