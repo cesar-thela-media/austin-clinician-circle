@@ -124,26 +124,76 @@ export default function JoinPage() {
       className="min-h-screen pt-20 md:pt-24 pb-16 md:pb-20"
       style={{ background: "var(--color-cream-100)" }}
     >
-      <div className="max-w-xl mx-auto px-5 md:px-6">
-        {/* Header */}
-        <p
-          className="text-[11px] font-semibold uppercase tracking-[0.28em] mb-4"
-          style={{ color: "var(--color-accent-highlight)" }}
-        >
-          Membership application
-        </p>
-        <h1
-          className="mb-10"
-          style={{
-            fontFamily: "var(--font-serif), Georgia, serif",
-            fontSize: "clamp(2.75rem, 5vw, 3.75rem)",
-            fontWeight: 400,
-            color: "var(--color-sage-900)",
-          }}
-        >
-          Join The Circle.
-        </h1>
+      <div className="max-w-6xl mx-auto px-5 md:px-8 flex flex-col lg:flex-row gap-12 lg:gap-20 items-start">
 
+        {/* ── Left: membership context ── */}
+        <div className="w-full lg:w-80 xl:w-96 shrink-0 lg:sticky lg:top-28">
+          <p
+            className="text-[11px] font-semibold uppercase tracking-[0.28em] mb-4"
+            style={{ color: "var(--color-accent-highlight)" }}
+          >
+            Membership application
+          </p>
+          <h1
+            className="mb-6 leading-tight"
+            style={{
+              fontFamily: "var(--font-serif), Georgia, serif",
+              fontSize: "clamp(2.5rem, 4vw, 3.25rem)",
+              fontWeight: 400,
+              color: "var(--color-sage-900)",
+            }}
+          >
+            Join The Circle.
+          </h1>
+          <p className="text-base leading-relaxed mb-8" style={{ color: "var(--color-text-secondary)" }}>
+            A professional community for licensed therapists in Austin. Sarah reviews every application personally.
+          </p>
+
+          {/* What's included */}
+          <div
+            className="rounded-2xl p-6 mb-6"
+            style={{ background: "var(--color-sage-800)" }}
+          >
+            <p className="text-[11px] font-semibold uppercase tracking-[0.22em] mb-4" style={{ color: "rgba(255,255,255,0.45)" }}>
+              What&apos;s included
+            </p>
+            <div className="flex flex-col gap-3">
+              {[
+                "Monthly case consultation group",
+                "Curated clinical resource library",
+                "Trusted referral network",
+                "Public directory listing",
+                "Practice coaching with Sarah",
+                "Professional will designation",
+              ].map((item) => (
+                <div key={item} className="flex items-start gap-3">
+                  <svg width="14" height="14" viewBox="0 0 16 16" fill="none" style={{ flexShrink: 0, marginTop: 2 }}>
+                    <circle cx="8" cy="8" r="8" fill="rgba(194,150,58,0.7)" />
+                    <path d="M4.5 8l2.5 2.5 4.5-5" stroke="#fff" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                  <span className="text-sm leading-snug" style={{ color: "rgba(255,255,255,0.78)" }}>{item}</span>
+                </div>
+              ))}
+            </div>
+            <div
+              className="mt-6 pt-5 flex items-baseline gap-1"
+              style={{ borderTop: "1px solid rgba(255,255,255,0.1)" }}
+            >
+              <span style={{ fontFamily: "var(--font-serif), Georgia, serif", fontSize: "2rem", fontWeight: 400, color: "#fff" }}>$79</span>
+              <span className="text-sm" style={{ color: "rgba(255,255,255,0.45)" }}>/month</span>
+            </div>
+            <p className="text-xs mt-1" style={{ color: "rgba(255,255,255,0.35)" }}>
+              Billed monthly · Cancel anytime
+            </p>
+          </div>
+
+          <p className="text-xs leading-relaxed" style={{ color: "var(--color-text-tertiary)" }}>
+            Payment is collected only after Sarah reviews and approves your application.
+          </p>
+        </div>
+
+        {/* ── Right: multi-step form ── */}
+        <div className="flex-1 min-w-0 w-full">
         {/* Step indicator */}
         <div className="flex flex-wrap items-center gap-3 gap-y-3 mb-8 md:mb-10">
           {STEPS.map((label, i) => (
@@ -488,7 +538,8 @@ export default function JoinPage() {
         )}
       </div>
 
-    </div>
+        </div>{/* end form right column */}
+      </div>{/* end flex row */}
     </div>
   );
 }

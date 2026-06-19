@@ -216,7 +216,7 @@ export default function HomePage() {
         />
 
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center" style={{ maxWidth: 1100, padding: "0 1.5rem", width: "100%" }}>
+        <div className="relative z-10 flex flex-col items-center" style={{ maxWidth: 1100, padding: "0 1.5rem", width: "100%", margin: "0 auto" }}>
           {/* Eyebrow */}
           <p
             className="uppercase tracking-[0.28em] font-medium mb-8 text-xs"
@@ -345,7 +345,7 @@ export default function HomePage() {
 
           {/* Founder pills */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-2.5" data-aos="fade-in" data-delay="300">
-            {["Founded by [Clinical Founder], LPC-S", "Austin, Texas"].map((txt) => (
+            {["Founded by Sarah Arnold, LPC-S", "Austin, Texas"].map((txt) => (
               <span
                 key={txt}
                 className="inline-flex items-center rounded-full text-xs"
