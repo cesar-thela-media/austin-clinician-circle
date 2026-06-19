@@ -46,7 +46,7 @@ export function PublicNav() {
               <img
                 src="/logo.png"
                 alt="Austin Clinician Circle"
-                className="h-9 w-auto transition-all duration-300"
+                className="h-12 w-auto transition-all duration-300"
                 style={{
                   filter: onDark ? "none" : "brightness(0) saturate(100%) invert(15%) sepia(3%) saturate(685%) hue-rotate(60deg) brightness(95%) contrast(89%)",
                 }}

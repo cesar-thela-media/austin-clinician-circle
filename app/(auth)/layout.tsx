@@ -22,7 +22,7 @@ export default function AuthLayout({
           <img
             src="/logo.png"
             alt="Austin Clinician Circle"
-            className="h-8 w-auto"
+            className="h-10 w-auto"
             style={{
               filter: "brightness(0) saturate(100%) invert(15%) sepia(3%) saturate(685%) hue-rotate(60deg) brightness(95%) contrast(89%)",
             }}
