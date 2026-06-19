@@ -28,6 +28,9 @@ export const metadata: Metadata = {
   title: "Austin Clinician Circle",
   description:
     "Austin Clinician Circle — a membership community for licensed clinicians in Austin, TX. Deepen your work. Find your people.",
+  icons: {
+    icon: "/icon.png",
+  },
 };
 
 export default function RootLayout({
