@@ -1,10 +1,10 @@
 import { SignIn } from "@clerk/nextjs";
-import { AuthSetupNotice } from "@/components/auth/AuthSetupNotice";
+import { MockSignIn } from "@/components/auth/MockSignIn";
 import { hasClerkCredentials } from "@/lib/env";
 
 export default function SignInPage() {
   if (!hasClerkCredentials) {
-    return <AuthSetupNotice />;
+    return <MockSignIn />;
   }
 
   return (

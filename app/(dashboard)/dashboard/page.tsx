@@ -1,6 +1,9 @@
+import { currentUser } from "@clerk/nextjs/server";
+import { cookies } from "next/headers";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import Link from "next/link";
+import { hasClerkCredentials } from "@/lib/env";
 
 const upcomingEvents = [
   {
@@ -29,7 +32,17 @@ const recentResources = [
   { title: "Psychoeducation: Anxiety Handout", category: "Handouts" },
 ];
 
-export default function DashboardPage() {
+export default async function DashboardPage() {
+  let firstName = "there";
+  if (hasClerkCredentials) {
+    const user = await currentUser();
+    if (user?.firstName) firstName = user.firstName;
+  } else {
+    const jar = await cookies();
+    const demoCookieName = jar.get("acc_demo_name")?.value;
+    if (demoCookieName) firstName = demoCookieName.split(" ")[0];
+  }
+
   return (
     <div className="flex flex-col gap-10 2xl:gap-14">
       {/* Header */}
@@ -41,7 +54,7 @@ export default function DashboardPage() {
           Member dashboard
         </p>
         <h1 className="text-page-title">
-          Welcome back, Jane.
+          Welcome back, {firstName}.
         </h1>
       </div>
 

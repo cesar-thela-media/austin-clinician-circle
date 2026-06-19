@@ -1,3 +1,4 @@
+import { cookies } from "next/headers";
 import { currentUser } from "@clerk/nextjs/server";
 import { clerkAdminEmails, hasClerkCredentials } from "@/lib/env";
 
@@ -8,9 +9,11 @@ export function isAdminEmail(email: string | null | undefined) {
 
 export async function getCurrentViewer() {
   if (!hasClerkCredentials) {
+    const jar = await cookies();
+    const email = jar.get("acc_demo_email")?.value ?? null;
     return {
       user: null,
-      primaryEmail: null,
+      primaryEmail: email,
       isAdmin: false,
     };
   }

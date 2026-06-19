@@ -1,6 +1,7 @@
 "use client";
 
 import type { CSSProperties } from "react";
+import { useRouter } from "next/navigation";
 import { SignOutButton } from "@clerk/nextjs";
 import { hasClerkPublishableKey } from "@/lib/public-env";
 
@@ -17,11 +18,19 @@ export function SignOutAction({
   style,
   onSignedOut,
 }: SignOutActionProps) {
+  const router = useRouter();
+
   if (!hasClerkPublishableKey) {
+    async function handleDemoSignOut() {
+      await fetch("/api/mock-auth", { method: "DELETE" });
+      onSignedOut?.();
+      router.push("/sign-in");
+      router.refresh();
+    }
     return (
-      <a href="/sign-in" className={className} style={style}>
+      <button type="button" className={className} style={style} onClick={handleDemoSignOut}>
         <span>⇤</span> {label}
-      </a>
+      </button>
     );
   }
 

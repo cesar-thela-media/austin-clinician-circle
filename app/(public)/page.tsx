@@ -272,7 +272,7 @@ export default function HomePage() {
       {/* ══ WHY ACC EXISTS ══════════════════════════════════ */}
       <section
         className="relative overflow-hidden"
-        style={{ background: SECTION2, padding: "clamp(4.5rem,9vw,7.5rem) 0" }}
+        style={{ background: SECTION2, padding: "clamp(3rem,6vw,5.5rem) 0" }}
       >
         <div className="absolute inset-0 pointer-events-none" style={{ background: `radial-gradient(ellipse 70% 50% at 50% 28%, rgba(194,150,58,0.055) 0%, transparent 65%)` }} />
 
@@ -361,7 +361,7 @@ export default function HomePage() {
       </section>
 
       {/* ══ TESTIMONIALS — CORKBOARD ════════════════════════ */}
-      <section style={{ background: PARCHMENT, padding: "clamp(4rem,7vw,6rem) 0" }}>
+      <section style={{ background: PARCHMENT, padding: "clamp(2.5rem,5vw,4rem) 0" }}>
         <div className="container-fluid">
           {/* Section header */}
           <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-4" data-aos="fade-in" style={{ color: AMBER }}>
@@ -494,9 +494,9 @@ export default function HomePage() {
       </section>
 
       {/* ══ MEMBERSHIP INCLUDES ══════════════════════════════ */}
-      <section style={{ background: PARCHMENT, padding: "clamp(3.5rem,7vw,6rem) 0", borderTop: `1px solid rgba(194,150,58,0.12)` }}>
+      <section style={{ background: PARCHMENT, padding: "clamp(2.5rem,5vw,4rem) 0", borderTop: `1px solid rgba(194,150,58,0.12)` }}>
         <div className="container-fluid">
-          <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-10 xl:gap-16 items-start" style={{ marginBottom: "3.5rem" }}>
+          <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-10 xl:gap-16 items-start" style={{ marginBottom: "2rem" }}>
             {/* Left */}
             <div data-aos="fade-in-up">
               <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-4" style={{ color: AMBER }}>
@@ -595,35 +595,34 @@ export default function HomePage() {
       </section>
 
       {/* ══ PRICING ══════════════════════════════════════════ */}
-      <section style={{ background: PARCHMENT, padding: "clamp(3.5rem,7vw,6rem) 0", borderTop: `1px solid rgba(194,150,58,0.12)` }}>
+      <section style={{ background: PARCHMENT, padding: "clamp(2.5rem,5vw,4rem) 0", borderTop: `1px solid rgba(194,150,58,0.12)` }}>
         <div className="container-fluid">
-          <div className="grid grid-cols-1 lg:grid-cols-[220px,1fr] gap-10 xl:gap-16 items-center">
-            {/* Left */}
-            <div data-aos="fade-in-up">
-              <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-4" style={{ color: AMBER }}>
-                Membership
-              </p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-serif), Georgia, serif",
-                  fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  fontWeight: 400,
-                  letterSpacing: "-0.018em",
-                  lineHeight: 1.18,
-                  color: "#1A1A1A",
-                }}
-              >
-                Simple,<br />all-inclusive<br />pricing.
-              </h2>
-            </div>
-
-            {/* Pricing card */}
-            <div
-              data-aos="scale-in"
-              data-delay="80"
-              className="rounded-2xl overflow-hidden"
-              style={{ background: "#fff", boxShadow: "0 4px 28px rgba(45,59,44,0.09)", border: "1px solid rgba(194,150,58,0.12)" }}
+          {/* Centered header */}
+          <div className="text-center mb-8" data-aos="fade-in-up">
+            <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-3" style={{ color: AMBER }}>
+              Membership
+            </p>
+            <h2
+              style={{
+                fontFamily: "var(--font-serif), Georgia, serif",
+                fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+                fontWeight: 400,
+                letterSpacing: "-0.018em",
+                lineHeight: 1.18,
+                color: "#1A1A1A",
+              }}
             >
+              Simple, all-inclusive pricing.
+            </h2>
+          </div>
+
+          {/* Pricing card */}
+          <div
+            data-aos="scale-in"
+            data-delay="80"
+            className="max-w-3xl mx-auto rounded-2xl overflow-hidden"
+            style={{ background: "#fff", boxShadow: "0 4px 28px rgba(45,59,44,0.09)", border: "1px solid rgba(194,150,58,0.12)" }}
+          >
               <div className="grid grid-cols-1 md:grid-cols-[190px,1fr]">
                 {/* Price */}
                 <div
@@ -675,7 +674,6 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
-          </div>
         </div>
       </section>
 

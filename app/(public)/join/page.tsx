@@ -68,9 +68,33 @@ export default function JoinPage() {
   const [step, setStep] = useState(0);
   const [form, setForm] = useState<FormData>(empty);
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState("");
 
   function set(field: keyof FormData, value: string) {
     setForm((f) => ({ ...f, [field]: value }));
+  }
+
+  async function handleSubmit() {
+    setSubmitting(true);
+    setSubmitError("");
+    try {
+      const res = await fetch("/api/application", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        setSubmitError((data as { error?: string }).error || "Something went wrong. Please try again.");
+      }
+    } catch {
+      setSubmitError("Network error. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   }
 
   function toggleMulti(field: "specialties" | "modalities", value: string) {
@@ -526,12 +550,17 @@ export default function JoinPage() {
               collected after Sarah reviews and approves your application.
             </div>
 
+            {submitError && (
+              <p className="text-sm text-center" style={{ color: "var(--color-error)" }}>
+                {submitError}
+              </p>
+            )}
             <div className="flex flex-col sm:flex-row gap-3">
-              <Button variant="secondary" onClick={() => setStep(1)} className="flex-1">
+              <Button variant="secondary" onClick={() => setStep(1)} className="flex-1" disabled={submitting}>
                 ← Back
               </Button>
-              <Button onClick={() => setSubmitted(true)} className="flex-1">
-                Submit application
+              <Button onClick={handleSubmit} className="flex-1" disabled={submitting}>
+                {submitting ? "Submitting…" : "Submit application"}
               </Button>
             </div>
           </div>
