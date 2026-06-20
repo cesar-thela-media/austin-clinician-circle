@@ -1,0 +1,387 @@
+(Transcribed by TurboScribe. Go Unlimited to remove this message.)
+
+Okay, we will be having a new QA on this one. We have Austin Clinician Circle. Yeah, let's walk through this. 
+
+I will be having a manual QA on this page. We have Austin Clinician Circle and I am currently on the landing page. Okay, here's what I'm seeing here currently. 
+
+Let's talk with the navbar. The navbar is too thick on this, really thick on this one. And I am preferring to remove the sticky navbar on this.
+
+Rather than, I mean, the navbar should not be sticky as I scroll. And yeah, because the navbar is too thick at this point, I will be making adjustments maybe on this. But ideally, the logo on this navbar should not have external padding on this.
+
+There should be no external padding on this. Rather, we should rely on the PX size on the image instead. The navbar. 
+
+Sooner or later, we will change the navbar UI structure, but not for now. But let me know what you think. I will be fetching UI components from 21stDev for this one.
+
+Let's move on to the hero section. I like the background here. I like the radar effect.
+
+And we have deepen your work, find your people. And what we don't have here is the sub-headline. I like the smaller text underneath that text. 
+
+Just a one-liner. Sub-liner on this one before the call to action. The next one is the why ACC exists section.
+
+Practice can feel isolating. I think that text should be one-liner on this. And the sentence, you don't have to do this alone, should be one-liner instead.
+
+Because currently it was a four-liner. So I would like you to adjust it. Maybe there was a border that is making this.
+
+I want you to remove that border if there is something existing like that. And I have a feeling that this section, why ACC exists section, feels like being compressed. Side to side, from left to right, they are being compressed.
+
+I want you to adjust that or remove that at all, depending on how it looks. The sub-liner when you leave the agency, I think we should have to shorten that a bit. And the metrics should be like 67%, 3 years, and the 89% component should be bigger as well.
+
+Let's move on to the next section which is the what members see before they join. I think the title recognition is the first thing section should be on the centered. They are centered, not just that and the other related to that title.
+
+The sub-liner and the section title should be centered at this point. And what I've noticed on mobile, how it is designed on mobile is different than the desktop. Because they don't have the design on.
+
+Like a tilt one, you know? Like on this testimonials UI card, on mobile they are not tilted properly and they are just straight out cards. And there was a gap, I think we should, on this section, the sentence Austin Clinician Circle should be a bit closer to the UI cards here. Because there was a gap on that.
+
+Let's move on to the next section which is the membership includes section. Okay, I'm thinking this is the benefits of joining. I'm thinking we should recreate this although I like the dashboard preview here.
+
+But I think overall on this membership includes needs rework entirely. This entire section because this is talking about the benefits. My point of view on this one should be like, we should be focusing on the benefits POV perspective on this.
+
+That is triggering emotion response rather than on logic. Because currently on your current design is the way it talks to me it is like very logical. It don't appeal to the emotion of the human.
+
+And on the nature of this project, most likely this is talking about people that is mostly women. So I am assuming that this is more into emotional kind of trigger we should be implementing on this project entirely. So I want you to recreate this section membership includes section entirely.
+
+And we have the membership section, we have the simple all-inclusive pricing. I think this will work for the meantime. But I want the text, the benefits text on this should be centered and aligned properly instead of the more into left side.
+
+Because currently it is not centered like the monthly keys consultation. I mean the checklist on this one is not centered. And we have the simple CTA. 
+
+I like it. And the footer needs rework as well. I don't know maybe it is still affected by the image logo here.
+
+But some of the text here was just too small. So I mean on the footer font size I would like it the same size as the bar menu font size on this. And I noticed that there was a gap on this one.
+
+We have like a very small gap that is not being like being what do you call this. I mean on my screen particularly it wasn't really like full width you know. Like on this entire landing page I am seeing like a very very thin gap that is existing all over this landing page.
+
+That is basically a space as well. I'm thinking if we should adjust that as well or remove entirely. My screen is maybe 144, 1400px.
+
+So I want you to view it at different viewpoint and view way on this to see that particularly. Let's move on to the who we are page. Okay.
+
+We have a section for the title a professional home for therapist. But. Okay.
+
+Here's what I want for the who we are page. I want the third section the founder Sarah Arnold section to be at the first section. So that will be the hero section or the first section here on this page.
+
+And move the origin section below that. And remove entirely remove the a professional home for therapist section title on this one entirely. And what we believe will be the third section at this point.
+
+Yeah, that's it for the who we are page. Let's move on to the membership page. I really don't like how you put a title on this one.
+
+Yeah, I mean this page sucks. Except the. FAQ on this the except the frequently asked question on this.
+
+I like the. FAQ here. And also on the slugs the slugs we have here.
+
+Currently we have we are in membership on the nav bar. It is called membership page, but on the link we have what we offer is slug instead. So I would like to have a unified.
+
+Title on the slug as well. Let's call this. Actually, let's call this what we offer.
+
+What we offer page instead not membership. So. Regarding the slug that will be the same case if that is the.
+
+If what we offer that it's fine, but I want you to. Change on the nav bar menu instead from membership to what we offer. Name.
+
+And on this page, particularly, I want you to full rework on this entirely. Except the FAQ the the. Frequently asked questions.
+
+And everything else needs needs rework on this. It sucks actually. Again, this is more into emotional.
+
+So. Ideally, this should be having a an emotional trigger response. I mean, not too exaggerated, but the idea is there.
+
+And we have a flying find a clinician here. Oh. Find a clinician.
+
+Remove the title again, the find your people, the entire opponents inside that. And just straight out to the actual content. Instead and remove.
+
+The nine clinicians instead and the seven active new clients. Analytics. And I need you to rework on the search bar.
+
+The search bar is too small. And that filter is too many. Maybe we should.
+
+Just apply. If you were filter on this one. And the list is.
+
+You are card. We have three columns and three rows on the listings. Here's what I would say on this profile here.
+
+I am seeing on the UI card. We have a profile. Type of thing.
+
+I would have you to like, please, a real human image here rather than a letter with. Just as profile. Please hold their images would be fine, but do not repeat images.
+
+And we have the city and the folder again. Fuller rework on. Water.
+
+And again on. We have discrepancies on the slugs and the title on the nav bar. So let's work on that.
+
+Let's move on to the resources page. And unfortunately, it was called what we offer on the slugs. And on this page, I want you to remove the title.
+
+Everything driving. Private practice needs section entirely. Entirely.
+
+Oh boy. This one sucks entirely to be honest. This page is too generic.
+
+Too much text. It's just to generalize. I mean, I am not even reading the text on this myself.
+
+I'm just scanning and. I would say. This is like an accessory page rather than something that needs attention to be honest.
+
+So we have to do a full. Rework on this. When I say full rework on this one, I'm pertaining to the custom UI components.
+
+Certain. Copy marketing. Copy.
+
+Messaging on this one. And. Yeah.
+
+Unique components more into visual UI components. Ideally. Not too generic.
+
+Should not be. Not a slop on this. Um.
+
+The UI components are unique. To each of the UI pages here. And yeah.
+
+Let's move on to the join the circle. And. This is the main.
+
+This is the main. Call to action here, right? Unfortunately. It redirects to the.
+
+Membership area right away, right? Ha. So the idea will be like. You are only able to access the members area once you have paid the $79.
+
+So there will be no account will be accepted unless you pay. Uh. What I am thinking of.
+
+I am thinking of something different here. Let me know what you think of this. I mean, do not execute this at all.
+
+But I want you to put this on the reply. Um. Should we have.
+
+Like a lead magnet. Page. That is the idea is to have them.
+
+Create an account for us. Right? So they will create an account and they will be having an access to the membership area. But they will have no access to the paid.
+
+Resources. Right? They will be able to log in. On the members area.
+
+But the only thing they will have access on. Is on the resources we have been offered. On the lead magnet page.
+
+What do I mean by that? So on the lead magnet page. So we will be having a lead magnet here. So the idea is we will be offering something for free.
+
+Um. This could be a PDF. Or a course.
+
+Or a. I think a simple PDF would be fine here. As a deliverable for them. And.
+
+You know. Just like. It will act as a small bribe.
+
+As a small bribe. So that. They.
+
+Will have. I mean the users will have the reason. To log in.
+
+And. Yeah. I think that's how.
+
+We should put it actually. To be honest. Um.
+
+I am talking to lead magnet page here. So meaning you have to create a lead magnet page here. So ideally on that lead magnet.
+
+Lead magnet page. Here. On hero section.
+
+We will have a two column setup. On the left right will be the text. About the lead magnet.
+
+And um. On the right side will be the image of the PDF. A placeholder will be fine for now.
+
+And. The second section is. And the rest of the section talks about.
+
+The content. And. Or the benefits.
+
+Perspective of that. PDF. And.
+
+Call to action section. That will be. Call to action section.
+
+That is. Being redirect. To the separate.
+
+Um. Sign in page. Okay.
+
+So there will be sign in page here. Um. That is.
+
+Fully allocated. That when the user sign up. On that page particularly.
+
+They will be having. They will be automatically able to. Um.
+
+Provision that. PDF. Upon.
+
+They have access. On the dashboard. Right.
+
+So. Two new pages. We have.
+
+Lead magnet page. I mean do not call it lead magnet page. Just find a better naming.
+
+Or title on this one. And we have. A separate dashboard.
+
+Um. I don't think we will having. A separate dashboard here.
+
+But we will be having some sort of. Paywall on the dashboard itself. Um.
+
+Ideally anyone can. Log in. Can sign in.
+
+On that dashboard. Um. Actually we will be having.
+
+A three. Um. Sign in.
+
+Sign in. Sign up. On this one.
+
+We have. The lead magnet one. The second one is.
+
+The no lead magnet. This is where. People are naturally.
+
+Go on the landing page. And create their account. Um.
+
+Ideally it will. It will also fall. On having them access.
+
+To the lead magnet page. But we will be having. A lot of lead magnet page.
+
+Soon. So let's have. That.
+
+The same. Um. Lead magnet access.
+
+To those. Who naturally. Sign up on that.
+
+Landing page. And the third one. Is via.
+
+Paywall. So when they pay for the. Exclusive.
+
+The seventy nine. Dollars a month. They will be having.
+
+An access. To the paid. Members area.
+
+Okay. So yeah. So.
+
+Work on that. Um. Forms.
+
+Currently I am. Now on. Slash.
+
+Join page. This is the main city. Page.
+
+I want you to fully. Work on this. Because.
+
+The nav bar. Is too thick. Um.
+
+The first section. Is not adjusted. Per the.
+
+Nav bar. That's why. The join.
+
+The circle. Title. Was blocked.
+
+Here. And remove. Probably.
+
+The what's included. And rather. Replace it with.
+
+I don't know. To be honest. If we should have.
+
+The pricing. On this city. Right away.
+
+Or. Uh. I think we should.
+
+Include that. But I think. No.
+
+We should remove that. I guess. We should remove the.
+
+Pricing. On the join page. Because.
+
+I don't know. If this. Join page.
+
+Is sign. Up page. Rather than sign in.
+
+So. There was a confusion. Here a bit.
+
+So. I would. Need you to create.
+
+A separate. Sign in. And sign up page.
+
+On this one. Rather than one. Because I'm.
+
+Not seeing. Log in. But when I click.
+
+The demo. You have the sign in page. So.
+
+Yeah. There was confusion. Here again.
+
+Um. On the nav bar. You name it.
+
+Demo. But when I click. The demo button.
+
+It redirects me. To the sign in page. Yeah.
+
+So I want you. To rename. That button.
+
+Into sign in page. And the join in. Will be.
+
+The sign up. So. Yeah.
+
+There was the. Just. Confusion.
+
+Here. I mean. I am.
+
+Live. QA. At this point.
+
+And yeah. And. Let's talk.
+
+Since we are. On the sign in page. Let's talk about it.
+
+I want you. To remove the nav bar. Here.
+
+You will be having. A two. Column setup.
+
+Here. So no nav bar. Two column.
+
+Two. Column. Session.
+
+Format. Layout. On this.
+
+Page. Right away. It should not be scrollable.
+
+On desktop. But on mobile. It should be like.
+
+The sign in circle. Probably. So on the.
+
+We are talking. Two columns. The first column.
+
+Should be an image. And the second. Column.
+
+Will be the. Sign in form. But in mobile.
+
+It should be the sign in form. Only. So yeah.
+
+That's it. For now. Let's move on.
+
+To the dashboard. I will log in. As demo user.
+
+Here. Yeah. Again.
+
+As I said. This is like. This seems like.
+
+A paid one. About the sign in. Signing in.
+
+This is like. A paid one. So we will be having.
+
+A two set. Maybe. Again.
+
+I don't know. If this. The approach here.
+
+Should be a two set. Of dashboard. Or.
+
+Live. Two set of dashboard. And.
+
+The first dashboard. Will be. The one.
+
+That. Is not. Paid.
+
+And the one. Is for the. Paid one.
+
+So. Currently. What I'm seeing.
+
+Is the paid one. I think everything. Is alright.
+
+At this point. But yeah. So you will be working.
+
+On a separate. Dashboard here. The one.
+
+That don't have the. That don't have the. I mean.
+
+The dashboard. Should be like. The one.
+
+That has the lead magnet. As I'm talking about. And yeah.
+
+We have to adjust. The. Logo here.
+
+Again. And again. There was still a gap.
+
+On this one. On the left side. That there was a. Separate space.
+
+Like on the. On the landing page. Maybe that is something.
+
+We have to look into. Yeah. I think that's all.
+
+For the dashboard. Admin page. I'm seeing.
+
+I'm not seeing the admin page. The admin page. I would say.
+
+It was good. But it still need. Some optimization on this.
+
+(This file is longer than 30 minutes. Go Unlimited at https://turboscribe.ai/ to transcribe files up to 10 hours long.)

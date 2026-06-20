@@ -247,6 +247,14 @@ export default function HomePage() {
             <em style={{ color: AMBER, fontStyle: "italic", display: "block" }}>Find your people.</em>
           </h1>
 
+          {/* Sub-headline */}
+          <p
+            className="text-sm md:text-base leading-relaxed mb-8 max-w-lg mx-auto"
+            style={{ color: "rgba(255,255,255,0.55)", animation: "fadeInUp 0.75s 0.28s cubic-bezier(0.16,1,0.3,1) both" }}
+          >
+            A membership network for licensed therapists who want to do deeper work — together.
+          </p>
+
           {/* CTA buttons */}
           <div
             className="flex flex-col sm:flex-row gap-3 justify-center"
@@ -271,7 +279,7 @@ export default function HomePage() {
               className="inline-flex items-center justify-center rounded-full text-sm font-medium transition-opacity hover:opacity-80"
               style={{ color: "rgba(255,255,255,0.6)", padding: "0.8rem 2.1rem" }}
             >
-              Try the demo →
+              Sign In →
             </Link>
           </div>
         </div>
@@ -282,7 +290,7 @@ export default function HomePage() {
         className="relative overflow-hidden"
         style={{ background: SECTION2, padding: "clamp(3rem,6vw,5.5rem) 0" }}
       >
-        <div className="container-fluid text-center relative z-10" style={{ maxWidth: 740 }}>
+        <div className="container-fluid text-center relative z-10" style={{ maxWidth: 900 }}>
           {/* Eyebrow */}
           <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-5" data-aos="fade-in" style={{ color: `rgba(194,150,58,0.85)` }}>
             Why ACC exists
@@ -293,34 +301,31 @@ export default function HomePage() {
             data-aos="fade-in-up" data-delay="80"
             style={{
               fontFamily: "var(--font-serif), Georgia, serif",
-              fontSize: "clamp(2.1rem, 5.5vw, 3.75rem)",
+              fontSize: "clamp(2.1rem, 5.5vw, 4rem)",
               fontWeight: 400,
               letterSpacing: "-0.02em",
-              lineHeight: 1.1,
+              lineHeight: 1.15,
               color: "#1A1A1A",
               marginBottom: "1.75rem",
             }}
           >
-            Private practice can feel isolating.
-            <br />
-            <em style={{ color: AMBER, fontStyle: "italic" }}>You don&apos;t have to do this alone.</em>
+            <span style={{ display: "block" }}>Private practice can feel isolating.</span>
+            <em style={{ color: AMBER, fontStyle: "italic", display: "block" }}>You don&apos;t have to do this alone.</em>
           </h2>
 
           {/* Body */}
-          <p className="text-sm leading-[1.85] max-w-[520px] mx-auto mb-4" data-aos="fade-in" data-delay="160" style={{ color: "#3D4A3B" }}>
-            When you leave an agency or group practice, you gain autonomy and lose the built-in
-            consultation, community, and support from colleagues that keep your clinical work sharp.
-            Most therapists in private practice never fully replace it.
+          <p className="text-sm leading-[1.7] max-w-[600px] mx-auto mb-4" data-aos="fade-in" data-delay="160" style={{ color: "#3D4A3B" }}>
+            When you leave an agency, you gain autonomy and lose the built-in consultation that keeps your clinical work sharp. Most private practitioners never fully replace it.
           </p>
           <p className="text-sm font-semibold mb-14" data-aos="fade-in" data-delay="220" style={{ color: "#1A1A1A" }}>
-            Austin Clinician Circle is here to change that.
+            The Circle is here to change that.
           </p>
 
           {/* Stats — amber hairline dividers */}
-          <div className="grid grid-cols-3 mb-12 mx-auto" data-aos="fade-in-up" data-delay="160" style={{ maxWidth: 680 }}>
+          <div className="grid grid-cols-3 mb-12 mx-auto" data-aos="fade-in-up" data-delay="160" style={{ maxWidth: 780 }}>
             {[
-              { stat: "67%",     sub: "feel isolated in\nprivate practice" },
-              { stat: "3 years", sub: "average without formal\npeer consultation" },
+              { stat: "67%",     sub: "of private practitioners\nfeel isolated" },
+              { stat: "3 years", sub: "average without\npeer consultation" },
               { stat: "89%",     sub: "say peer support improved\ntheir confidence" },
             ].map((item, i) => (
               <div
@@ -334,7 +339,7 @@ export default function HomePage() {
                 <span
                   style={{
                     fontFamily: "var(--font-serif), Georgia, serif",
-                    fontSize: "clamp(2rem, 5vw, 3.5rem)",
+                    fontSize: "clamp(2.5rem, 6vw, 4.25rem)",
                     fontWeight: 400,
                     color: SECTION3,
                     lineHeight: 1,
@@ -344,7 +349,7 @@ export default function HomePage() {
                 >
                   {item.stat}
                 </span>
-                <span style={{ fontSize: "11px", lineHeight: 1.5, color: "#75796E", whiteSpace: "pre-line", maxWidth: 110, display: "block" }}>
+                <span style={{ fontSize: "12px", lineHeight: 1.5, color: "#75796E", whiteSpace: "pre-line", maxWidth: 140, display: "block" }}>
                   {item.sub}
                 </span>
               </div>
@@ -370,6 +375,7 @@ export default function HomePage() {
       <section style={{ background: SECTION3, padding: "clamp(2.5rem,5vw,4rem) 0" }}>
         <div className="container-fluid">
           {/* Section header */}
+          <div className="text-center">
           <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-4" data-aos="fade-in" style={{ color: `rgba(194,150,58,0.78)` }}>
             What members say before they join
           </p>
@@ -393,6 +399,7 @@ export default function HomePage() {
           >
             You don&apos;t have to carry it all alone.
           </p>
+          </div>
 
           {/* ── Desktop corkboard — cards visible immediately, container fades in ── */}
           <div
@@ -492,7 +499,7 @@ export default function HomePage() {
           <p
             className="text-center text-sm font-medium"
             data-aos="fade-in"
-            style={{ color: "rgba(255,255,255,0.72)", marginTop: "clamp(2rem,5vw,3.5rem)" }}
+            style={{ color: "rgba(255,255,255,0.72)", marginTop: "clamp(1.5rem,3vw,2rem)" }}
           >
             Austin Clinician Circle was built for this moment.
           </p>

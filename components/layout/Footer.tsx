@@ -5,7 +5,7 @@ const BG    = "#2D3B2C";
 
 const quickLinks = [
   { href: "/who-we-are",   label: "Who we are" },
-  { href: "/what-we-offer", label: "Membership" },
+  { href: "/what-we-offer", label: "What we offer" },
   { href: "/find-a-clinician",  label: "Community" },
   { href: "/what-we-offer",  label: "Resources" },
   { href: "/dashboard/events",  label: "Events" },
