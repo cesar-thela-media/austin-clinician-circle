@@ -24,7 +24,7 @@ const faqs = [
   },
   {
     q: "How do I reach Sarah?",
-    a: "By email — sarah@restoredfc.com",
+    a: "By email, sarah@restoredfc.com",
   },
 ];
 
@@ -61,11 +61,11 @@ export default function WhatWeOfferPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               { label: "01", title: "You talk through cases with people who get it.", body: "Monthly case consultation with a small, trusted group of clinicians. Bring your hardest sessions and leave with perspective you can actually use." },
-              { label: "02", title: "You stop Googling for handouts at 10pm.", body: "A searchable library of clinical tools, assessments, and templates — organized by specialty and ready when you are." },
+              { label: "02", title: "You stop Googling for handouts at 10pm.", body: "A searchable library of clinical tools, assessments, and templates, organized by specialty and ready when you are." },
               { label: "03", title: "You send referrals without second-guessing.", body: "A vetted network of clinicians you know and trust. Because the best referrals come from real professional relationships." },
-              { label: "04", title: "You stay sharp without sitting through irrelevant CEUs.", body: "Continuing education designed for practicing clinicians — practical, relevant, and actually worth your Saturday morning." },
+              { label: "04", title: "You stay sharp without sitting through irrelevant CEUs.", body: "Continuing education designed for practicing clinicians, practical, relevant, and actually worth your Saturday morning." },
               { label: "05", title: "You get found by the clients who need you.", body: "Your profile in our public directory, searchable by specialty, modality, and availability. A trusted source for client referrals." },
-              { label: "06", title: "You have someone to call when it feels heavy.", body: "Discounted one-on-one coaching with Sarah Arnold, LPC-S — for clinical guidance, practice strategy, or just a grounded conversation." },
+              { label: "06", title: "You have someone to call when it feels heavy.", body: "Discounted one-on-one coaching with Sarah Arnold, LPC-S, for clinical guidance, practice strategy, or just a grounded conversation." },
             ].map((item) => (
               <div key={item.label} className="rounded-2xl p-7 flex gap-5" style={{ background: "#fff", border: "1px solid rgba(194,150,58,0.12)", boxShadow: "0 2px 12px rgba(45,59,44,0.05)" }}>
                 <span className="text-2xl shrink-0" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: AMBER, lineHeight: 1 }}>{item.label}</span>

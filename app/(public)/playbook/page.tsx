@@ -7,8 +7,8 @@ const SAGE = "#2D3B2C";
 const benefits = [
   { title: "Set your fees with confidence", body: "Stop undercharging. A proven framework to calculate what your practice is worth and communicate it clearly." },
   { title: "Build a referral engine", body: "The three-ring referral model that keeps your caseload full without marketing yourself into burnout." },
-  { title: "Spot burnout before it spots you", body: "12 early-warning signs most clinicians miss — and the protective structures that actually work." },
-  { title: "Find your clinical community", body: "What thriving private practices do differently. The isolation tax is real — here's how to stop paying it." },
+  { title: "Spot burnout before it spots you", body: "12 early-warning signs most clinicians miss, and the protective structures that actually work." },
+  { title: "Find your clinical community", body: "What thriving private practices do differently. The isolation tax is real. Here's how to stop paying it." },
 ];
 
 export const metadata: Metadata = {
@@ -40,7 +40,7 @@ export default function PlaybookPage() {
                 The Private Practice Playbook
               </h1>
               <p className="text-base leading-relaxed mb-8" style={{ color: "rgba(255,255,255,0.6)" }}>
-                A practical guide for licensed therapists who want to build a sustainable, connected private practice — without going it alone.
+                A practical guide for licensed therapists who want to build a sustainable, connected private practice, without going it alone.
               </p>
               <Link
                 href="/sign-in"

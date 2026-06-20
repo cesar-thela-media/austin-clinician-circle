@@ -89,7 +89,7 @@ export function MockSignIn({ redirectTo = "/dashboard" }: Props) {
           Sign in to The Circle
         </h1>
         <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-          Clerk auth isn&apos;t configured — enter any name and email to access the member dashboard.
+          Clerk auth isn&apos;t configured. Enter any name and email to access the member dashboard.
         </p>
       </div>
 

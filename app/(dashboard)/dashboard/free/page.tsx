@@ -31,7 +31,7 @@ export default async function FreeDashboardPage() {
             Your free playbook is ready.
           </h1>
           <p className="text-sm leading-relaxed mb-5" style={{ color: "rgba(255,255,255,0.6)" }}>
-            You have access to The Private Practice Playbook — a practical guide for building a sustainable practice. Upgrade to unlock the full Circle.
+            You have access to The Private Practice Playbook, a practical guide for building a sustainable practice. Upgrade to unlock the full Circle.
           </p>
           <div className="flex flex-wrap gap-3">
             <a href="#" className="inline-flex items-center gap-2 rounded-full text-sm font-medium px-5 py-2.5 transition-opacity hover:opacity-90" style={{ background: AMBER, color: "#fff" }}>
@@ -53,10 +53,10 @@ export default async function FreeDashboardPage() {
       <div className="rounded-2xl p-5 flex flex-col sm:flex-row items-start sm:items-center gap-4" style={{ background: "rgba(194,150,58,0.08)", border: "1px solid rgba(194,150,58,0.18)" }}>
         <div className="flex-1">
           <p className="text-sm font-semibold mb-1" style={{ color: SAGE }}>Ready for the full experience?</p>
-          <p className="text-xs leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>Monthly case consultation, CEUs, referral network, resource library, and more — all included.</p>
+          <p className="text-xs leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>Monthly case consultation, CEUs, referral network, resource library, and more, all included.</p>
         </div>
         <Link href="/join" className="shrink-0 rounded-full text-sm font-medium px-6 py-2.5 transition-opacity hover:opacity-90" style={{ background: AMBER, color: "#fff" }}>
-          Upgrade — $79/mo
+          Upgrade, $79/mo
         </Link>
       </div>
 

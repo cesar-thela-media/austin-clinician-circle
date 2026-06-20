@@ -96,7 +96,7 @@ const benefits = [
 const corkCards = [
   {
     // Card 1 — center landscape (dominant) — starts after Card 2 right edge
-    quote: "I started dreading Mondays. Not because of my clients — because I was completely alone with the weight of it.",
+    quote: "I started dreading Mondays. Not because of my clients. Because I was completely alone with the weight of it.",
     author: "Anonymous, PhD", location: "Austin, TX",
     desktop: { left: "28%", top: "56px", width: "38%" },
     rotation: 1.5,
@@ -252,7 +252,7 @@ export default function HomePage() {
             className="text-sm md:text-base leading-relaxed mb-8 max-w-lg mx-auto"
             style={{ color: "rgba(255,255,255,0.55)", animation: "fadeInUp 0.75s 0.28s cubic-bezier(0.16,1,0.3,1) both" }}
           >
-            A membership network for licensed therapists who want to do deeper work — together.
+            A membership network for licensed therapists who want to do deeper work, together.
           </p>
 
           {/* CTA buttons */}
@@ -455,7 +455,7 @@ export default function HomePage() {
                 </p>
                 <div style={{ height: "0.5px", background: `rgba(194,150,58,0.32)` }} />
                 <div>
-                  <p style={{ fontSize: "11.5px", fontWeight: 600, color: "#4A5E48", letterSpacing: "0.01em" }}>— {card.author}</p>
+                  <p style={{ fontSize: "11.5px", fontWeight: 600, color: "#4A5E48", letterSpacing: "0.01em" }}>{card.author}</p>
                   <p style={{ fontSize: "11px", color: "#9A9A8E", marginTop: 3 }}>{card.location}</p>
                 </div>
               </div>
@@ -490,7 +490,7 @@ export default function HomePage() {
                 </p>
                 <div style={{ height: "0.5px", background: `rgba(194,150,58,0.3)` }} />
                 <div>
-                  <p style={{ fontSize: "11px", fontWeight: 600, color: "#4A5E48" }}>— {card.author}</p>
+                  <p style={{ fontSize: "11px", fontWeight: 600, color: "#4A5E48" }}>{card.author}</p>
                   <p style={{ fontSize: "10.5px", color: "#9A9A8E", marginTop: 2 }}>{card.location}</p>
                 </div>
               </div>
@@ -533,10 +533,10 @@ export default function HomePage() {
           {/* Emotional benefit cards */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
             {[
-              { feeling: "Seen.", title: "Case consultation that meets you where you are", body: "Bring your hardest cases to clinicians who get it. No judgment — just the kind of perspective that only comes from someone who does this work too." },
-              { feeling: "Supported.", title: "Resources that save you hours", body: "Stop reinventing the wheel. A growing library of clinical tools, handouts, and templates — organized and ready when you need them." },
+              { feeling: "Seen.", title: "Case consultation that meets you where you are", body: "Bring your hardest cases to clinicians who get it. No judgment, just the kind of perspective that only comes from someone who does this work too." },
+              { feeling: "Supported.", title: "Resources that save you hours", body: "Stop reinventing the wheel. A growing library of clinical tools, handouts, and templates, organized and ready when you need them." },
               { feeling: "Connected.", title: "A referral network you actually trust", body: "Send and receive referrals with confidence. Every member has been vetted through the same professional community you belong to." },
-              { feeling: "Sharp.", title: "CEUs that don&apos;t waste your time", body: "Continuing education designed for practicing clinicians — relevant, practical, and aligned with your licensure." },
+              { feeling: "Sharp.", title: "CEUs that don&apos;t waste your time", body: "Continuing education designed for practicing clinicians, relevant, practical, and aligned with your licensure." },
               { feeling: "Visible.", title: "A directory listing that works for you", body: "Your profile, searchable by specialty and modality. A trusted source for client referrals and colleague connections." },
               { feeling: "Grounded.", title: "Coaching that understands the weight", body: "Discounted one-on-one sessions with Sarah for when you need clinical guidance, practice strategy, or just someone who&apos;s been there." },
             ].map((item, i) => (
@@ -583,7 +583,7 @@ export default function HomePage() {
               Peer consultation groups, matched to your specialty.
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
-              Browse open groups by specialty — trauma, anxiety, couples, ADHD, and more. Join as a member to see live availability and reserve your spot.
+              Browse open groups by specialty. Trauma, anxiety, couples, ADHD, and more. Join as a member to see live availability and reserve your spot.
             </p>
           </div>
         </div>
