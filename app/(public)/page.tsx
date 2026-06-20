@@ -462,8 +462,8 @@ export default function HomePage() {
             ))}
           </div>
 
-          {/* ── Mobile: clean vertical stack ── */}
-          <div className="md:hidden flex flex-col gap-4">
+          {/* ── Mobile: tilted card stack ── */}
+          <div className="md:hidden flex flex-col gap-4 px-2">
             {corkCards.map((card, i) => (
               <div
                 key={i}
@@ -471,8 +471,9 @@ export default function HomePage() {
                   background: "#fff",
                   borderRadius: "12px",
                   padding: "1.35rem 1.45rem",
-                  boxShadow: "0 2px 12px rgba(45,59,44,0.08)",
+                  boxShadow: "0 6px 24px rgba(45,59,44,0.10), 0 1px 4px rgba(45,59,44,0.06)",
                   display: "flex", flexDirection: "column", gap: "0.9rem",
+                  transform: `rotate(${i % 2 === 0 ? -1.5 : 2}deg)`,
                 }}
               >
                 <p
@@ -643,8 +644,8 @@ export default function HomePage() {
                 {/* Features */}
                 <div style={{ padding: "2rem", display: "flex", flexDirection: "column", alignItems: "center" }}>
                   {/* Amber hairline */}
-                  <div className="md:hidden" style={{ height: "0.5px", background: `rgba(194,150,58,0.3)`, marginBottom: "1.5rem" }} />
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5" style={{ marginBottom: "1.75rem" }}>
+                  <div className="md:hidden" style={{ height: "0.5px", background: `rgba(194,150,58,0.3)`, marginBottom: "1.5rem", width: "100%" }} />
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-2.5" style={{ marginBottom: "1.75rem", width: "100%", maxWidth: 480 }}>
                     {pricingFeatures.map(([left, right], i) => (
                       <div key={i} className="contents">
                         <div className="flex items-start gap-2">

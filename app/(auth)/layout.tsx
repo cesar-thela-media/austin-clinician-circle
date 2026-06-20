@@ -13,14 +13,15 @@ export default function AuthLayout({
 }) {
   return (
     <div className="h-screen flex overflow-hidden" style={{ background: "#fff" }}>
-      {/* Left — image (desktop only) */}
+      {/* Left — brand panel (desktop only) */}
       <div className="hidden md:flex w-1/2 relative overflow-hidden" style={{ background: "#2D3B2C" }}>
-        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(194,150,58,0.08) 0%, transparent 65%)" }} />
-        <div className="relative flex flex-col justify-center px-12 lg:px-16 w-full">
+        <div className="absolute inset-0 opacity-30" style={{ background: "url(/hero-bg.jpg) center/cover" }} />
+        <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(194,150,58,0.12) 0%, transparent 65%)" }} />
+        <div className="relative flex flex-col justify-center px-12 lg:px-16 w-full z-10">
           <img
             src="/logo.png"
             alt="Austin Clinician Circle"
-            className="h-10 w-auto mb-8"
+            className="h-12 w-auto mb-8"
           />
           <h1
             className="leading-tight mb-4"
