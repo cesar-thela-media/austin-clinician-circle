@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 const PARCHMENT = "#F0EDE6";
 const SAGE_800 = "#2D3B2C";
@@ -109,6 +110,14 @@ export function MockSignIn({ redirectTo = "/dashboard" }: Props) {
         </svg>
         {loading ? "Signing you in…" : "Log in as Demo User"}
       </button>
+
+      <Link
+        href="/dashboard/free"
+        className="w-full rounded-full text-sm font-medium py-3 transition-all hover:opacity-80 flex items-center justify-center gap-2 text-center"
+        style={{ border: "1px solid rgba(194,150,58,0.22)", color: AMBER }}
+      >
+        Preview free tier →
+      </Link>
 
       <div className="flex items-center gap-3">
         <div className="flex-1" style={{ height: "0.5px", background: "rgba(194,150,58,0.18)" }} />
