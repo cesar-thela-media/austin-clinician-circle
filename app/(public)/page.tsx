@@ -509,79 +509,66 @@ export default function HomePage() {
       {/* ══ MEMBERSHIP INCLUDES ══════════════════════════════ */}
       <section style={{ background: PARCHMENT, padding: "clamp(2.5rem,5vw,4rem) 0", borderTop: `1px solid rgba(194,150,58,0.12)` }}>
         <div className="container-fluid">
-          <div className="grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-10 xl:gap-16 items-start" style={{ marginBottom: "2rem" }}>
-            {/* Left */}
-            <div data-aos="fade-in-up">
-              <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-4" style={{ color: AMBER }}>
-                Membership includes
-              </p>
-              <h2
-                style={{
-                  fontFamily: "var(--font-serif), Georgia, serif",
-                  fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
-                  fontWeight: 400,
-                  letterSpacing: "-0.018em",
-                  lineHeight: 1.18,
-                  color: "#1A1A1A",
-                }}
-              >
-                Everything you need to thrive in private practice.
-              </h2>
-            </div>
-
-            {/* Right: 5-col grid */}
-            <div
-              className="grid gap-x-6 gap-y-7"
-              style={{ gridTemplateColumns: "repeat(auto-fill, minmax(130px, 1fr))" }}
-            >
-              {benefits.map((b, i) => (
-                <div
-                  key={b.label}
-                  className="flex flex-col gap-2.5"
-                  data-aos="fade-in-up"
-                  data-delay={String(((i % 5) + 1) * 55)}
-                >
-                  <BenefitIcon>{b.icon}</BenefitIcon>
-                  <span style={{ fontSize: "12.5px", fontWeight: 500, lineHeight: 1.4, color: "#1A1A1A", whiteSpace: "pre-line" }}>
-                    {b.label}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* Consultation Scheduler — desktop: browser-chrome product preview */}
-          <div className="hidden md:block" data-aos="fade-in-up" data-delay="80">
-            <p className="text-xs font-medium uppercase tracking-[0.22em] mb-4" style={{ color: "rgba(194,150,58,0.75)" }}>
-              Member preview
+          <div className="text-center mb-10" data-aos="fade-in-up">
+            <p className="uppercase tracking-[0.28em] font-medium text-[11px] mb-4" style={{ color: AMBER }}>
+              Membership includes
             </p>
-            <div
-              className="rounded-2xl overflow-hidden"
+            <h2
               style={{
-                boxShadow: "0 28px 72px rgba(45,59,44,0.16), 0 4px 20px rgba(45,59,44,0.08)",
-                border: "1px solid rgba(45,59,44,0.09)",
+                fontFamily: "var(--font-serif), Georgia, serif",
+                fontSize: "clamp(1.8rem, 3vw, 2.5rem)",
+                fontWeight: 400,
+                letterSpacing: "-0.018em",
+                lineHeight: 1.18,
+                color: "#1A1A1A",
+                maxWidth: 600,
+                margin: "0 auto",
               }}
             >
-              {/* Browser chrome bar */}
+              You didn&apos;t become a therapist to do it alone.
+            </h2>
+          </div>
+
+          {/* Emotional benefit cards */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 mb-12">
+            {[
+              { feeling: "Seen.", title: "Case consultation that meets you where you are", body: "Bring your hardest cases to clinicians who get it. No judgment — just the kind of perspective that only comes from someone who does this work too." },
+              { feeling: "Supported.", title: "Resources that save you hours", body: "Stop reinventing the wheel. A growing library of clinical tools, handouts, and templates — organized and ready when you need them." },
+              { feeling: "Connected.", title: "A referral network you actually trust", body: "Send and receive referrals with confidence. Every member has been vetted through the same professional community you belong to." },
+              { feeling: "Sharp.", title: "CEUs that don&apos;t waste your time", body: "Continuing education designed for practicing clinicians — relevant, practical, and aligned with your licensure." },
+              { feeling: "Visible.", title: "A directory listing that works for you", body: "Your profile, searchable by specialty and modality. A trusted source for client referrals and colleague connections." },
+              { feeling: "Grounded.", title: "Coaching that understands the weight", body: "Discounted one-on-one sessions with Sarah for when you need clinical guidance, practice strategy, or just someone who&apos;s been there." },
+            ].map((item, i) => (
               <div
-                className="h-9 flex items-center px-4 gap-3"
-                style={{ background: "#DEDAD2", borderBottom: "1px solid rgba(45,59,44,0.08)" }}
+                key={item.title}
+                data-aos="fade-in-up"
+                data-delay={String((i + 1) * 60)}
+                className="rounded-2xl p-6 flex flex-col gap-3 group transition-all duration-300 hover:-translate-y-1"
+                style={{ background: "#fff", border: "1px solid rgba(194,150,58,0.12)", boxShadow: "0 2px 12px rgba(45,59,44,0.05)" }}
               >
+                <p className="text-[11px] font-semibold uppercase tracking-[0.2em]" style={{ color: AMBER }}>{item.feeling}</p>
+                <h3 className="text-base font-semibold leading-snug" style={{ color: "var(--color-sage-800)" }}>{item.title}</h3>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>{item.body}</p>
+              </div>
+            ))}
+          </div>
+
+          {/* Dashboard preview */}
+          <div className="hidden md:block" data-aos="fade-in-up" data-delay="80">
+            <p className="text-xs font-medium uppercase tracking-[0.22em] mb-4 text-center" style={{ color: "rgba(194,150,58,0.75)" }}>
+              A peek inside
+            </p>
+            <div
+              className="rounded-2xl overflow-hidden max-w-4xl mx-auto"
+              style={{ boxShadow: "0 28px 72px rgba(45,59,44,0.16), 0 4px 20px rgba(45,59,44,0.08)", border: "1px solid rgba(45,59,44,0.09)" }}
+            >
+              <div className="h-9 flex items-center px-4 gap-3" style={{ background: "#DEDAD2", borderBottom: "1px solid rgba(45,59,44,0.08)" }}>
                 <div className="flex items-center gap-1.5">
-                  {["rgba(194,80,60,0.75)", "rgba(210,150,40,0.75)", "rgba(60,160,80,0.75)"].map((c, i) => (
-                    <span key={i} className="w-2.5 h-2.5 rounded-full block" style={{ background: c }} />
+                  {["rgba(194,80,60,0.75)", "rgba(210,150,40,0.75)", "rgba(60,160,80,0.75)"].map((c, j) => (
+                    <span key={j} className="w-2.5 h-2.5 rounded-full block" style={{ background: c }} />
                   ))}
                 </div>
-                <div
-                  className="rounded px-3 py-0.5 text-center text-xs"
-                  style={{
-                    background: "rgba(255,255,255,0.50)",
-                    color: "rgba(45,59,44,0.38)",
-                    width: 260,
-                    margin: "0 auto",
-                    letterSpacing: "0.01em",
-                  }}
-                >
+                <div className="rounded px-3 py-0.5 text-center text-xs" style={{ background: "rgba(255,255,255,0.50)", color: "rgba(45,59,44,0.38)", width: 260, margin: "0 auto" }}>
                   The Circle · Member Dashboard
                 </div>
               </div>
@@ -589,15 +576,9 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Consultation Scheduler — mobile: editorial text card */}
-          <div
-            className="md:hidden rounded-2xl p-6"
-            style={{ background: "#fff", border: "1px solid rgba(194,150,58,0.14)", boxShadow: "0 2px 12px rgba(45,59,44,0.06)" }}
-          >
-            <p
-              className="text-base mb-2"
-              style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "var(--color-sage-800)" }}
-            >
+          {/* Mobile */}
+          <div className="md:hidden rounded-2xl p-6" style={{ background: "#fff", border: "1px solid rgba(194,150,58,0.14)", boxShadow: "0 2px 12px rgba(45,59,44,0.06)" }}>
+            <p className="text-base mb-2" style={{ fontFamily: "var(--font-serif), Georgia, serif", fontWeight: 400, color: "var(--color-sage-800)" }}>
               Peer consultation groups, matched to your specialty.
             </p>
             <p className="text-sm leading-relaxed" style={{ color: "var(--color-text-secondary)" }}>
