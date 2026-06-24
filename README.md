@@ -4,7 +4,7 @@ A subscription-based virtual support network for licensed therapists in Austin, 
 
 Not a client-facing therapy platform — it serves therapists.
 
-> **Live:** [acc-lac.vercel.app](https://acc-lac.vercel.app)
+> **Live:** https://austin-clinician-circle.vercel.app/
 
 ---
 
