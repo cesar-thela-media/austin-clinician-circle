@@ -17,6 +17,11 @@ export const hasStripeSandboxConfig =
 
 export const hasDatabaseConfig = isConfigured(process.env.DATABASE_URL);
 
+export const hasRobollyConfig =
+  isConfigured(process.env.ROBOLLY_API_KEY) && isConfigured(process.env.ROBOLLY_TEMPLATE_ID);
+
+export const robollyNameElement = process.env.ROBOLLY_NAME_ELEMENT || "name";
+
 export const clerkAdminEmails = (process.env.CLERK_ADMIN_EMAILS || "")
   .split(",")
   .map((email) => email.trim().toLowerCase())

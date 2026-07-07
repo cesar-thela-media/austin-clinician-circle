@@ -8,6 +8,7 @@ FROM base AS deps
 RUN apk add --no-cache libc6-compat openssl
 WORKDIR /app
 COPY package*.json ./
+COPY scripts/prisma-generate.js ./scripts/prisma-generate.js
 COPY prisma ./prisma
 RUN npm ci
 

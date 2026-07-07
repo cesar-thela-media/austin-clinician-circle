@@ -536,9 +536,9 @@ export default function HomePage() {
               { feeling: "Seen.", title: "Case consultation that meets you where you are", body: "Bring your hardest cases to clinicians who get it. No judgment, just the kind of perspective that only comes from someone who does this work too." },
               { feeling: "Supported.", title: "Resources that save you hours", body: "Stop reinventing the wheel. A growing library of clinical tools, handouts, and templates, organized and ready when you need them." },
               { feeling: "Connected.", title: "A referral network you actually trust", body: "Send and receive referrals with confidence. Every member has been vetted through the same professional community you belong to." },
-              { feeling: "Sharp.", title: "CEUs that don&apos;t waste your time", body: "Continuing education designed for practicing clinicians, relevant, practical, and aligned with your licensure." },
+              { feeling: "Sharp.", title: "CEUs that don't waste your time", body: "Continuing education designed for practicing clinicians, relevant, practical, and aligned with your licensure." },
               { feeling: "Visible.", title: "A directory listing that works for you", body: "Your profile, searchable by specialty and modality. A trusted source for client referrals and colleague connections." },
-              { feeling: "Grounded.", title: "Coaching that understands the weight", body: "Discounted one-on-one sessions with Sarah for when you need clinical guidance, practice strategy, or just someone who&apos;s been there." },
+              { feeling: "Grounded.", title: "Coaching that understands the weight", body: "Discounted one-on-one sessions with Sarah for when you need clinical guidance, practice strategy, or just someone who's been there." },
             ].map((item, i) => (
               <div
                 key={item.title}

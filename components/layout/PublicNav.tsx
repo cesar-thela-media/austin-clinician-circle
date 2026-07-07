@@ -30,7 +30,7 @@ export function PublicNav() {
 
   return (
     <>
-      <header className="absolute top-0 left-0 right-0 z-50">
+      <header className={`${isHome ? "absolute" : "sticky"} top-0 left-0 right-0 z-50`}>
         <div
           className="transition-all duration-300"
           style={{
@@ -46,9 +46,13 @@ export function PublicNav() {
               <img
                 src="/logo.png"
                 alt="Austin Clinician Circle"
-                className="h-28 w-auto transition-all duration-300"
+                width={2000}
+                height={1549}
+                className="block transition-all duration-300"
                 style={{
-                  filter: onDark ? "none" : "brightness(0) saturate(100%) invert(15%) sepia(3%) saturate(685%) hue-rotate(60deg) brightness(95%) contrast(89%)",
+                  width: isHome ? "9rem" : "6.75rem",
+                  height: "auto",
+                  objectFit: "contain",
                 }}
               />
             </Link>

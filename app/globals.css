@@ -1,4 +1,8 @@
 @import "tailwindcss";
+@source not "../.next";
+@source "../app";
+@source "../components";
+@source "../lib";
 
 html, body {
   overflow-x: hidden;
@@ -146,7 +150,7 @@ html, body {
 
 /* ── Base ────────────────────────────────────────────────────── */
 html {
-  scrollbar-gutter: stable both-edges;
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -160,6 +164,10 @@ body {
 button, a {
   transition-duration: 280ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.placeholder-theme::placeholder {
+  color: var(--color-text-tertiary);
 }
 
 /* ── Keyframe animations ─────────────────────────────────────── */

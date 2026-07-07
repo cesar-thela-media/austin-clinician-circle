@@ -18,11 +18,18 @@ export default function AuthLayout({
         <div className="absolute inset-0 opacity-30" style={{ background: "url(/hero-bg.jpg) center/cover" }} />
         <div className="absolute inset-0" style={{ background: "radial-gradient(ellipse 60% 50% at 50% 40%, rgba(194,150,58,0.12) 0%, transparent 65%)" }} />
         <div className="relative flex flex-col justify-center px-12 lg:px-16 w-full z-10">
-          <img
-            src="/logo.png"
-            alt="Austin Clinician Circle"
-            className="h-12 w-auto mb-8"
-          />
+          <div
+            className="mb-3 w-72 max-w-full"
+            aria-label="Austin Clinician Circle"
+          >
+            <img
+              src="/logo-auth.png"
+              alt=""
+              width={1763}
+              height={687}
+              className="h-auto w-full object-contain"
+            />
+          </div>
           <h1
             className="leading-tight mb-4"
             style={{
@@ -45,12 +52,20 @@ export default function AuthLayout({
       {/* Right — form */}
       <div className="flex-1 flex flex-col items-center justify-center px-5 md:px-10 py-8 overflow-y-auto" style={{ background: "#F0EDE6" }}>
         {/* Mobile logo */}
-        <img
-          src="/logo.png"
-          alt="Austin Clinician Circle"
-          className="md:hidden h-8 w-auto mb-8"
-          style={{ filter: "brightness(0) saturate(100%) invert(15%) sepia(3%) saturate(685%) hue-rotate(60deg) brightness(95%) contrast(89%)" }}
-        />
+        <div
+          className="md:hidden mb-4 flex h-20 w-52 max-w-full items-center justify-center overflow-hidden px-3 py-2"
+          style={{
+            background: "var(--color-sage-800)",
+          }}
+        >
+          <img
+            src="/logo-auth.png"
+            alt="Austin Clinician Circle"
+            width={1763}
+            height={687}
+            className="h-full w-full object-contain"
+          />
+        </div>
         <div className="w-full max-w-sm">
           {children}
         </div>
