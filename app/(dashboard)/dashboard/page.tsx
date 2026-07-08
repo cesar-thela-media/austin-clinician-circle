@@ -3,7 +3,7 @@ import { cookies } from "next/headers";
 import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import Link from "next/link";
-import { hasClerkCredentials, hasRobollyConfig } from "@/lib/env";
+import { hasClerkCredentials } from "@/lib/env";
 
 const upcomingEvents = [
   {
@@ -229,24 +229,13 @@ export default async function DashboardPage() {
             $79/month · Renews May 21, 2026
           </p>
         </div>
-        <div className="flex items-center gap-4">
-          {hasRobollyConfig && (
-            <a
-              href="/api/certificate"
-              className="text-xs font-medium underline"
-              style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}
-            >
-              Download certificate →
-            </a>
-          )}
-          <Link
-            href="/dashboard/billing"
-            className="text-xs font-medium underline"
-            style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}
-          >
-            Manage billing →
-          </Link>
-        </div>
+        <Link
+          href="/dashboard/billing"
+          className="text-xs font-medium underline"
+          style={{ color: "var(--color-sage-700)", textUnderlineOffset: "3px" }}
+        >
+          Manage billing →
+        </Link>
       </Card>
     </div>
   );
